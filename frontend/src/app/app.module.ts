@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,6 +25,15 @@ import { StaffingComponent } from './staff/staffing/staffing.component';
 import { OndutyComponent } from './staff/onduty/onduty.component';
 import { OffdutyComponent } from './staff/offduty/offduty.component';
 import { InventoryitemsComponent } from './inventory/inventoryitems/inventoryitems.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DialogBodyComponent } from './dialog-body/dialog-body.component';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatInputModule} from '@angular/material/input';
+
 //import { faBell } from '@fortawesome/free-solid-svg-icons';
 
 @NgModule({
@@ -46,17 +56,31 @@ import { InventoryitemsComponent } from './inventory/inventoryitems/inventoryite
     StaffingComponent,
     OndutyComponent,
     OffdutyComponent,
-    InventoryitemsComponent
+    InventoryitemsComponent,
+    DialogBodyComponent,
+    
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FormsModule,
+    FontAwesomeModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatIconModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatDialogModule,
+    MatInputModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:[DialogBodyComponent]
+
 })
 export class AppModule { 
+  
   constructor(library: FaIconLibrary) {
     library.addIcons(faBell, faUser, faEllipsisH);
   

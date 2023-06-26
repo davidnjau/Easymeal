@@ -2,6 +2,8 @@ import { Component, inject } from '@angular/core';
 import { TrendingService } from '../trending.service';
 import { Trendingcombo } from '../trendingcombo';
 import { Users } from '../users';
+import {MatDialog, MatDialogConfig} from '@angular/material';
+import { DialogBodyComponent } from '../dialog-body/dialog-body.component';
 
 @Component({
   selector: 'app-staff',
@@ -9,11 +11,17 @@ import { Users } from '../users';
   styleUrls: ['./staff.component.css']
 })
 export class StaffComponent {
-   
+
  trendingcomboList : Trendingcombo []=[];
  trendingservice:TrendingService = inject(TrendingService);
  
- constructor(){
+ constructor(private dialog:MatDialog){
+  openDialog(){
+    this.dialog.open(DialogBodyComponent),{
+      width:"50%"
+    }
+  }
+
    this.trendingcomboList = this.trendingservice.getAllTrendingcombo();
  }
 

@@ -1,8 +1,10 @@
 import { Component} from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
-//import routeConfig from './routes';
 
+
+
+//import routeConfig from './routes';
 
 
 @Component({
@@ -14,4 +16,12 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
 export class AppComponent{
   title = 'Easymeal';
+
+  constructor(){
+      /* material dialog to display add staff form/dialog 
+      openDialog(){
+        this.matDialog.open(DialogBodyComponent)
+      }
+mat dialog ends here */  
+  }
 }

@@ -1,0 +1,24 @@
+
+<h4 mat-dialog-title> Add Staff Member</h4>
+
+<form>
+<div mat-dialog-content>
+    <mat-form-field>
+        <input placeholder="Employee Name" mat-Input>
+    </mat-form-field>
+    <mat-form-field>
+        <input placeholder="Phone Number" mat-Input>
+    </mat-form-field>
+    <mat-form-field>
+        <input placeholder="Department" mat-Input>
+    </mat-form-field>
+    <mat-form-field>
+        <input placeholder="Position" mat-Input>
+    </mat-form-field>
+    
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+  <button mat-raised-button color="primary" [mat-dialog-close]="true">Add staff</button>
+</div>
+</form>
