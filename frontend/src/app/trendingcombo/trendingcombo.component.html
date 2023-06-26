@@ -1,0 +1,27 @@
+<!-- <section class="combos">
+    <div><p>Trending Combos</p></div>
+
+    <article> 
+        <img alt="img1">
+    </article>
+    <article> 
+        <img alt="img1" >
+    </article>
+    <article> 
+        <img alt="img1">
+    </article>
+    <article> 
+        <img alt="img1">
+    </article>
+</section>
+ <a [routerLink]="['/details', housingLocation.id]">Learn More</a> 
+-->
+
+<section class="combos">
+   
+        <article>
+            <a routerLink="./menu"><img class="combo-photo" [src]="trendingcombo.photo" alt="Exterior photo of {{trendingcombo.comboname}}"></a> 
+            <a routerLink="./menu"><h2 class="combo-heading">{{trendingcombo.comboname }} <br> <p>{{trendingcombo.ordernumber}}</p></h2></a> 
+        <div  class="combo-details"><p> {{trendingcombo.price }}</p></div>
+    </article>
+</section>

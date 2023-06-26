@@ -1,0 +1,105 @@
+nav{
+    justify-content: center;
+    align-items: center;
+}
+    
+nav .analytics{
+    display: inline;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+nav .analytics li{
+    margin: 20px
+}
+
+nav .analytics li{
+    list-style: none;
+    display: inline-flex;
+    color: black;
+    text-decoration: none;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    padding: 10px;
+    border: 2px solid rgb(228, 225, 225);
+    border-left-color: orangered;
+    border-left-width: 5px;
+}
+nav .analytics li p{
+     padding-right: 130px;
+     color: rgb(107, 106, 106);
+     line-height: 1.5rem;
+}
+nav .analytics li a{
+    color: orangered;
+}
+nav .analytics ul .chefnote{
+    border: none;
+}
+nav .analytics ul .chefnote p{
+    font-size: xx-large;
+    margin-left: 90px;
+    font-family: Calibri;
+    line-height: 2rem;
+}
+
+/**/
+.comboss{
+    color: rgb(107, 106, 106);
+    height: 250px;
+    width: 1370px;
+    padding: 30px 0 30px 30px;
+    text-align:centre;
+    margin: 20px 0 0 70px;
+    border: 2px solid rgb(228, 225, 225);
+    border-radius: 0px;
+}
+.combos{
+    display:flex;
+    flex-direction: row;
+}
+.comboss p{
+    color: rgb(107, 106, 106);
+    font-size: xx-large;
+}
+
+.ordersummary{ 
+    height: 560px;
+    width: 1400px;
+    margin: 40px 0 0 70px;
+    border: 2px solid rgb(228, 225, 225);
+    border-left-color: orangered;
+    border-left-width: 5px;
+
+}
+.ordersummary .summary{
+    color: rgb(107, 106, 106);
+    font-size: xx-large;
+    padding: 30px;
+    display: inline-flex;
+}
+.ordersummary .summary p{
+    padding-right: 1060px;
+}
+.dropdown select{
+    margin-left: 1170px;
+}
+
+/* order summmary*/
+table{
+    font-size: larger;
+    width: 100%;
+   
+}
+tr th{
+    border-top: 2px solid rgb(228, 225, 225);
+    border-bottom: 2px solid rgb(228, 225, 225);
+    height: 40px;
+    color:black;
+   
+    
+}
+
+.datatable {
+ margin: 0 0 0 0px;
+}

@@ -1,0 +1,156 @@
+nav{
+    justify-content: center;
+    align-items: center;
+}
+    
+nav .analytics{
+    display: inline;
+    margin: 10px 0 10px 0;
+}
+
+nav .analytics li{
+    list-style: none;
+    display: inline-flex;
+    text-decoration: none;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 19px;
+    padding: 10px;
+    margin: 0 0 0 300px;
+    width: 370px;
+    height:80px;
+    border: 2px solid rgb(228, 225, 225);
+    border-left-color: orangered;
+    border-left-width: 5px;
+}
+nav .analytics .second{
+    margin-left: 170px;
+}
+nav .analytics li p{
+  
+     color: rgb(80, 80, 80);
+     line-height: 1.5rem;
+}
+nav .analytics li a{
+    color: orangered;
+}
+
+nav .chefnote p{
+    font-size: xx-large;
+    margin: 40px 0 40px 120px;
+    font-family: Calibri;
+    color: rgb(107, 106, 106);
+}
+
+/**/
+.comboss{
+    color: rgb(107, 106, 106);
+    height: 250px;
+    width: 1370px;
+    padding: 30px 0 30px 30px;
+    text-align:centre;
+    margin: 20px 0 0 70px;
+    border: 2px solid rgb(228, 225, 225);
+    border-radius: 0px;
+}
+.combos{
+    display:flex;
+    flex-direction: row;
+}
+.comboss p{
+    color: rgb(107, 106, 106);
+    font-size: xx-large;
+}
+
+.ordersummary{ 
+    height: 610px;
+    width: 1400px;
+    margin: 40px 0 0 70px;
+    border: 2px solid rgb(228, 225, 225);
+    border-left-color: orangered;
+    border-left-width: 5px;
+}
+.ordersummary .summary{
+    color: rgb(107, 106, 106);
+    font-size: x-large;
+    padding: 30px;
+    display: inline-flex;
+}
+.ordersummary .summary p{
+    padding-right: 1060px;
+}
+.dropdown select{
+    margin-left: 1190px;
+}
+
+/* order summmary*/
+table{
+    font-size: larger;
+    width: 100%;
+   
+}
+tr th{
+    border-top: 2px solid rgb(228, 225, 225);
+    border-bottom: 2px solid rgb(228, 225, 225);
+    height: 40px;
+    color:rgb(107, 106, 106);
+    text-align: center;
+}
+
+.datatable {
+ margin: 0 0 0 0px;
+}
+
+/*searchform*/
+* {
+    box-sizing: border-box;
+  }
+  
+  form.input input[type=text] {
+    padding: 10px;
+    height: 50px;
+    font-size: 17px;
+    border: 2px solid rgb(228, 225, 225);
+    float: left;
+    width: 60%;
+    margin: 30px 0 30px 34px;
+    background: white;
+  }
+  
+  form.input button {
+    float:left;
+    width: 9%;
+    height: 50px;
+    margin: 30px 0 0 0;
+    padding: 10px;
+    background:#c1584a;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+  }
+  form.input button:hover {
+    background: #7a1205;
+  }
+  
+  form.input::after {
+    content: "";
+    clear: both;
+  }
+
+  /*addcategory button*/
+  form #category {
+    padding: 10px;
+    height: 50px;
+    font-size: 15px;
+    border: 2px solid rgb(228, 225, 225);
+    float: left;
+    width: 13%;
+    margin: 15px 0 30px 150px;
+    background: white;
+  }
+ 
+  form.input::after {
+    content: "";
+    clear: both;
+  }

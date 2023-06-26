@@ -1,0 +1,29 @@
+table{
+    font-size: larger;
+    width: 100%;
+}
+
+tbody tr td{
+    
+    border-bottom: 2px solid rgb(228, 225, 225);
+    height: 50px;
+    color: rgb(107, 106, 106);
+
+    
+}
+.datatable table tbody tr td{
+
+    
+}
+.datatable table tbody tr .aligntd {
+  
+}
+
+tbody .icondiv img{
+    border-radius: 50%;
+    height:40px;
+}
+
+.datatable{
+    margin:0px 0 0 40px ;
+}

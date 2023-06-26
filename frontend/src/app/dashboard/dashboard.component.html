@@ -1,0 +1,61 @@
+<nav>
+    <div class="analytics">
+        <ul>
+            <li class="chefnote"><p>Welcome <br> Head Chef.</p></li>
+            <li>
+                <p>Total Earnings <br> <a>#600,000</a></p> <fa-icon icon="ellipsis"></fa-icon> 
+            </li>
+            <li>
+                <p>Today's Orders <br> <a>20,000 Items</a></p> <fa-icon icon="ellipsis"></fa-icon>
+            </li>
+            <li>
+                <p>Tomorrow's Orders <br> <a>20,000 Items</a></p> <fa-icon icon="ellipsis"></fa-icon>
+            </li>
+        </ul>  
+    </div>
+</nav>
+
+<section class="comboss">
+    <div article-title><p>Trending Combos</p></div>
+
+    <section class="combos">
+    <app-trendingcombo  *ngFor="let trendingcombo of trendingcomboList"
+        [trendingcombo]="trendingcombo"></app-trendingcombo>
+    </section>
+</section>
+
+<section class="ordersummary">
+    <div class="summary">
+        <p>Order Summary</p> 
+        <div class="faicon"><fa-icon icon="ellipsis"></fa-icon></div>
+    </div>
+    <section class="dropdown">
+        <select name="category" id="category" placeholder="select category"> <!--The dropdown, to hide or show table contents-->
+          <option value="select category" disabled selected>Select Category</option>
+          <option *ngFor="let users of usersList">{{users.name}}</option>
+        </select>
+    </section>
+    <section class="datatable">
+        <table class="tabled">
+            <thead>
+                <tr>
+                    <th  margin-left="150px">Name</th>
+                    <th  margin-left="150px">Item</th>
+                    <th  margin-left="150px">Qty</th>
+                    <th  margin-left="150px">Value</th>
+                    <th  margin-left="150px">Date</th>
+                    <th  margin-left="150px">Status</th>
+                </tr>
+            </thead>
+        </table>
+        </section>
+    <app-rest *ngFor="let users of usersList" [users]="users"></app-rest>
+    
+</section>
+
+
+
+
+
+
+

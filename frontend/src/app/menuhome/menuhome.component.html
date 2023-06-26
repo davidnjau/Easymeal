@@ -1,0 +1,100 @@
+
+<div class="menubar">
+    <p>Menu Items</p>
+    <form class="input" action="/action_page.php">
+        <input type="text" placeholder="Search Item" name="search">
+        <button type="submit">Search</button>
+      </form>
+      <form class="input" action="/action_page.php">
+     <div class="mealadding"><button type="submit" >Add Category</button></div>
+      </form>
+</div>
+
+<br>
+<section class="comboss">
+
+    <div article-title><p>Chef's Choice Combos</p></div>
+    <button name="category" id="category" placeholder="select category"> <!--The dropdown, to hide or show a form contents-->
+        <option>Add Item</option>
+    </button> 
+
+    <section class="datatable">
+        <table class="tabled">
+            <thead>
+                <tr>
+                    <th  width="100px" class="first">#</th>
+                    <th  width="150px">Picture</th>
+                    <th  width="200px" class="second">Item Name</th>
+                    <th  width="150px" class="second">Value</th>
+                    <th  width="200px" class="second">Date Added</th>
+                    <th  width="200px" class="second">Action</th>
+                </tr>
+            </thead>
+        </table>
+    </section>
+
+    <section class="combos">
+        <app-menu  *ngFor="let trendingcombo of trendingcomboList"
+            [trendingcombo]="trendingcombo"></app-menu>        
+    </section>  
+</section>
+
+
+<br>
+<section class="comboss">
+
+    <div article-title><p>Meals</p></div>
+    <button name="category" id="category" placeholder="select category"> <!--The dropdown, to hide or show a form contents-->
+        <option>Add Item</option>
+    </button> 
+
+    <section class="datatable">
+        <table class="tabled">
+            <thead>
+                <tr>
+                    <th  width="100px" class="first">#</th>
+                    <th  width="150px">Picture</th>
+                    <th  width="150px" class="second">Item Name</th>
+                    <th  width="150px" class="second">Value</th>
+                    <th  width="200px" class="second">Date Added</th>
+                    <th  width="200px" class="second">Action</th>
+                </tr>
+            </thead>
+        </table>
+    </section>
+
+    <section class="combos">
+        <app-menusinglemeals  *ngFor="let trendingcombo of trendingcomboList"
+            [trendingcombo]="trendingcombo"></app-menusinglemeals>        
+    </section>  
+</section>
+
+
+<br>
+<section class="comboss">
+
+    <div article-title><p>Hot Beverages</p></div>
+    <button name="category" id="category" placeholder="select category"> <!--The dropdown, to hide or show a form contents-->
+        <option>Add Item</option>
+    </button> 
+
+    <section class="datatable">
+        <table class="tabled">
+            <thead>
+                <tr>
+                    <th  width="100px" class="first">#</th>
+                    <th  width="150px">Picture</th>
+                    <th  width="200px" class="second">Item Name</th>
+                    <th  width="150px" class="second">Value</th>
+                    <th  width="200px" class="second">Date Added</th>
+                    <th  width="200px" class="second">Action</th>
+                </tr>
+            </thead>
+        </table>
+    </section>
+
+    <section class="combos">
+        <app-menubeverages  *ngFor="let trendingcombo of trendingcomboList"
+            [trendingcombo]="trendingcombo"></app-menubeverages>        
+    </section>  
+</section>

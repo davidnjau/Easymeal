@@ -1,0 +1,99 @@
+.chefnote{
+    display: flex;
+    flex-direction: row;
+}
+.chefnote .title .inputone{
+    margin-left: 100px;
+}
+
+hr{
+    border-bottom: 2px solid orangered;
+    width: 86%;
+    margin: 5px 0 0 100px;
+}
+    
+nav .analytics{
+    display: inline;
+    margin: 0px 0 0 0;
+}
+
+nav .analytics li{
+    list-style: none;
+    display: inline-flex;
+    text-decoration: none;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 19px;
+    margin: 0 0 0 74px;
+    
+}
+
+nav .analytics li p a{
+  
+     color: rgb(107, 106, 106);
+     font-size: x-large;  
+}
+nav .analytics li p a:active{
+    color: orangered;
+}
+nav .analytics li p a:hover{
+    color: orangered;
+    text-decoration: none;
+}
+
+ .chefnote p{
+    font-size: 40px;
+    margin: 40px 0 40px 120px;
+    font-family: Calibri;
+    color: rgb(107, 106, 106);
+}
+
+/**/
+
+.ordersummary{ 
+    height: 500px;
+    width: 1400px;
+    margin: 40px 0 0 70px;
+}
+
+/* order summmary*/
+table{
+    font-size: larger;
+    width: 100%;
+   
+}
+tr th{
+    border-top: 2px solid rgb(228, 225, 225);
+    border-bottom: 2px solid rgb(228, 225, 225);
+    height: 40px;
+    color:rgb(107, 106, 106);
+    text-align: left;
+    margin-left: 100px;
+}
+
+.datatable {
+ margin: 0 0 0 0px;
+}
+
+/*searchform*/
+
+ 
+  
+ .chefnote .title form button{
+   
+    width: 140%;
+    height: 50px;
+    margin: 30px 0 0 0px;
+    background:#c45d50;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    cursor: pointer;
+  }
+  .chefnote .title form.inputone button:hover {
+    background: #7a1205;
+  }
+  
+  .chefnote .title form.inputone::after {
+    content: "";
+    clear: both;
+  }

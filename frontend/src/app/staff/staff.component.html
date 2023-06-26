@@ -1,0 +1,126 @@
+
+<div class="chefnote">
+    <p>Staff</p>
+        <div class="title">
+        <form class="inputone" action="/action_page.php">
+            <button type="submit" id="myBtn" >Add Staff</button>
+        </form></div>
+</div> 
+<div class="bodyy">
+    
+<!-- The Modal -->
+    <button id="myBtn">Add Staff</button>
+    <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Some text in the Modal..</p>
+    </div>
+  
+  </div>
+  
+  <script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+  
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn");
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks the button, open the modal 
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>
+
+</div>
+
+<!-- popupform begins here-->
+<!--
+<button  class="open-button" onclick="openForm()">Add Staff</button>
+
+<div class="form-popup" id="myForm">
+    <form action="/action_page.php" class="form-container">
+      <h5>Add Staff Member</h5>
+  
+      <input type="text" placeholder="Employee Name*" name="name" required>
+      <input type="text" placeholder="Phone Number*" name="name" required>
+      <input type="text" placeholder="Department*" name="name" required>
+      <input type="text" placeholder="Position*" name="name" required>
+  
+      <button type="submit" class="btn">Add Staff</button>
+     <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+  </div>
+  <script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+    
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+    </script>
+
+</div>
+
+           end of popupform
+-->   
+
+<nav>
+    <div class="analytics">
+        <ul> 
+            <li>
+                <p><a  routerLinkActive="active" routerLink="./staff">All </a></p>  
+            </li>
+            <li>
+                <p><a routerLink="./onduty">On Duty</a></p> 
+            </li>
+            <li>
+                <p><a routerLink="./offduty">Off Duty</a></p>
+            </li>
+        </ul>  
+    </div>
+    <hr>
+</nav>
+
+<section class="ordersummary">
+
+    <form class="input" action="/action_page.php">
+        <input type="text" placeholder="" name="search">
+        <button type="submit">Search</button>
+      </form>
+
+
+      <section class="datatable">
+        <table class="tabled">
+            <thead>
+                <tr>
+                    <th width="200px">Name</th>
+                    <th width="200px">Position</th>
+                    <th width="200px">Department</th>
+                    <th width="200px">Joined</th>
+                    <th width="200px">Mobile</th>
+                    <th width="200px">Action</th>
+                </tr>
+            </thead>
+        </table>
+        </section>
+    <app-staffing *ngFor="let users of usersList" [users]="users"></app-staffing>
+    
+</section>

@@ -1,0 +1,60 @@
+<nav>
+    <div class="chefnote"><p>Live Orders</p></div>
+    <div class="analytics">
+        <ul> 
+            <li>
+                <p>Total Live Orders Earnings <br> <a>Ksh.600,000</a></p>  
+            </li>
+            <li>
+                <p>Today's Orders <br> <a>20,000 Items</a></p> 
+            </li>
+            <li>
+                <p>Rejected Orders <br> <a>20 Items</a></p>
+            </li>
+        </ul>  
+    </div>
+</nav>
+
+<!--<section class="comboss">
+    <div article-title><p>Trending Combos</p></div>
+
+    <section class="combos">
+    <app-trendingcombo  *ngFor="let trendingcombo of trendingcomboList"
+        [trendingcombo]="trendingcombo"></app-trendingcombo>
+    </section>
+</section>-->
+
+<section class="ordersummary">
+    <div class="summary">
+        <p>Live Orders Summary</p> 
+        <div class="faicon"><fa-icon icon="ellipsis"></fa-icon></div>
+    </div>
+
+    <form class="input" action="/action_page.php">
+        <input type="text" placeholder="Search Item" name="search">
+        <button type="submit">Search</button>
+      </form>
+      <form><select class="input" action="/action_page.php" name="category" id="category" placeholder="select category">
+        <option value="select category" disabled selected>Select Category</option>
+        <option *ngFor="let users of usersList">{{users.name}}</option> 
+      </select></form>
+
+
+    <section class="datatable">
+        <table class="tabled">
+            <thead>
+                <tr>
+                    <th  margin-left="150px">Name</th>
+                    <th  margin-left="150px">Item</th>
+                    <th  margin-left="150px">Qty</th>
+                    <th  margin-left="150px">Value</th>
+                    <th  margin-left="150px">Date</th>
+                    <th  margin-left="150px">Status</th>
+                    <th  margin-left="150px">Action</th>
+                </tr>
+            </thead>
+        </table>
+        </section>
+    <app-livesummary *ngFor="let users of usersList" [users]="users"></app-livesummary>
+    
+</section>

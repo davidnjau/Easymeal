@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding:0;
+}
+nav{
+    display: grid;
+    justify-content: right;
+    padding: 20px;
+    margin: 0 100px 10px 0px;
+    border-bottom: 2px solid orangered;
+}
+ul li{
+    list-style: none;
+    display: inline-flex;
+    padding: 10px 20px 10px 20px;
+    font-size: large;
+}
+li a{
+    color: black;
+}
+li a:hover{
+    color: orangered;
+    text-decoration: none;
+}
+ li .active{
+    color: orangered;
+    text-decoration: none;
+}
+
+ul li fa-icon:hover{
+    color: orangered;
+}
+div img{
+    margin: 0 0 -90px 10px;
+}
+
