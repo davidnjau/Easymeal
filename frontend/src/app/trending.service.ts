@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Trendingcombo } from './trendingcombo';
-import { MenuComponent } from './menu/menu.component';
+//import { MenuComponent } from './menu/menu.component';
 //import { TrendingcomboComponent } from './trendingcombo/trendingcombo.component';
 
 
