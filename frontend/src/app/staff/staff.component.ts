@@ -1,6 +1,9 @@
 import { Component, inject } from '@angular/core';
 import { TrendingService } from '../trending.service';
 import { Trendingcombo } from '../trendingcombo';
+import { OndutyComponent } from './onduty/onduty.component';
+import { OffdutyComponent } from './offduty/offduty.component';
+import { RouterModule, Routes } from '@angular/router';
 import { Users } from '../users';
 //import {MatDialog, MatDialogConfig} from '@angular/material';
 import { DialogBodyComponent } from '../dialog-body/dialog-body.component';

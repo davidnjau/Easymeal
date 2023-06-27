@@ -45,13 +45,13 @@
     <div class="analytics">
         <ul> 
             <li>
-                <p><a  routerLinkActive="active" routerLink="./staff">All </a></p>  
+                <p><a  routerLinkActive="active" routerLink="staff">All </a></p>  
             </li>
             <li>
-                <p><a routerLink="./onduty">On Duty</a></p> 
+                <p><a routerLink="onduty">On Duty</a></p>
             </li>
             <li>
-                <p><a routerLink="./offduty">Off Duty</a></p>
+                <p><a routerLink="offduty">Off Duty</a></p>
             </li>
         </ul>  
     </div>
@@ -83,6 +83,11 @@
     <app-staffing *ngFor="let users of usersList" [users]="users"></app-staffing>
     
 </section>
+
+
+<router-outlet></router-outlet>
+
+
 
 <!--
     <button mat-raised-button color="primary" >
