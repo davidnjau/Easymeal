@@ -15,10 +15,24 @@ import { Users } from '../users';
 export class DashboardComponent {
   trendingcomboList : Trendingcombo []=[];
   trendingservice:TrendingService = inject(TrendingService);
-  
+  filteredusersList: Users[] = [];
+
   constructor(){
     this.trendingcomboList = this.trendingservice.getAllTrendingcombo();
   }
+
+
+// implementing filterresult event handler function to return the selected itemname
+filterResults(text: string) {
+  if (!text) {
+    this.filteredusersList = this.usersList;
+  }
+
+  this.filteredusersList = this.usersList.filter(
+    users => users?.item.toLowerCase().includes(text.toLowerCase())
+  );
+}
+
 
   //ordersummary details array-mock
 
@@ -51,7 +65,7 @@ export class DashboardComponent {
       imgicon: "../assets/user.png",
       id:"ID2435635", 
       name:"Bosun Jones", 
-      item:"Pizza and Chips",
+      item:"Ugali and Beefstew",
       value:"Ksh5000", 
       qty:12, 
       date:"25th May 2019", 
@@ -75,7 +89,7 @@ export class DashboardComponent {
       imgicon: "../assets/user.png",
       id:"ID2435635", 
       name:"Bosun Jones", 
-      item:"Pizza and Chips",
+      item:"Rice and Beans",
       value:"Ksh5000", 
       qty:12, 
       date:"25th May 2019", 
@@ -99,7 +113,7 @@ export class DashboardComponent {
       imgicon: "../assets/user.png",
       id:"ID2435635", 
       name:"Bosun Jones", 
-      item:"Pizza and Chips",
+      item:"Chapati and Beans",
       value:"Ksh5000", 
       qty:12, 
       date:"25th May 2019", 

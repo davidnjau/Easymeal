@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Users } from 'src/app/users';
 
 @Component({
   selector: 'app-offduty',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./offduty.component.css']
 })
 export class OffdutyComponent {
-
+  @Input() users!:Users;
 }

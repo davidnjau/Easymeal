@@ -32,7 +32,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatDialogModule} from '@angular/material/dialog';
-//import {ReactiveFormsModule} from '@angular/forms';
+import {ReactiveFormsModule} from '@angular/forms';
 import { faBell } from '@fortawesome/free-solid-svg-icons';
 
 @NgModule({
@@ -66,17 +66,17 @@ import { faBell } from '@fortawesome/free-solid-svg-icons';
     FormsModule,
     FontAwesomeModule,
     BrowserAnimationsModule,
-   // MatButtonModule,
+    MatButtonModule,
     MatIconModule,
     MatInputModule,
     MatFormFieldModule,
     MatDialogModule,
     MatInputModule,
-   // ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
- // entryComponents:[DialogBodyComponent]
+  //entryComponents:[DialogBodyComponent]
 
 })
 export class AppModule { 

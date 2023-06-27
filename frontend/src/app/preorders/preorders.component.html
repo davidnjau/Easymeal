@@ -19,8 +19,8 @@
     </div>
 
     <form class="input" action="/action_page.php">
-        <input type="text" placeholder="Search Item" name="search">
-        <button type="submit">Search</button>
+        <input type="text" placeholder="Search Item" name="search" #filter>
+        <button type="submit" (click)="filterResults(filter.value)">Search</button>
       </form>
       <form><select class="input" action="/action_page.php" name="category" id="category" placeholder="select category">
         <option value="select category" disabled selected>Select Category</option>
@@ -43,6 +43,6 @@
             </thead>
         </table>
         </section>
-    <app-livesummary *ngFor="let users of usersList" [users]="users"></app-livesummary>
+    <app-livesummary *ngFor="let users of filteredusersList" [users]="users"></app-livesummary>
     
 </section>

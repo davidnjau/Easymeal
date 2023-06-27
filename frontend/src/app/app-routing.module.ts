@@ -15,8 +15,8 @@ const routes: Routes = [
   {path: 'liveorders', component:LiveordersComponent},
   {path: 'preorders', component:PreordersComponent},
   {path: 'staff', component:StaffComponent},
-  {path: 'onduty', component:OndutyComponent},
-  {path: 'offduty', component:OffdutyComponent},
+  {path: 'staff/onduty', component:OndutyComponent},
+  {path: 'staff/offduty', component:OffdutyComponent},
   {path: 'inventory', component:InventoryComponent},
   {path: '', redirectTo: '/homepage', pathMatch:'full'}
 ];

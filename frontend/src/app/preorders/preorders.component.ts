@@ -12,13 +12,25 @@ export class PreordersComponent {
   
  trendingcomboList : Trendingcombo []=[];
  trendingservice:TrendingService = inject(TrendingService);
+ filteredusersList: Users[] = [];
  
  constructor(){
    this.trendingcomboList = this.trendingservice.getAllTrendingcombo();
  }
 
- //ordersummary details array-mock
+   // implementing filterresult event handler function to return the selected itemname
+filterResults(text: string) {
+  if (!text) {
+    this.filteredusersList = this.usersList;
+  }
 
+  this.filteredusersList = this.usersList.filter(
+    users => users?.item.toLowerCase().includes(text.toLowerCase())
+  );
+}
+
+
+ //ordersummary details array-mock
  usersList : Users[] = [
   {
     imgicon: "../assets/user.png",

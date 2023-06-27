@@ -17,6 +17,7 @@ export class StaffComponent {
 
  trendingcomboList : Trendingcombo []=[];
  trendingservice:TrendingService = inject(TrendingService);
+ filteredusersList: Users[] = [];
  
  constructor(/*private dialog:MatDialog*/){  //popup  dialog function
   /*openDialog(){
@@ -26,6 +27,15 @@ export class StaffComponent {
   }*/
 
    this.trendingcomboList = this.trendingservice.getAllTrendingcombo();
+ 
+}
+ // implementing filterresult event handler function to return the searched staff by department
+ filterResults(text: string) {
+  if (!text) {
+    this.filteredusersList = this.usersList;
+  }
+
+  this.filteredusersList = this.usersList.filter(users => users?.department.toLowerCase().includes(text.toLowerCase()));
 }
  
 

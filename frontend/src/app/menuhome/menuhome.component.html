@@ -2,8 +2,8 @@
 <div class="menubar">
     <p>Menu Items</p>
     <form class="input" action="/action_page.php">
-        <input type="text" placeholder="Search Item" name="search">
-        <button type="submit">Search</button>
+        <input type="text" placeholder="Search Item" name="search" #filter>
+        <button type="submit"  (click)="filterResults(filter.value)">Search</button>
       </form>
       <form class="input" action="/action_page.php">
      <div class="mealadding"><button type="submit" >Add Category</button></div>
@@ -34,7 +34,7 @@
     </section>
 
     <section class="combos">
-        <app-menu  *ngFor="let trendingcombo of trendingcomboList"
+        <app-menu  *ngFor="let trendingcombo of filteredcomboList"
             [trendingcombo]="trendingcombo"></app-menu>        
     </section>  
 </section>
@@ -64,7 +64,7 @@
     </section>
 
     <section class="combos">
-        <app-menusinglemeals  *ngFor="let trendingcombo of trendingcomboList"
+        <app-menusinglemeals  *ngFor="let trendingcombo of  filteredcomboList"
             [trendingcombo]="trendingcombo"></app-menusinglemeals>        
     </section>  
 </section>
@@ -94,7 +94,7 @@
     </section>
 
     <section class="combos">
-        <app-menubeverages  *ngFor="let trendingcombo of trendingcomboList"
+        <app-menubeverages  *ngFor="let trendingcombo of  filteredcomboList"
             [trendingcombo]="trendingcombo"></app-menubeverages>        
     </section>  
 </section>

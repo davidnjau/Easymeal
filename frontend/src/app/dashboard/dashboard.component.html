@@ -30,9 +30,9 @@
         <div class="faicon"><fa-icon icon="ellipsis"></fa-icon></div>
     </div>
     <section class="dropdown">
-        <select name="category" id="category" placeholder="select category"> <!--The dropdown, to hide or show table contents-->
-          <option value="select category" disabled selected>Select Category</option>
-          <option *ngFor="let users of usersList">{{users.name}}</option>
+        <select name="category" id="category" placeholder="select category" #filter > <!--The dropdown, to show ordersummary contents-->
+          <option value="select category" (click)="filterResults(filter.value)" >Select Category</option>  <!--Click event to filter by item(not working properly yet)-->
+          <option *ngFor="let users of usersList">{{users.item}}</option>
         </select>
     </section>
     <section class="datatable">
@@ -50,7 +50,7 @@
         </table>
         </section>
     <app-rest *ngFor="let users of usersList" [users]="users"></app-rest>
-    
+                             <!--filteredusersList-->
 </section>
 
 

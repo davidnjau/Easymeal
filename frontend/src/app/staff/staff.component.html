@@ -61,8 +61,8 @@
 <section class="ordersummary">
 
     <form class="input" action="/action_page.php">
-        <input type="text" placeholder="" name="search">
-        <button type="submit">Search</button>
+        <input type="text" placeholder="" name="search" #filter>
+        <button type="submit" (click)="filterResults(filter.value)">Search</button>
       </form>
 
 
@@ -80,7 +80,7 @@
             </thead>
         </table>
         </section>
-    <app-staffing *ngFor="let users of usersList" [users]="users"></app-staffing>
+    <app-staffing *ngFor="let users of filteredusersList" [users]="users"></app-staffing>
     
 </section>
 
@@ -90,7 +90,7 @@
 
 
 <!--
-    <button mat-raised-button color="primary" >
+    <button mat-raised-button color="primary" (click)="openDialog()">
         <mat-icon>add</mat-icon>ADDADD</button>
         
-(click)="openDialog()"-->
+-->

@@ -13,9 +13,21 @@ import { RestComponent } from '../rest/rest.component';
 export class MenuhomeComponent {
   trendingcomboList : Trendingcombo []=[];
   trendingservice:TrendingService = inject(TrendingService);
+  filteredcomboList: Trendingcombo[] = [];
   
   constructor(){
     this.trendingcomboList = this.trendingservice.getAllTrendingcombo();
+    this.filteredcomboList = this.trendingcomboList;
   }
+// implementing filterresult event handler function to return the searched combo dish
+filterResults(text: string) {
+  if (!text) {
+    this.filteredcomboList = this.trendingcomboList;
+  }
+
+  this.filteredcomboList = this.trendingcomboList.filter(
+    trendingcombo => trendingcombo?.comboname.toLowerCase().includes(text.toLowerCase())
+  );
+}
 
 }
