@@ -33,7 +33,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatInputModule} from '@angular/material/input';
-
+import {ReactiveFormsModule} from '@angula/forms';
 //import { faBell } from '@fortawesome/free-solid-svg-icons';
 
 @NgModule({
@@ -72,7 +72,8 @@ import {MatInputModule} from '@angular/material/input';
     MatInputModule,
     MatFormFieldModule,
     MatDialogModule,
-    MatInputModule
+    MatInputModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
@@ -80,7 +81,7 @@ import {MatInputModule} from '@angular/material/input';
 
 })
 export class AppModule { 
-  
+
   constructor(library: FaIconLibrary) {
     library.addIcons(faBell, faUser, faEllipsisH);
   

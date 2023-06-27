@@ -11,5 +11,14 @@ export class DialogBodyComponent implements OnInit {
 
   ngOnInit() {
   }*/
+  Reactiveform = new FormGroup({
+    code: new FormControl({ value: 0, disabled: true }),
+    name: new FormControl("", Validators.required),
+    email: new FormControl("", Validators.required),
+    phone: new FormControl("", Validators.required),
+    designation: new FormControl(""),
+    gender: new FormControl("M"),
+    isactive: new FormControl(true)
+  });
 
 }
