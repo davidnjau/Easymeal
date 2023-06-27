@@ -5,20 +5,21 @@ import { Component,  OnInit} from '@angular/core';
   templateUrl: './dialog-body.component.html',
   styleUrls: ['./dialog-body.component.css']
 })
-export class DialogBodyComponent implements OnInit {
+export class DialogBodyComponent /*implements OnInit */{
   /*
   constructor() { }
 
   ngOnInit() {
-  }*/
+  }
+*/
+/*
   Reactiveform = new FormGroup({
-    code: new FormControl({ value: 0, disabled: true }),
-    name: new FormControl("", Validators.required),
-    email: new FormControl("", Validators.required),
-    phone: new FormControl("", Validators.required),
-    designation: new FormControl(""),
-    gender: new FormControl("M"),
-    isactive: new FormControl(true)
-  });
+    employeename: new FormControl({ value: 0, disabled: true }),
+    phonenumber: new FormControl("", Validators.required),
+    department: new FormControl("", Validators.required),
+    position: new FormControl("", Validators.required),
+   image: new FormControl("")
+
+  }); */
 
 }

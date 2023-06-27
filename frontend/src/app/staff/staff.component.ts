@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { TrendingService } from '../trending.service';
 import { Trendingcombo } from '../trendingcombo';
 import { Users } from '../users';
-import {MatDialog, MatDialogConfig} from '@angular/material';
+//import {MatDialog, MatDialogConfig} from '@angular/material';
 import { DialogBodyComponent } from '../dialog-body/dialog-body.component';
 
 @Component({
@@ -15,15 +15,16 @@ export class StaffComponent {
  trendingcomboList : Trendingcombo []=[];
  trendingservice:TrendingService = inject(TrendingService);
  
- constructor(private dialog:MatDialog){
-  openDialog(){
-    this.dialog.open(DialogBodyComponent),{
+ constructor(/*private dialog:MatDialog*/){  //popup  dialog function
+  /*openDialog(){
+    this.dialog.open(DialogBodyComponent,{
       width:"50%"
-    }
-  }
+    })
+  }*/
 
    this.trendingcomboList = this.trendingservice.getAllTrendingcombo();
- }
+}
+ 
 
  //ordersummary details array-mock
 

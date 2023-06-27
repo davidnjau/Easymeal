@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
-import { faBell, faEllipsisH } from '@fortawesome/free-solid-svg-icons';
+import { faEllipsisH } from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { RestComponent } from './rest/rest.component';
 import { TrendingcomboComponent } from './trendingcombo/trendingcombo.component';
@@ -32,9 +32,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatDialogModule} from '@angular/material/dialog';
-import {MatInputModule} from '@angular/material/input';
-import {ReactiveFormsModule} from '@angula/forms';
-//import { faBell } from '@fortawesome/free-solid-svg-icons';
+//import {ReactiveFormsModule} from '@angular/forms';
+import { faBell } from '@fortawesome/free-solid-svg-icons';
 
 @NgModule({
   declarations: [
@@ -67,17 +66,17 @@ import {ReactiveFormsModule} from '@angula/forms';
     FormsModule,
     FontAwesomeModule,
     BrowserAnimationsModule,
-    MatButtonModule,
+   // MatButtonModule,
     MatIconModule,
     MatInputModule,
     MatFormFieldModule,
     MatDialogModule,
     MatInputModule,
-    ReactiveFormsModule
+   // ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents:[DialogBodyComponent]
+ // entryComponents:[DialogBodyComponent]
 
 })
 export class AppModule { 
