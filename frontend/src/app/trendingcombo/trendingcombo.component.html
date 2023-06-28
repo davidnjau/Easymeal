@@ -20,8 +20,8 @@
 <section class="combos">
    
         <article>
-            <a routerLink="./menu"><img class="combo-photo" [src]="trendingcombo.photo" alt="Exterior photo of {{trendingcombo.comboname}}"></a> 
-            <a routerLink="./menu"><h2 class="combo-heading">{{trendingcombo.comboname }} <br> <p>{{trendingcombo.ordernumber}}</p></h2></a> 
-        <div  class="combo-details"><p> {{trendingcombo.price }}</p></div>
-    </article>
+            <a routerLinkActive="active" routerLink="./menuhome"><img class="combo-photo" [src]="trendingcombo.photo" alt="Exterior photo of {{trendingcombo.comboname}}"></a> 
+            <a routerLinkActive="active" routerLink="./menuhome"><h2 class="combo-heading">{{trendingcombo.comboname }} <br> <p>{{trendingcombo.ordernumber}}</p></h2></a> 
+            <div  class="combo-details"><p> {{trendingcombo.price }}</p></div>
+        </article>
 </section>

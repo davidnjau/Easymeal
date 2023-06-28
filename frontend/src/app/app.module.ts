@@ -34,6 +34,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatDialogModule} from '@angular/material/dialog';
 import {ReactiveFormsModule} from '@angular/forms';
 import { faBell } from '@fortawesome/free-solid-svg-icons';
+import { ItemComponent } from './item/item.component';
+import { ItemDialogComponent } from './item-dialog/item-dialog.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +59,8 @@ import { faBell } from '@fortawesome/free-solid-svg-icons';
     OffdutyComponent,
     InventoryitemsComponent,
     DialogBodyComponent,
+    ItemComponent,
+    ItemDialogComponent,
     
    
   ],

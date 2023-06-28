@@ -3,7 +3,8 @@
     <p>Staff</p>
         <div class="title">
             <form class="inputone" action="/action_page.php">
-            <button type="submit">Add Staff</button>
+            <button mat-raised-button type="submit">Add Staff</button>
+                    <!-- (click)="openDialog()"-->
             </form>
         </div>
 </div> 
@@ -86,11 +87,10 @@
 
 
 <router-outlet></router-outlet>
+<app-item></app-item>
 
 
 
-<!--
-    <button mat-raised-button color="primary" (click)="openDialog()">
-        <mat-icon>add</mat-icon>ADDADD</button>
+
+
         
--->

@@ -6,8 +6,11 @@ import { OffdutyComponent } from './offduty/offduty.component';
 import { RouterModule, Routes } from '@angular/router';
 import { Users } from '../users';
 import { UsersService } from '../users.service';
-//import {MatDialog, MatDialogConfig} from '@angular/material';
+import {MatDialog, MatDialogConfig} from '@angular/material/dialog';
 import { DialogBodyComponent } from '../dialog-body/dialog-body.component';
+import { ItemComponent } from '../item/item.component'; 
+import { ItemService } from '../item.service';
+import { ItemDialogComponent } from '../item-dialog/item-dialog.component';
 
 @Component({
   selector: 'app-staff',
@@ -25,10 +28,10 @@ trendingservice:TrendingService = inject(TrendingService);
 //ordersummary details array-mock (transfered to users service)
  usersList : Users[] = [];
  filteredusersList: Users[] = [];
-
  usersservice:UsersService = inject(UsersService);
- 
- constructor(/*private dialog:MatDialog*/){  //popup  dialog function
+
+  //add/edit/delete popup  dialog function 
+ constructor(/*private dialog:MatDialog*/){ 
   /*openDialog(){
     this.dialog.open(DialogBodyComponent,{
       width:"50%"
@@ -44,8 +47,7 @@ trendingservice:TrendingService = inject(TrendingService);
     this.filteredusersList = this.usersList;
   }
 
-  this.filteredusersList = this.usersList.filter(users => users?.department.toLowerCase().includes(text.toLowerCase()));
+ // this.filteredusersList = this.usersList.filter(users => users?.department.toLowerCase().includes(text.toLowerCase()));
+  this.filteredusersList = this.usersList.filter(users => users?.staffname.toLowerCase().includes(text.toLowerCase()));
 }
- 
-
 }
