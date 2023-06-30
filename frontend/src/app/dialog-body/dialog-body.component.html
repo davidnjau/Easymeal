@@ -6,19 +6,22 @@
     <mat-form-field appearance="outline">
         <input placeholder="Employee Name" matInput>
     </mat-form-field>
-    <mat-form-field>
+    <mat-form-field appearance="outline">
         <input placeholder="Phone Number" matInput>
     </mat-form-field>
-    <mat-form-field>
+    <mat-form-field appearance="outline">
         <input placeholder="Department" matInput>
     </mat-form-field>
-    <mat-form-field>
+    <mat-form-field appearance="outline">
         <input placeholder="Position" matInput>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <input placeholder="Add Image" matInput>
     </mat-form-field>
     
 </div>
 <div mat-dialog-actions>
-  <button mat-raised-button color="warn" mat-dialog-close>Close</button>
-  <button mat-raised-button color="primary" [mat-dialog-close]="true">Add staff</button>
+  <!--<button mat-raised-button color="warn" mat-dialog-close>Close</button>-->
+  <button mat-raised-button class="addbutton" [mat-dialog-close]="true" >Add staff</button>
 </div>
 </form>

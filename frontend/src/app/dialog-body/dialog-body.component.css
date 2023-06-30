@@ -1,5 +1,14 @@
-.mat-form-field{
+mat-form-field{
     display: block important;
     position:relative;
     text-align: left;
+    width:100%;
+    color: black;
+    padding-bottom: 10px;
+    
+}
+.addbutton{
+    width:90%;
+    background-color: green;
+    height:50px;
 }

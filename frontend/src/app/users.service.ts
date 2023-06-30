@@ -160,7 +160,7 @@ export class UsersService {
       return this.usersList;
     }
 
-    getTrendingcomboById(item: string):Users| undefined {
+    getUsersById(item: string):Users| undefined {
       return this.usersList.find(users =>users.item === item);
     }
       constructor() {}

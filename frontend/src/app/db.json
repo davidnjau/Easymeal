@@ -1,9 +1,0 @@
-
-    {
-        "Users":[
-            {"id":"2435635", "name":"Bosun Jones", "item":"Pizza and Chips","value":"Ksh5000", "qty":12, "date":"25th May 2019", "status":"Pending"},
-            {"id":"2435635", "name":"Bosun Jones", "item":"Pizza and Chips","value":"Ksh5000", "qty":12, "date":"25th May 2019", "status":"Completed"},
-            {"id":"2435635", "name":"Bosun Jones", "item":"Pizza and Chips","value":"Ksh5000", "qty":12, "date":"25th May 2019", "status":"Cancelled"},
-            {"id":"2435635", "name":"Bosun Jones", "item":"Pizza and Chips","value":"Ksh5000", "qty":12, "date":"25th May 2019", "status":"Pending"}
-        ]
-    }
