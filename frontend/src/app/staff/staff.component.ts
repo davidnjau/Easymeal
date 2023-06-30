@@ -46,7 +46,8 @@ openDialog(){
         this.usersList = this.usersList;
         this.filteredusersList = usersList;
     });
-    }
+  }
+  
  // implementing filterresult event handler function to return the searched staff by department
  filterResults(text: string) {
   if (!text) {
