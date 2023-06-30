@@ -23,31 +23,37 @@ export class StaffComponent {
 trendingcomboList : Trendingcombo []=[];
 trendingservice:TrendingService = inject(TrendingService);
 
-
+ //add staff popup dialog function 
+openDialog(){
+  this.dialog.open(DialogBodyComponent,{
+    width:"55%"
+  })
+}
 
 //ordersummary details array-mock (transfered to users service)
  usersList : Users[] = [];
  filteredusersList: Users[] = [];
  usersservice:UsersService = inject(UsersService);
 
-  //add/edit/delete popup  dialog function 
- constructor(/*private dialog:MatDialog*/){ 
-  /*openDialog(){
-    this.dialog.open(DialogBodyComponent,{
-      width:"50%"
-    })
-  }*/
-
+ 
+ constructor(private dialog:MatDialog){ 
+  
   this.trendingcomboList = this.trendingservice.getAllTrendingcombo();
-  this.usersList = this.usersservice.getAllUsers();
-}
+  
+    ////
+  
+    this.usersservice.getAllUsers().then((usersList: Users[]) => {    //method to get from json file
+        this.usersList = this.usersList;
+        this.filteredusersList = usersList;
+    });
+    }
  // implementing filterresult event handler function to return the searched staff by department
  filterResults(text: string) {
   if (!text) {
     this.filteredusersList = this.usersList;
   }
 
- // this.filteredusersList = this.usersList.filter(users => users?.department.toLowerCase().includes(text.toLowerCase()));
+ // this.filteredusersList = this.usersList.filter(users => users?.staffid.toLowerCase().includes(text.toLowerCase()));
   this.filteredusersList = this.usersList.filter(users => users?.staffname.toLowerCase().includes(text.toLowerCase()));
 }
 }

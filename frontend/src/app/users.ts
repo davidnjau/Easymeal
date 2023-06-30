@@ -7,9 +7,10 @@ export interface Users{
     value: string;
     date: string;
     status: string;
-    action:string;
+    //action:string;
     staffname:string;
     staffimg:string;
+    staffid:number;
     position:string;
     department:string;
     joined:string;
@@ -20,7 +21,7 @@ export interface Users{
     qtyin: string;
     currentqty: string;
     qtystatus:string;
-    qtyaction:string;
+   // qtyaction:string;
 
 
 }

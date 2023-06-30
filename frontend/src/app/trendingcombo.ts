@@ -4,7 +4,6 @@ export interface Trendingcombo {
   ordernumber: string;
   price: string;
   photo: string;
-  action:string;
   value: string;
   date: string;
   singlemealname: string;

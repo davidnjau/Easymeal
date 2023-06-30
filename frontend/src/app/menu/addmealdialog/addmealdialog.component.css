@@ -1,0 +1,12 @@
+tbody td fa-icon{
+    width:40px;
+    height:30px;
+    padding:10px 20px 10px 10px;
+   
+}
+tbody td .add{
+    color: aqua;
+}
+tbody td .del{
+    color:red;
+}

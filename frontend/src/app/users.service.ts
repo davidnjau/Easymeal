@@ -1,167 +1,67 @@
 import { Injectable } from '@angular/core';
 import { Users } from './users';
+import { HttpClient } from '@angular/common/http';
+import { Observable, Subject,tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsersService {
-  usersList : Users[] = [
-    {
-      imgicon: "../assets/user.png",
-      id:"ID2435635", 
-      name:"Bosun Jones", 
-      item:"Pizza and Chips",
-      value:"Ksh5000", 
-      qty:12, 
-      date:"25th May 2019", 
-      status:"Pending",
-      action:"add or remove",
-      staffimg: "../assets/staffimg2.jpg",
-      staffname:"Grant Marshall",
-      position:"Head Chef",
-      department:"Kitchen",
-      joined:"9.12.20215",
-      mobile: "0722000000",
+  url = 'http://localhost:3000/users';
 
-      itemid:1,
-     itemname:"Salt",
-     datein:"25/2/2021",
-     qtyin:"25 Kgs",
-     currentqty: "20 Kgs",
-     qtystatus:"Good",
-     qtyaction:""
-    },
-    {
-      imgicon: "../assets/user.png",
-      id:"ID2435635", 
-      name:"Bosun Jones", 
-      item:"Ugali and Beefstew",
-      value:"Ksh5000", 
-      qty:12, 
-      date:"25th May 2019", 
-      status:"Cancelled",
-      action:"add or remove",
-      staffimg: "../assets/staffimg1.jpg",
-      staffname:"Pena Valdez",
-      position:"Sous Chef",
-      department:"Kitchen",
-      joined:"9.12.20215",
-      mobile: "0722000000",
-      itemid:2,
-      itemname:"Sugar",
-      datein:"25/2/2021",
-      qtyin:"25 Kgs",
-      currentqty: "2 Kgs",
-      qtystatus:"Low",
-      qtyaction:"Send Requisition"
-    },
-    {
-      imgicon: "../assets/user.png",
-      id:"ID2435635", 
-      name:"Bosun Jones", 
-      item:"Rice and Beans",
-      value:"Ksh5000", 
-      qty:12, 
-      date:"25th May 2019", 
-      status:"Completed",
-      action:"add or remove",
-      staffimg: "../assets/staffimg3.jpg",
-      staffname:"Jessica Miles",
-      position:"Store Keeper",
-      department:"Store",
-      joined:"9.12.20215",
-      mobile: "0722000000",
-      itemid:3,
-      itemname:"Onions",
-      datein:"25/2/2021",
-      qtyin:"25 Kgs",
-      currentqty: "18 Kgs",
-      qtystatus:"Good",
-      qtyaction:""
-    },
-    {
-      imgicon: "../assets/user.png",
-      id:"ID2435635", 
-      name:"Bosun Jones", 
-      item:"Chapati and Beans",
-      value:"Ksh5000", 
-      qty:12, 
-      date:"25th May 2019", 
-      status:"Completed",
-      action:"add or remove",
-      staffimg: "../assets/staffimg4.jpg",
-      staffname:"Kerri Barber",
-      position:"Cashier",
-      department:"Sales",
-      joined:"9.12.20215",
-      mobile: "0722000000",
-      itemid:4,
-      itemname:"Tomatoes",
-      datein:"25/2/2021",
-      qtyin:"25 Kgs",
-      currentqty: "20 Kgs",
-      qtystatus:"Good",
-      qtyaction:""
-
-    },
-    {
-     imgicon: "../assets/user.png",
-     id:"ID2435635", 
-     name:"Bosun Jones", 
-     item:"Pizza and Chips",
-     value:"Ksh5000", 
-     qty:12, 
-     date:"25th May 2019", 
-     status:"Completed",
-     action:"add or remove",
-     staffimg: "../assets/staffimg5.jpg",
-      staffname:"Natasha Gamble",
-      position:"Waiter",
-      department:"Kitchen",
-      joined:"9.12.20215",
-      mobile: "0722000000",
-      itemid:5,
-      itemname:"Wheat Flour",
-      datein:"25/2/2021",
-      qtyin:"25 Kgs",
-      currentqty: "2 Kgs",
-      qtystatus:"Low",
-      qtyaction:"Send Requisition"
-    },
-    {
-     imgicon: "../assets/user.png",
-     id:"ID2435635", 
-     name:"Bosun Jones", 
-     item:"Pizza and Chips",
-     value:"Ksh5000", 
-     qty:12, 
-     date:"25th May 2019", 
-     status:"Completed",
-     action:"add or remove",
-     staffimg: "../assets/staffimg6.jpg",
-      staffname:"White Castaneda",
-      position:"Waiter",
-      department:"Kitchen",
-      joined:"9.12.20215",
-      mobile: "0722000000",
-      itemid:6,
-      itemname:"Maize Flour",
-      datein:"25/2/2021",
-      qtyin:"25 Kgs",
-      currentqty: "19 Kgs",
-      qtystatus:"Good",
-      qtyaction:""
+  
+  //service function to inject in components altered to //use asynchronous code to make a get request over HTTP
+  async getAllUsers(): Promise<Users[]> {      
+      const data = await fetch(this.url);
+      return await data.json() ?? [];
     }
 
-  ];
-
-  //service function to inject in components
-    getAllUsers():Users[] {
-      return this.usersList;
+    async getUsersById(staffid:number): Promise<Users| undefined> {
+      const data = await fetch(`${this.url}/${staffid}`);
+      return await data.json() ?? {};
+    }
+/*
+     async Remove(staffid:any) {
+      //const data = await delete(this.url);
+      //return await data.json() ?? {};
+      return this.http.delete(`${this.url}/${staffid}`);
     }
 
-    getTrendingcomboById(item: string):Users| undefined {
-      return this.usersList.find(users =>users.item === item);
-    }
-      constructor() {}
+    async Save(inputdata:any){
+        //const data = await post(this.url);
+        //return await data.json() ?? {};
+        return this.http.post(this.url, inputdata)
+        .pipe(
+          tap(()=>{
+        this.RequiredRefresh.next();
+          })
+        );
+      }
+      constructor( private http:HttpClient) {}
+
+*/
+
+      /*private _refreshrequired=new Subject<void>();
+  get RequiredRefresh(){
+    return this._refreshrequired;
+  }*/
+/*
+  getAllUsers(): Observable<Users> {
+    return this.http.get<Users>(this.url);
+  }
+  GetEmployeebystaffid(staffid:any){
+    return this.http.get(this.url+'/'+staffid);
+  }
+  Remove(staffname:any){
+    return this.http.delete(this.url+'/'+staffname);
+  }
+  Save(inputdata:any){
+    return this.http.post(this.url,inputdata).pipe(
+      tap(()=>{
+      this.RequiredRefresh.next();
+      })
+    );
+  }
+*/
 }
+

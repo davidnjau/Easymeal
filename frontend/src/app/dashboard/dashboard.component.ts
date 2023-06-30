@@ -15,21 +15,24 @@ import { UsersService } from '../users.service';
 export class DashboardComponent {
   trendingcomboList : Trendingcombo []=[];
   trendingservice:TrendingService = inject(TrendingService);
+
+
+  //ordersummary details array-mock (transfered to users service)
+  usersList : Users[] = [];
   filteredusersList: Users[] = [];
+  usersservice:UsersService = inject(UsersService);
 
+  //add/edit/delete popup  dialog function 
+  constructor(/*private dialog:MatDialog*/){ 
+  
+  this.trendingcomboList = this.trendingservice.getAllTrendingcombo();
+  ////
 
-
-
-  //ordersummary details array-mock (transfered to users.ts service)
-   usersList : Users[] = [];
-   usersservice:UsersService = inject(UsersService);
-
-  constructor(){
-    this.trendingcomboList = this.trendingservice.getAllTrendingcombo();
-    this.usersList = this.usersservice.getAllUsers();
+  this.usersservice.getAllUsers().then((usersList: Users[]) => {
+      this.usersList = this.usersList;
+      this.filteredusersList = usersList;
+  });
   }
-
-
  // implementing filterresult event handler function to return the selected itemname
   filterResults(text: string) {
     if (!text) {

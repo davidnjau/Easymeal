@@ -1,24 +1,31 @@
 
 <h4 mat-dialog-title> Add Staff Member</h4>
 
-<form>
+<form [formGroup]="Reactiveform" (ngSubmit)="SaveStaff()">
 <div mat-dialog-content>
     <mat-form-field appearance="outline">
-        <input placeholder="Employee Name" matInput>
+        <mat-label>Employee Name</mat-label>
+        <input placeholder="Employee Name" matInput formControlName="staffname">
     </mat-form-field>
-    <mat-form-field>
-        <input placeholder="Phone Number" matInput>
+    <mat-form-field appearance="outline">
+        <mat-label>Phone Number</mat-label>
+        <input placeholder="Phone Number" matInput formControlName="mobile">
     </mat-form-field>
-    <mat-form-field>
-        <input placeholder="Department" matInput>
+    <mat-form-field appearance="outline">
+        <mat-label>Department</mat-label>
+        <input placeholder="Department" matInput formControlName="department">
     </mat-form-field>
-    <mat-form-field>
-        <input placeholder="Position" matInput>
+    <mat-form-field appearance="outline">
+        <mat-label>Position</mat-label>
+        <input placeholder="Position" matInput formControlName="position">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <input placeholder="Add Image" matInput formControlName="staffimg">
     </mat-form-field>
     
 </div>
 <div mat-dialog-actions>
-  <button mat-raised-button color="warn" mat-dialog-close>Close</button>
-  <button mat-raised-button color="primary" [mat-dialog-close]="true">Add staff</button>
+  <!--<button mat-raised-button color="warn" mat-dialog-close>Close</button>-->
+  <button mat-raised-button class="addbutton" [mat-dialog-close]="true" type="submit">Add staff</button>
 </div>
 </form>

@@ -1,0 +1,22 @@
+<h4 mat-dialog-title> Add Item</h4>
+  
+  <form>
+  <div mat-dialog-content>
+      <mat-form-field appearance="outline">
+          <mat-label>Item Name</mat-label>
+          <input placeholder="Item Name" matInput formControlName="staffname">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+      <mat-label>Item Price</mat-label>
+      <input placeholder="Item Price" matInput formControlName="staffname">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+  <input placeholder="Image" matInput formControlName="staffname">
+</mat-form-field>
+      
+  </div>
+  <div mat-dialog-actions>
+    <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+    <button mat-raised-button class="addbutton" type="submit">Add Food Item</button>
+  </div>
+  </form>

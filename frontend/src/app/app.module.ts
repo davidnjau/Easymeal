@@ -34,8 +34,13 @@ import {MatInputModule} from '@angular/material/input';
 import {MatDialogModule} from '@angular/material/dialog';
 import {ReactiveFormsModule} from '@angular/forms';
 import { faBell } from '@fortawesome/free-solid-svg-icons';
+import { faEdit } from '@fortawesome/free-solid-svg-icons';
+import { faDeleteLeft } from '@fortawesome/free-solid-svg-icons';
 import { ItemComponent } from './item/item.component';
 import { ItemDialogComponent } from './item-dialog/item-dialog.component';
+import { InventorydialogComponent } from './inventory/inventorydialog/inventorydialog.component';
+import { MenudialogComponent } from './menudialog/menudialog.component';
+import { AddmealdialogComponent } from './menu/addmealdialog/addmealdialog.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +66,9 @@ import { ItemDialogComponent } from './item-dialog/item-dialog.component';
     DialogBodyComponent,
     ItemComponent,
     ItemDialogComponent,
+    InventorydialogComponent,
+    MenudialogComponent,
+    AddmealdialogComponent,
     
    
   ],
@@ -86,7 +94,7 @@ import { ItemDialogComponent } from './item-dialog/item-dialog.component';
 export class AppModule { 
 
   constructor(library: FaIconLibrary) {
-    library.addIcons(faBell, faUser, faEllipsisH);
+    library.addIcons(faBell, faUser, faEllipsisH, faEdit, faDeleteLeft);
   
   }
 }
