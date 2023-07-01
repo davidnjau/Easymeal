@@ -1,8 +1,8 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-//import * as alertify from 'alertifyjs';
 import { MatDialogRef,MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { UsersService } from '../users.service';
+import { CoreService } from '../core.service';
 import Swal from 'sweetalert2';
 
 
@@ -12,15 +12,33 @@ import Swal from 'sweetalert2';
   styleUrls: ['./dialog-body.component.css']
 })
 export class DialogBodyComponent implements OnInit{
-  
-  constructor( /*private service: UsersService, public dialogref: MatDialogRef<DialogBodyComponent>,@Inject(MAT_DIALOG_DATA) public data:any*/) { }
 
+  empForm: FormGroup;
+  
+  constructor(
+    private _fb: FormBuilder,
+    private _empService: UsersService,
+    private _dialogRef: MatDialogRef<DialogBodyComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private _coreService: CoreService
+  ) {
+    this.empForm = this._fb.group({
+     staffname: '',
+      department: '',
+      position: '',
+      joined: '',
+      mobile: '',
+      action: '',
+    });
+  }
   //respdata: any;
 
   ngOnInit(): void {
+    this.empForm.patchValue(this.data);
   }
 
 
+/*
   Reactiveform = new FormGroup({
     staffname: new FormControl("", Validators.required),
     mobile: new FormControl("", Validators.required),
@@ -29,24 +47,32 @@ export class DialogBodyComponent implements OnInit{
     staffimg: new FormControl("")
   });
 
-  SaveStaff(){
-    if (this.Reactiveform.valid) {
-      console.log(this.Reactiveform.getRawValue());
-     /* this.service.Save(this.Reactiveform.getRawValue()); //.subscribe(result => {
-        this.respdata = result;
-        if (this.respdata.result == 'pass') {
-          //successNotification() {
-            Swal.fire("saved successfully.", 'success');
-          
-          /*
-          alertify.success("saved successfully.")///
-          this.dialogref.close();
-        }
-      });*/
-
-    } else {
-      Swal.fire('Please Enter valid data)', 'error');
-      //alertify.error("Please Enter valid data")
+  */
+  onFormSubmit() {
+    if (this.empForm.valid) {
+      if (this.data) {
+        this._empService
+          .updateEmployee(this.data.id, this.empForm.value)
+          .subscribe({
+            next: (val: any) => {
+              this._coreService.openSnackBar('Employee details updated!');
+              this._dialogRef.close(true);
+            },
+            error: (err: any) => {
+              console.error(err);
+            },
+          });
+      } else {
+        this._empService.addEmployee(this.empForm.value).subscribe({
+          next: (val: any) => {
+            this._coreService.openSnackBar('Employee added successfully');
+            this._dialogRef.close(true);
+          },
+          error: (err: any) => {
+            console.error(err);
+          },
+        });
+      }
     }
   }
 

@@ -177,3 +177,20 @@ tbody .icondiv img{
 .datatable{
     margin:0px 0 0 40px ;
 }
+
+
+
+mat-form-field{
+  display: block important;
+  position:relative;
+  text-align: left;
+  width:100%;
+  color: black;
+  padding-bottom: 10px;
+  
+}
+.addbutton{
+  width:90%;
+  background-color: green;
+  height:50px;
+}
