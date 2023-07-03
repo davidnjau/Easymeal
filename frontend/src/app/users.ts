@@ -1,6 +1,6 @@
 export interface Users{
     imgicon:string;
-    id: string;
+    idno: string;
     name: string;
     item: string;
     qty: number;
@@ -10,7 +10,7 @@ export interface Users{
     //action:string;
     staffname:string;
     staffimg:string;
-    staffid:number;
+    id:number;
     position:string;
     department:string;
     joined:string;

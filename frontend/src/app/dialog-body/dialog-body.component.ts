@@ -23,7 +23,7 @@ export class DialogBodyComponent implements OnInit{
     private _coreService: CoreService
   ) {
     this.empForm = this._fb.group({
-     staffname: '',
+      staffname: '',
       department: '',
       position: '',
       joined: '',

@@ -15,6 +15,7 @@ import { CoreService } from '../core.service';
 })
 export class StaffComponent implements OnInit {
   displayedColumns: string[] = [
+
     'staffname',
     'department',
     'position',
