@@ -1,79 +1,109 @@
+<div class="chefnote">
+  <p>Staff</p>
+      <div class="title">
+          <form class="inputone" action="/action_page.php">
+          <button mat-raised-button type="submit" (click)="openAddEditEmpForm()">Add Staff</button>
+          </form>
+      </div>
+</div> 
+
+<nav>
+  <div class="analytics">
+      <ul> 
+          <li>
+              <p><a  routerLinkActive="active" routerLink="staff">All </a></p>  
+          </li>
+          <li>
+              <p><a routerLink="onduty">On Duty</a></p>
+          </li>
+          <li>
+              <p><a routerLink="offduty">Off Duty</a></p>
+          </li>
+      </ul>  
+  </div>
+  <hr>
+</nav>
+
+<!--
 <mat-toolbar color="primary">
   <span>Add Staff Member</span>
   <span class="example-spacer"></span>
   <button mat-raised-button (click)="openAddEditEmpForm()">
-    ADD EMPLOYEE
+    Add Staff
   </button>
-</mat-toolbar>
+</mat-toolbar>-->
 
-
-
-<div class="main-body">
-
+<!--
   <mat-form-field>
     <mat-label>Filter</mat-label>
     <input matInput (keyup)="applyFilter($event)" placeholder="stafffilter" #input>
   </mat-form-field>
 
   <div class="table-container">
-    <table mat-table [dataSource]="dataSource" matSort>
+    <table mat-table [dataSource]="dataSource" matSort>-->
+  <section class="ordersummary">
 
-      <!-- ID Column
-      <ng-container matColumnDef="staffid">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
-        <td mat-cell *matCellDef="let row"> {{row.id}} </td>
-      </ng-container> -->
+          <form class="input" action="/action_page.php">
+            <input type="text" placeholder="" name="search" #filter  (keyup)="applyFilter($event)" #input>
+            <button type="submit" (click)="filterResults(filter.value)">Search</button>
+          </form>
+    
+    
+        <section class="datatable">
+          <table class="tabled" mat-table [dataSource]="dataSource" matSort>
 
-      <!-- Progress Column -->
-      <ng-container matColumnDef="staffname">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
-        <td mat-cell *matCellDef="let row"> {{row.staffame}}</td>
-      </ng-container>
+            <!-- Progress Column -->
+            <ng-container matColumnDef="staffname">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+              <td mat-cell *matCellDef="let row"> {{row.staffame}}</td>
+            </ng-container>
 
-      <ng-container matColumnDef="department">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Department </th>
-        <td mat-cell *matCellDef="let row"> {{row.department}}</td>
-      </ng-container>
+            <ng-container matColumnDef="department">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Department </th>
+              <td mat-cell *matCellDef="let row"> {{row.department}}</td>
+            </ng-container>
 
-      <ng-container matColumnDef="position">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>Position</th>
-        <td mat-cell *matCellDef="let row"> {{row.position}}</td>
-      </ng-container>
+            <ng-container matColumnDef="position">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Position</th>
+              <td mat-cell *matCellDef="let row"> {{row.position}}</td>
+            </ng-container>
 
-      <ng-container matColumnDef="joined">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Joined </th>
-        <td mat-cell *matCellDef="let row"> {{row.joined | date}}</td>
-      </ng-container> 
+            <ng-container matColumnDef="joined">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Joined </th>
+              <td mat-cell *matCellDef="let row"> {{row.joined | date}}</td>
+            </ng-container> 
 
-      <ng-container matColumnDef="mobile">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>Phone number</th>
-        <td mat-cell *matCellDef="let row"> {{row.mobile}}</td>
-      </ng-container>
+            <ng-container matColumnDef="mobile">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Phone number</th>
+              <td mat-cell *matCellDef="let row"> {{row.mobile}}</td>
+            </ng-container>
 
-      <ng-container matColumnDef="action">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>
-        <td mat-cell *matCellDef="let row">
-          <button mat-icon-button color="primary" (click)="openEditForm(row)">
-            <mat-icon>edit</mat-icon>
-          </button>
-          <button mat-icon-button color="warn" (click)="deleteEmployee(row.id)">
-            <mat-icon>delete</mat-icon>
-          </button>
-        </td>
-      </ng-container>
+            <ng-container matColumnDef="action">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>
+              <td mat-cell *matCellDef="let row">
+                <button mat-icon-button color="primary" (click)="openEditForm(row)">
+                  <mat-icon>edit</mat-icon>
+                </button>
+                <button mat-icon-button color="warn" (click)="deleteEmployee(row.id)">
+                  <mat-icon>delete</mat-icon>
+                </button>
+              </td>
+            </ng-container>
 
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 
-      <!-- Row shown when there is no matching data. -->
-      <tr class="mat-row" *matNoDataRow>
-        <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
-      </tr>
-    </table>
+            <!-- Row shown when there is no matching data. -->
+            <!--<tr class="mat-row" *matNoDataRow>
+              <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+            </tr>-->
+          </table>
 
-    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
-  </div>
-</div>
+          <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+    </section>
+    <!--<app-staffing *ngFor="let users of filteredusersList" [users]="users"></app-staffing>-->
+  </section>
+
 
 
 
@@ -88,56 +118,6 @@
             </form>
         </div>
 </div> 
-
-<!/// popupform begins here-///
-<!///
-<button  class="open-button" onclick="openForm()">Add Staff</button>
-
-<div class="form-popup" id="myForm">
-    <form action="/action_page.php" class="form-container">
-      <h5>Add Staff Member</h5>
-  
-      <input type="text" placeholder="Employee Name*" name="name" required>
-      <input type="text" placeholder="Phone Number*" name="name" required>
-      <input type="text" placeholder="Department*" name="name" required>
-      <input type="text" placeholder="Position*" name="name" required>
-  
-      <button type="submit" class="btn">Add Staff</button>
-     <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-    </form>
-  </div>
-  <script>
-    function openForm() {
-      document.getElementById("myForm").style.display = "block";
-    }
-    
-    function closeForm() {
-      document.getElementById("myForm").style.display = "none";
-    }
-    </script>
-
-</div>
-
-           end of popupform
-///
-
-
-<nav>
-    <div class="analytics">
-        <ul> 
-            <li>
-                <p><a  routerLinkActive="active" routerLink="staff">All </a></p>  
-            </li>
-            <li>
-                <p><a routerLink="onduty">On Duty</a></p>
-            </li>
-            <li>
-                <p><a routerLink="offduty">Off Duty</a></p>
-            </li>
-        </ul>  
-    </div>
-    <hr>
-</nav>
 
 <section class="ordersummary">
 

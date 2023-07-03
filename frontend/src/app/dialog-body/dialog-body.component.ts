@@ -20,7 +20,7 @@ export class DialogBodyComponent implements OnInit{
     private _empService: UsersService,
     private _dialogRef: MatDialogRef<DialogBodyComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
-    private _coreService: CoreService
+   // private _coreService: CoreService
   ) {
     this.empForm = this._fb.group({
       staffname: '',
@@ -51,17 +51,15 @@ export class DialogBodyComponent implements OnInit{
   onFormSubmit() {
     if (this.empForm.valid) {
       if (this.data) {
-        this._empService
-          .updateEmployee(this.data.id, this.empForm.value)
-          .subscribe({
+        this._empService.updateEmployee(this.data.id, this.empForm.value).subscribe({
             next: (val: any) => {
               //this._coreService.openSnackBar('Employee details updated!');
-               Swal.fire("Employee details updated successfully!", 'success');
+              Swal.fire("Employee details updated successfully!", 'success');
               this._dialogRef.close(true);
             },
             error: (err: any) => {
-              //console.error(err);
-              Swal.fire('Please Enter valid data)', 'error');
+              console.error(err);
+              //Swal.fire('Please Enter valid data)', 'error');
             },
           });
       } else {

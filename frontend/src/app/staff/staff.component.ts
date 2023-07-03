@@ -5,8 +5,9 @@ import { UsersService } from '../users.service';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
-import { CoreService } from '../core.service';
-//import Swal from 'sweetalert2';
+//import { CoreService } from '../core.service';
+import Swal from 'sweetalert2';
+import { Users } from '../users'; 
 
 @Component({
   selector: 'app-staff',
@@ -27,12 +28,24 @@ export class StaffComponent implements OnInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
+  ///
+  usersList : Users[] = [];
+  filteredusersList: Users[] = [];
+
   constructor(
     private _dialog: MatDialog,
     private _empService: UsersService,
-    private _coreService: CoreService
+    //private _coreService: CoreService
   ) {}
-
+  ///
+  //implementing filterresult event handler function to return the searched staff by department
+ filterResults(text: string) {
+  if (!text) {
+    this.filteredusersList = this.usersList;
+  }
+ // this.filteredusersList = this.usersList.filter(users => users?.staffid.toLowerCase().includes(text.toLowerCase()));
+  this.filteredusersList = this.usersList.filter(users => users?.staffname.toLowerCase().includes(text.toLowerCase()));
+}
   ngOnInit(): void {
     this.getEmployeeList();
   }
@@ -58,7 +71,7 @@ export class StaffComponent implements OnInit {
       error: console.log,
     });
   }
-
+  ////
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
@@ -67,14 +80,15 @@ export class StaffComponent implements OnInit {
       this.dataSource.paginator.firstPage();
     }
   }
-
+  ////
   deleteEmployee(id: number) {
     this._empService.deleteEmployee(id).subscribe({
       next: (res) => {
-        this._coreService.openSnackBar('Employee deleted!', 'done');
+        //this._coreService.openSnackBar('Employee deleted!', 'done');
+        Swal.fire("Employee deleted successfully!", 'success');
         this.getEmployeeList();
       },
-      error: console.log,
+      //error: console.log,
     });
   }
 
@@ -92,6 +106,18 @@ export class StaffComponent implements OnInit {
     });
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
 import { Component, inject } from '@angular/core';
@@ -148,7 +174,7 @@ openDialog(){
     this.filteredusersList = this.usersList;
   }
 
- // this.filteredusersList = this.usersList.filter(users => users?.staffid.toLowerCase().includes(text.toLowerCase()));
+ // this.filteredusersList = this.usersList.filter(users => users?.id.toLowerCase().includes(text.toLowerCase()));
   this.filteredusersList = this.usersList.filter(users => users?.staffname.toLowerCase().includes(text.toLowerCase()));
 }
 }
