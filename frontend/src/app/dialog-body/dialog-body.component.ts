@@ -55,21 +55,26 @@ export class DialogBodyComponent implements OnInit{
           .updateEmployee(this.data.id, this.empForm.value)
           .subscribe({
             next: (val: any) => {
-              this._coreService.openSnackBar('Employee details updated!');
+              //this._coreService.openSnackBar('Employee details updated!');
+               Swal.fire("Employee details updated successfully!", 'success');
               this._dialogRef.close(true);
             },
             error: (err: any) => {
-              console.error(err);
+              //console.error(err);
+              Swal.fire('Please Enter valid data)', 'error');
             },
           });
       } else {
         this._empService.addEmployee(this.empForm.value).subscribe({
           next: (val: any) => {
-            this._coreService.openSnackBar('Employee added successfully');
+            //this._coreService.openSnackBar('Employee added successfully');
+            Swal.fire("Employee details added successfully!", 'success');
             this._dialogRef.close(true);
           },
+          
           error: (err: any) => {
-            console.error(err);
+           // console.error(err);
+           Swal.fire('Please Enter valid data)', 'error');
           },
         });
       }
