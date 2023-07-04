@@ -11,7 +11,7 @@ import { DialogBodyComponent } from 'src/app/dialog-body/dialog-body.component';
 })
 export class OffdutyComponent {
   @Input() users!:Users;
-
+/*
 
   openDialog(){
     this.dialog.open(DialogBodyComponent,{
@@ -19,5 +19,5 @@ export class OffdutyComponent {
     })
   }
 
-  constructor(private dialog:MatDialog){}
+  constructor(private dialog:MatDialog){}*/
 }

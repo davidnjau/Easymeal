@@ -46,8 +46,6 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { faBell } from '@fortawesome/free-solid-svg-icons';
 import { faEdit } from '@fortawesome/free-solid-svg-icons';
 import { faDeleteLeft } from '@fortawesome/free-solid-svg-icons';
-import { ItemComponent } from './item/item.component';
-import { ItemDialogComponent } from './item-dialog/item-dialog.component';
 import { InventorydialogComponent } from './inventory/inventorydialog/inventorydialog.component';
 import { MenudialogComponent } from './menudialog/menudialog.component';
 import { AddmealdialogComponent } from './menu/addmealdialog/addmealdialog.component';
@@ -74,8 +72,6 @@ import { AddmealdialogComponent } from './menu/addmealdialog/addmealdialog.compo
     OffdutyComponent,
     InventoryitemsComponent,
     DialogBodyComponent,
-    ItemComponent,
-    ItemDialogComponent,
     InventorydialogComponent,
     MenudialogComponent,
     AddmealdialogComponent,

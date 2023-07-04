@@ -41,7 +41,6 @@ export class LiveordersComponent {
     if (!text) {
       this.filteredusersList = this.usersList;
     }
-
     this.filteredusersList = this.usersList.filter(
       users => users?.item.toLowerCase().includes(text.toLowerCase())
     );

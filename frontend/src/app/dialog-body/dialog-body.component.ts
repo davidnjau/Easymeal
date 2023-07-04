@@ -64,15 +64,15 @@ export class DialogBodyComponent implements OnInit{
           });
       } else {
         this._empService.addEmployee(this.empForm.value).subscribe({
-          next: (val: any) => {
+          next: (value: any) => {
             //this._coreService.openSnackBar('Employee added successfully');
             Swal.fire("Employee details added successfully!", 'success');
             this._dialogRef.close(true);
           },
           
           error: (err: any) => {
-           // console.error(err);
-           Swal.fire('Please Enter valid data)', 'error');
+            console.error(err);
+          // Swal.fire('Please Enter valid data)', 'error');
           },
         });
       }

@@ -15,7 +15,7 @@ import { Users } from '../users';
   styleUrls: ['./staff.component.css'],
 })
 export class StaffComponent implements OnInit {
-  displayedColumns: string[] = [
+  displayedColumns = [
     'staffname',
     'department',
     'position',
@@ -28,24 +28,26 @@ export class StaffComponent implements OnInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  ///
-  usersList : Users[] = [];
-  filteredusersList: Users[] = [];
-
   constructor(
     private _dialog: MatDialog,
     private _empService: UsersService,
     //private _coreService: CoreService
   ) {}
-  ///
+
+
+  ////
+    usersList : Users[] = [];
+    filteredusersList: Users[] = [];
   //implementing filterresult event handler function to return the searched staff by department
  filterResults(text: string) {
   if (!text) {
     this.filteredusersList = this.usersList;
   }
- // this.filteredusersList = this.usersList.filter(users => users?.staffid.toLowerCase().includes(text.toLowerCase()));
   this.filteredusersList = this.usersList.filter(users => users?.staffname.toLowerCase().includes(text.toLowerCase()));
 }
+////
+
+
   ngOnInit(): void {
     this.getEmployeeList();
   }
@@ -55,6 +57,7 @@ export class StaffComponent implements OnInit {
     dialogRef.afterClosed().subscribe({
       next: (val) => {
         if (val) {
+          console.log(val);
           this.getEmployeeList();
         }
       },
@@ -71,6 +74,8 @@ export class StaffComponent implements OnInit {
       error: console.log,
     });
   }
+
+
   ////
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
@@ -81,6 +86,8 @@ export class StaffComponent implements OnInit {
     }
   }
   ////
+
+
   deleteEmployee(id: number) {
     this._empService.deleteEmployee(id).subscribe({
       next: (res) => {
@@ -88,7 +95,7 @@ export class StaffComponent implements OnInit {
         Swal.fire("Employee deleted successfully!", 'success');
         this.getEmployeeList();
       },
-      //error: console.log,
+      error: console.log,
     });
   }
 
@@ -98,11 +105,12 @@ export class StaffComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe({
-      next: (val) => {
+     next: (val) => {
+      console.log('val', val);
         if (val) {
           this.getEmployeeList();
         }
-      },
+     },
     });
   }
 }
