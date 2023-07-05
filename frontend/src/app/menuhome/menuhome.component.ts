@@ -2,7 +2,6 @@ import { Component, OnInit, ViewChild, inject } from '@angular/core';
 import { Trendingcombo } from '../trendingcombo';
 import {MatDialog, MatDialogConfig} from '@angular/material/dialog';
 import { MenudialogComponent } from '../menudialog/menudialog.component';
-import { DialogBodyComponent } from '../dialog-body/dialog-body.component';
 import { TrendingService } from '../trending.service';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';

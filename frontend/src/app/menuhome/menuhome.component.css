@@ -16,8 +16,8 @@
     font-size: large;
 }
 
-button{
-    margin:-60px 0 0 1200px;
+ .comboss .addmealbtn button{
+    
     height:35px;
     width:120px;
     background-color:rgb(5, 137, 19) ;
@@ -28,6 +28,7 @@ button{
 .comboss button{
     color: white;
 }
+/*
 .datatable table{
     font-size: larger;
     width: 100%;
@@ -39,7 +40,7 @@ button{
     color:black;
     text-align: left;
 }
-
+*/
 
 /*searchform*/
 * {
