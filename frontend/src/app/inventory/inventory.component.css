@@ -97,3 +97,15 @@ tr th{
     content: "";
     clear: both;
   }
+    
+  utton {
+    background: aqua;
+    border: none;
+    font-size: medium;
+    border-radius: 5px;
+    height: 40px;
+    color:white;
+  }
+  button .del{
+    background:red;
+  }

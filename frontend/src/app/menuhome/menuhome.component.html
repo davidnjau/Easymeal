@@ -6,7 +6,7 @@
         <button type="submit"  (click)="filterResults(filter.value)">Search</button>
       </form>
       <form class="input" action="/action_page.php">
-     <div class="mealadding"><button type="submit"  mat-raised-button (click)="openDialog()">Add Category</button></div>
+     <div class="mealadding"><button type="submit"  mat-raised-button (click)="openAddEditMealForm()">Add Category</button></div>
       </form>
 </div>
 
@@ -15,28 +15,61 @@
 
     <div article-title><p>Chef's Choice Combos</p></div>
     <button name="category" id="category" placeholder="select category"> <!--The dropdown, to hide or show a form contents-->
-        <option>Add Item</option>
+        <option (click)="openAddEditMealForm()">Add Item</option>
     </button> 
 
     <section class="datatable">
-        <table class="tabled">
-            <thead>
-                <tr>
-                    <th  width="100px" class="first">#</th>
-                    <th  width="150px">Picture</th>
-                    <th  width="200px" class="second">Item Name</th>
-                    <th  width="150px" class="second">Value</th>
-                    <th  width="200px" class="second">Date Added</th>
-                    <th  width="200px" class="second">Action</th>
-                </tr>
-            </thead>
-        </table>
-    </section>
+        <table  class="tabled" mat-table [dataSource] = "dataSource" matSort>
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>#</th>
+                <td mat-cell *matCellDef="let row"> {{row.id}}</td>
+              </ng-container>
+             <!--image to figure shortly-->
+              <ng-container matColumnDef="photo">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Picture </th>
+                <td mat-cell *matCellDef="let row"> {{row.photo}}</td>
+              </ng-container>
+  
+              <ng-container matColumnDef="comboname">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Item Name </th>
+                <td mat-cell *matCellDef="let row"> {{row.comboname}}</td>
+              </ng-container>
+  
+              <ng-container matColumnDef="value">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>Value</th>
+                <td mat-cell *matCellDef="let row"> {{row.value}}</td>
+              </ng-container>
+  
+              <ng-container matColumnDef="date">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Date Added </th>
+                <td mat-cell *matCellDef="let row"> {{row.date | date}}</td>
+              </ng-container> 
+              
+  
+              <ng-container matColumnDef="action">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>
+                <td mat-cell *matCellDef="let row">
+                  <button mat-icon-button color="primary" (click)="openEditForm(row)">
+                    <mat-icon>edit</mat-icon>
+                  </button>
+                  <button mat-icon-button color="warn" (click)="deleteTrendingcombomeal(row.id)">
+                    <mat-icon>delete</mat-icon>
+                  </button>
+                </td>
+              </ng-container>
+  
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  
+              <!-- Row shown when there is no matching data. 
+              <tr class="mat-row" *matNoDataRow>
+                <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+              </tr>-->
+            </table>
+  
+            <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+      </section>
 
-    <section class="combos">
-        <app-menu  *ngFor="let trendingcombo of filteredcomboList"
-            [trendingcombo]="trendingcombo"></app-menu>        
-    </section>  
 </section>
 
 
@@ -45,28 +78,66 @@
 
     <div article-title><p>Meals</p></div>
     <button name="category" id="category" placeholder="select category"> <!--The dropdown, to hide or show a form contents-->
-        <option>Add Item</option>
+        <option (click)="openAddEditSMealForm()">Add Item</option>
     </button> 
 
     <section class="datatable">
-        <table class="tabled">
-            <thead>
-                <tr>
-                    <th  width="100px" class="first">#</th>
-                    <th  width="150px">Picture</th>
-                    <th  width="150px" class="second">Item Name</th>
-                    <th  width="150px" class="second">Value</th>
-                    <th  width="200px" class="second">Date Added</th>
-                    <th  width="200px" class="second">Action</th>
-                </tr>
-            </thead>
-        </table>
-    </section>
+        <table  class="tabled" mat-table [dataSource] = "dataSource" matSort>
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>#</th>
+                <td mat-cell *matCellDef="let row"> {{row.id}}</td>
+              </ng-container>
+            <!--image to figure shortly-->
+              <ng-container matColumnDef="singlemealphoto">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Picture </th>
+                <td mat-cell *matCellDef="let row"> {{row.singlemealphoto}}</td>
+              </ng-container>
+  
+              <ng-container matColumnDef="singlemealname">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Item Name </th>
+                <td mat-cell *matCellDef="let row"> {{row.singlemealname}}</td>
+              </ng-container>
+  
+              <ng-container matColumnDef="singlemealprice">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>Value</th>
+                <td mat-cell *matCellDef="let row"> {{row.singlemealprice}}</td>
+              </ng-container>
+  
+              <ng-container matColumnDef="date">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Date Added </th>
+                <td mat-cell *matCellDef="let row"> {{row.date | date}}</td>
+              </ng-container> 
+              
+  
+              <ng-container matColumnDef="action">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>
+                <td mat-cell *matCellDef="let row">
+                  <button mat-icon-button color="primary" (click)="openEditSForm(row)">
+                    <mat-icon>edit</mat-icon>
+                  </button>
+                  <button mat-icon-button color="warn" (click)="deleteSinglemeal(row.id)">
+                    <mat-icon>delete</mat-icon>
+                  </button>
+                </td>
+              </ng-container>
+  
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  
+              <!-- Row shown when there is no matching data. 
+              <tr class="mat-row" *matNoDataRow>
+                <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+              </tr>-->
+            </table>
+  
+            <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+      </section>
 
-    <section class="combos">
+
+   <!--<section class="combos">
         <app-menusinglemeals  *ngFor="let trendingcombo of  filteredcomboList"
             [trendingcombo]="trendingcombo"></app-menusinglemeals>        
-    </section>  
+    </section>  --> 
 </section>
 
 
@@ -75,26 +146,64 @@
 
     <div article-title><p>Hot Beverages</p></div>
     <button name="category" id="category" placeholder="select category"> <!--The dropdown, to hide or show a form contents-->
-        <option>Add Item</option>
+        <option (click)="openAddEditBevForm()">Add Item</option>
     </button> 
 
     <section class="datatable">
-        <table class="tabled">
-            <thead>
-                <tr>
-                    <th  width="100px" class="first">#</th>
-                    <th  width="150px">Picture</th>
-                    <th  width="200px" class="second">Item Name</th>
-                    <th  width="150px" class="second">Value</th>
-                    <th  width="200px" class="second">Date Added</th>
-                    <th  width="200px" class="second">Action</th>
-                </tr>
-            </thead>
-        </table>
-    </section>
+        <table  class="tabled" mat-table [dataSource] = "dataSource" matSort>
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>#</th>
+                <td mat-cell *matCellDef="let row"> {{row.id}}</td>
+              </ng-container>
+            <!--image to figure shortly-->
+              <ng-container matColumnDef="beveragephoto">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Picture </th>
+                <td mat-cell *matCellDef="let row"> {{row.beveragephoto}}</td>
+              </ng-container>
+  
+              <ng-container matColumnDef="beveragename">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Item Name </th>
+                <td mat-cell *matCellDef="let row"> {{row.beveragename}}</td>
+              </ng-container>
+  
+              <ng-container matColumnDef="beverageprice">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>Value</th>
+                <td mat-cell *matCellDef="let row"> {{row.beverageprice}}</td>
+              </ng-container>
+  
+              <ng-container matColumnDef="date">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Date Added </th>
+                <td mat-cell *matCellDef="let row"> {{row.date | date}}</td>
+              </ng-container> 
+              
+  
+              <ng-container matColumnDef="action">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>
+                <td mat-cell *matCellDef="let row">
+                  <button mat-icon-button color="primary" (click)="openEditBForm(row)">
+                    <mat-icon>edit</mat-icon>
+                  </button>
+                  <button mat-icon-button color="warn" (click)="deleteBeverage(row.id)">
+                    <mat-icon>delete</mat-icon>
+                  </button>
+                </td>
+              </ng-container>
+  
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  
+              <!-- Row shown when there is no matching data. 
+              <tr class="mat-row" *matNoDataRow>
+                <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+              </tr>-->
+            </table>
+  
+            <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+      </section>
 
-    <section class="combos">
-        <app-menubeverages  *ngFor="let trendingcombo of  filteredcomboList"
-            [trendingcombo]="trendingcombo"></app-menubeverages>        
-    </section>  
+
+   <!--<section class="combos">
+        <app-menusinglemeals  *ngFor="let trendingcombo of  filteredcomboList"
+            [trendingcombo]="trendingcombo"></app-menusinglemeals>        
+    </section>  --> 
 </section>

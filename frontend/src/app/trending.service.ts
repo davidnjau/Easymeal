@@ -1,76 +1,70 @@
 import { Injectable } from '@angular/core';
 import { Trendingcombo } from './trendingcombo';
-//import { MenuComponent } from './menu/menu.component';
-//import { TrendingcomboComponent } from './trendingcombo/trendingcombo.component';
+
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Users } from './users';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class TrendingService {
-  trendingcomboList : Trendingcombo[] = [         //display all trendingcombos
-  {
-  id:1,
-  comboname: "Ugali & Beefstew",
-  ordernumber: "500 orders today",
-  price: "200KSH",
-  photo: "assets/ugali_and_beef.jpg",
-  value:"Ksh5000", 
-  date:"25th May 2019",
-  singlemealname: "Ugali",
-  singlemealprice:"Ksh5000", 
-  singlemealphoto:"assets/ugali.jpg",
-  beveragename:"House Coffee",
-  beverageprice:"Ksh5000", 
-  beveragephoto:"assets/coffee.jpg"
 
-},
-{
-  id:2,
-  comboname: "Pizza and Chips",
-  ordernumber: "5540 orders today",
-  price: "200KSH",
-  photo: "assets/pizza_and_chips.jpg",
-  value:"Ksh5000", 
-  date:"25th May 2019",
-  singlemealname: "Chapati",
-  singlemealprice: "Ksh5000", 
-  singlemealphoto:"assets/chapati.jpg",
-  beveragename:"Regular/Masala Tea",
-  beverageprice:"Ksh5000", 
-  beveragephoto:"assets/masala_tea.jpg"
-},
-{
-  id:3,
-  comboname: "Rice & Beans",
-  ordernumber: "5540 orders today",
-  price: "200KSH",
-  photo: "assets/rice_and_beans.jpg",
-  value:"Ksh5000", 
-  date:"25th May 2019",
-  singlemealname: "Rice",
-  singlemealprice: "Ksh5000", 
-  singlemealphoto:"assets/rice.jpg",
-  beveragename:"Regular/Hearbal Tea",
-  beverageprice:"Ksh5000", 
-  beveragephoto:"assets/green_tea.jpg"
-},
-{
-  id:4,
-  comboname: "Chapati & Beans",
-  ordernumber: "5540 orders today",
-  price: "200KSH",
-  photo: "assets/chapati_and_beef.jpg",
-  value:"Ksh5000", 
-  date:"25th May 2019",
-  singlemealname: "Chips",
-  singlemealprice:"Ksh5000", 
-  singlemealphoto:"assets/chips.jpg",
-  beveragename:"Tea Pot",
-  beverageprice:"Ksh5000", 
-  beveragephoto:"assets/teapot.jpg"
-}
-];
+  constructor(private _http: HttpClient) {}
+
+
+  addTrendingcombomeal(data: any): Observable<any> {
+    return this._http.post('http://localhost:3000/trendingcombo', data);
+  }
+
+  
+
+  updateTrendingcombomeal(id: number, data: any): Observable<any> {
+    return this._http.put(`http://localhost:3000/trendingcombo/${id}`, data);
+  }
+  updateSinglemeal(id: number, data: any): Observable<any> {
+    return this._http.put(`http://localhost:3000trendingcombo/${id}`, data);
+  }
+  updateBeverage(id: number, data: any): Observable<any> {
+    return this._http.put(`http://localhost:3000/trendingcombo/${id}`, data);
+  }
+
+
+
+  getTrendingcomboList(): Observable<any> {
+    return this._http.get('http://localhost:3000/trendingcombo');
+  }
+  getSinglemealList(): Observable<any> {
+    return this._http.get('http://localhost:3000/trendingcombo');
+  }
+  getBeverageList(): Observable<any> {
+    return this._http.get('http://localhost:3000/trendingcombo');
+  }
+
+
+
+  deleteTrendingcombomeal(id: number): Observable<any> {
+    return this._http.delete(`http://localhost:3000/trendingcombo/${id}`);
+  }
+  deleteSinglemeal(id: number): Observable<any> {
+    return this._http.delete(`http://localhost:3000/trendingcombo/${id}`);
+  }
+  deleteBeverage(id: number): Observable<any> {
+    return this._http.delete(`http://localhost:3000/trendingcombo/${id}`);
+  }
+
+
+  
+
+
+
+
+
+
+
+  trendingcomboList : Trendingcombo[] = [];         //display all trendingcombos
+  
 
 
 getAllTrendingcombo(): Trendingcombo[] {
@@ -80,5 +74,17 @@ getAllTrendingcombo(): Trendingcombo[] {
 getTrendingcomboById(id: number): Trendingcombo| undefined {
   return this.trendingcomboList.find(trendingcombo => trendingcombo.id === id);
 }
-  constructor() {}
 }
+
+/*
+  //service function to inject in components (other than menu for now)altered to //use asynchronous code to make a get request over HTTP
+  async getAllTrendingcombo(): Promise<Trendingcombo[]> {      
+      const data = await fetch(this.url);
+      return await data.json() ?? [];
+    }
+
+    async getTrendingcomboById(id:number): Promise<Trendingcombo| undefined> {
+      const data = await fetch(`${this.url}/${id}`);
+      return await data.json() ?? {};
+    }
+}*/

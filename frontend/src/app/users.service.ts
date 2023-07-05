@@ -25,7 +25,16 @@ export class UsersService {
     return this._http.delete(`http://localhost:3000/users/${id}`);
   }
 
-
+  //inventory calls;
+  getInventoryList(): Observable<any> {
+    return this._http.get('http://localhost:3000/users');
+  }
+  updateInventory(itemid: number, data: any): Observable<any> {
+    return this._http.put(`http://localhost:3000/users/${itemid}`, data);
+  }
+  addInventory(data: any): Observable<any> {
+    return this._http.post('http://localhost:3000/users', data);
+  }
 
   
   ////
