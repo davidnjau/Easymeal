@@ -64,7 +64,7 @@ export class DialogBodyComponent implements OnInit{
           });
       } else {
         this._empService.addEmployee(this.empForm.value).subscribe({
-          next: (value: any) => {
+          next: (val: any) => {
             //this._coreService.openSnackBar('Employee added successfully');
             Swal.fire("Employee details added successfully!", 'success');
             this._dialogRef.close(true);

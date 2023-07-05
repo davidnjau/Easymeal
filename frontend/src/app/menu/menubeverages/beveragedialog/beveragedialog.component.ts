@@ -6,33 +6,32 @@ import { TrendingService } from 'src/app/trending.service';
 import Swal from 'sweetalert2';
 
 @Component({
-  selector: 'app-addmealdialog',
-  templateUrl: './addmealdialog.component.html',
-  styleUrls: ['./addmealdialog.component.css']
+  selector: 'app-beveragedialog',
+  templateUrl: './beveragedialog.component.html',
+  styleUrls: ['./beveragedialog.component.css']
 })
-export class AddmealdialogComponent {
-
-  smealForm: FormGroup;
+export class BeveragedialogComponent {
+  bevmealForm: FormGroup;
   
   constructor(
     private _fb: FormBuilder,
     private _empService: TrendingService,
-    private _dialogRef: MatDialogRef<AddmealdialogComponent>,
+    private _dialogRef: MatDialogRef<BeveragedialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
    // private _coreService: CoreService
   ) {
-    this.smealForm = this._fb.group({
+    this.bevmealForm = this._fb.group({
       id:'',
-      singlemealphoto:'',
-      singlemealname:'',
-      singlemealprice:'',
+      beveragephoto:'',
+      beveragename:'',
+      beverageprice:'',
       date:'',
       action:'',
     });
   }
   
     ngOnInit(): void {
-      this.smealForm.patchValue(this.data);
+      this.bevmealForm.patchValue(this.data);
     }
   
   
@@ -47,9 +46,9 @@ export class AddmealdialogComponent {
   
     
     onFormSubmit() {
-      if (this.smealForm.valid) {
+      if (this.bevmealForm.valid) {
         if (this.data) {
-          this._empService.updateSinglemeal(this.data.id, this.smealForm.value).subscribe({
+          this._empService.updateBeverage(this.data.id, this.bevmealForm.value).subscribe({
               next: (val: any) => {
                 //this._coreService.openSnackBar('Employee details updated!');
                 Swal.fire("Meal details updated successfully!", 'success');
@@ -61,7 +60,7 @@ export class AddmealdialogComponent {
               },
             });
         } else {
-          this._empService.addSinglemeal(this.smealForm.value).subscribe({
+          this._empService.addBeverage(this.bevmealForm.value).subscribe({
             next: (value: any) => {
               //this._coreService.openSnackBar('Employee added successfully');
               Swal.fire("Meal details added successfully!", 'success');
@@ -76,5 +75,4 @@ export class AddmealdialogComponent {
         }
       }
     }
-  }
-
+}

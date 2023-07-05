@@ -13,7 +13,7 @@
 <br>
 <section class="comboss">
 
-    <div class="c" article-title><p>Chef's Choice Combos</p></div>
+    <div article-title><p>Chef's Choice Combos</p></div>
    <div class="addmealbtn"> <button name="category" id="category" placeholder="select category"> <!--The dropdown, to hide or show a form contents-->
         <option (click)="openAddEditMealForm()">Add Item</option>
     </button> </div>
@@ -77,61 +77,8 @@
 </section>
 
 
-<br>
-<section class="comboss">
-
-    <div article-title><p>Meals</p></div>
-    <button name="category" id="category" placeholder="select category"> <!--The dropdown, to hide or show a form contents-->
-        <option>Add Item</option>
-    </button> 
-
-    <section class="datatable">
-        <table class="tabled">
-            <thead>
-                <tr>
-                    <th  width="100px" class="first">#</th>
-                    <th  width="150px">Picture</th>
-                    <th  width="150px" class="second">Item Name</th>
-                    <th  width="150px" class="second">Value</th>
-                    <th  width="200px" class="second">Date Added</th>
-                    <th  width="200px" class="second">Action</th>
-                </tr>
-            </thead>
-        </table>
-    </section>
-
-    <section class="combos">
-        <app-menusinglemeals  *ngFor="let trendingcombo of  filteredcomboList"
-            [trendingcombo]="trendingcombo"></app-menusinglemeals>        
-    </section>  
-</section>
-
+<app-singlemeal></app-singlemeal>
 
 <br>
-<section class="comboss">
 
-    <div article-title><p>Hot Beverages</p></div>
-    <button name="category" id="category" placeholder="select category"> <!--The dropdown, to hide or show a form contents-->
-        <option>Add Item</option>
-    </button> 
-
-    <section class="datatable">
-        <table class="tabled">
-            <thead>
-                <tr>
-                    <th  width="100px" class="first">#</th>
-                    <th  width="150px">Picture</th>
-                    <th  width="200px" class="second">Item Name</th>
-                    <th  width="150px" class="second">Value</th>
-                    <th  width="200px" class="second">Date Added</th>
-                    <th  width="200px" class="second">Action</th>
-                </tr>
-            </thead>
-        </table>
-    </section>
-
-    <section class="combos">
-        <app-menubeverages  *ngFor="let trendingcombo of  filteredcomboList"
-            [trendingcombo]="trendingcombo"></app-menubeverages>        
-    </section>  
-</section>
+<app-menubeverages></app-menubeverages>

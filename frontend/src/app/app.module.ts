@@ -12,7 +12,6 @@ import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { RestComponent } from './rest/rest.component';
 import { TrendingcomboComponent } from './trendingcombo/trendingcombo.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { MenuComponent } from './menu/menu.component';
 import { MenuhomeComponent } from './menuhome/menuhome.component';
 import { MenubeveragesComponent } from './menu/menubeverages/menubeverages.component';
 import { MenusinglemealsComponent } from './menu/menusinglemeals/menusinglemeals.component';
@@ -49,6 +48,8 @@ import { faDeleteLeft } from '@fortawesome/free-solid-svg-icons';
 import { InventorydialogComponent } from './inventory/inventorydialog/inventorydialog.component';
 import { MenudialogComponent } from './menudialog/menudialog.component';
 import { AddmealdialogComponent } from './menu/addmealdialog/addmealdialog.component';
+import { SinglemealComponent } from './menu/menusinglemeals/singlemeal/singlemeal.component';
+import { BeveragedialogComponent } from './menu/menubeverages/beveragedialog/beveragedialog.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,6 @@ import { AddmealdialogComponent } from './menu/addmealdialog/addmealdialog.compo
     RestComponent,
     TrendingcomboComponent,
     DashboardComponent,
-    MenuComponent,
     MenuhomeComponent,
     MenubeveragesComponent,
     MenusinglemealsComponent,
@@ -75,6 +75,8 @@ import { AddmealdialogComponent } from './menu/addmealdialog/addmealdialog.compo
     InventorydialogComponent,
     MenudialogComponent,
     AddmealdialogComponent,
+    SinglemealComponent,
+    BeveragedialogComponent,
     
    
   ],

@@ -17,6 +17,12 @@ export class TrendingService {
   addTrendingcombomeal(data: any): Observable<any> {
     return this._http.post('http://localhost:3000/trendingcombo', data);
   }
+  addSinglemeal(data: any): Observable<any> {
+    return this._http.post('http://localhost:3000/trendingcombo', data);
+  }
+  addBeverage(data: any): Observable<any> {
+    return this._http.post('http://localhost:3000/trendingcombo', data);
+  }
 
   
 

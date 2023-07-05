@@ -1,10 +1,9 @@
 
-
 <section class="comboss">
 
-    <div article-title><p>Hot Beverages</p></div>
+    <div article-title><p>Meals</p></div>
     <div class="addmealbtn"><button name="category" id="category" placeholder="select category"> <!--The dropdown, to hide or show a form contents-->
-        <option click="openAddEditBevForm()">Add Item</option>
+        <option click="openAddEditSMealForm()">Add Item</option>
     </button> </div> 
 
     <section class="datatable">
@@ -14,19 +13,19 @@
                 <td mat-cell *matCellDef="let row"> {{row.id}}</td>
               </ng-container>
             <!--image to figure shortly-->
-              <ng-container matColumnDef="beveragephoto">
+              <ng-container matColumnDef="singlemealphoto">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header> Picture </th>
-                <td mat-cell *matCellDef="let row"> {{row.beveragephoto}}</td>
+                <td mat-cell *matCellDef="let row"> {{row.singlemealphoto}}</td>
               </ng-container>
   
-              <ng-container matColumnDef="beveragename">
+              <ng-container matColumnDef="singlemealname">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header> Item Name </th>
-                <td mat-cell *matCellDef="let row"> {{row.beveragename}}</td>
+                <td mat-cell *matCellDef="let row"> {{row.singlemealname}}</td>
               </ng-container>
   
-              <ng-container matColumnDef="beverageprice">
+              <ng-container matColumnDef="singlemealprice">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header>Value</th>
-                <td mat-cell *matCellDef="let row"> {{row.beverageprice}}</td>
+                <td mat-cell *matCellDef="let row"> {{row.singlemealprice}}</td>
               </ng-container>
   
               <ng-container matColumnDef="date">
@@ -38,10 +37,10 @@
               <ng-container matColumnDef="action">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>
                 <td mat-cell *matCellDef="let row">
-                  <button mat-icon-button color="primary" (click)="openEditBForm(row)">
+                  <button mat-icon-button color="primary" (click)="openEditSForm(row)">
                     <mat-icon>edit</mat-icon>
                   </button>
-                  <button mat-icon-button color="warn" (click)="deleteBeverage(row.id)">
+                  <button mat-icon-button color="warn" (click)="deleteSinglemeal(row.id)">
                     <mat-icon>delete</mat-icon>
                   </button>
                 </td>
@@ -59,22 +58,4 @@
             <mat-paginator [pageSizeOptions]="[5, 10, 25]" aria-label="Select page of users"></mat-paginator>
       </section>
 
-   
 </section>
-
-<!--<section class="datatable">
-    <table class="tabled" id="1">
-      
-        
-        <tbody>
-            <tr>
-                <td class="aligntd" width="100px">{{trendingcombo.id}}</td>
-                <td class="aligntd" width="150px"><div class="icondiv"><img [src]="trendingcombo.beveragephoto" alt="image of {{trendingcombo.beveragename}}" width="100px"></div></td>
-                <td class="aligntd" width="200px">{{trendingcombo.beveragename}}</td>
-                <td class="aligntd" width="150px">{{trendingcombo.beverageprice}}</td>
-                <td class="aligntd" width="200px">{{trendingcombo.date}}</td>
-                <td class="aligntd" width="200px"><fa-icon class="add" icon="edit"></fa-icon><fa-icon class="del" icon="delete-left"></fa-icon></td>
-            </tr>
-        </tbody> 
-    </table>
-</section>-->

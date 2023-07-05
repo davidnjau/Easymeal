@@ -1,29 +1,29 @@
 
 <h4 mat-dialog-title> Add Item</h4>
   
-  <form [formGroup]="smealForm" (ngSubmit)="onFormSubmit()">
+  <form [formGroup]="bevmealForm" (ngSubmit)="onFormSubmit()">
     <mat-form-field appearance="outline">
       <mat-label>Item No.</mat-label>
       <input matInput type="text" placeholder="Enter number" formControlName="id">
   </mat-form-field>
   
   <mat-form-field appearance="outline">
-      <input placeholder="Add Image" matInput formControlName="singlemealphoto">
+      <input placeholder="Add Image" matInput formControlName="beveragephoto">
   </mat-form-field>
   
   <mat-form-field appearance="outline">
       <mat-label>Item Name</mat-label>
-      <input matInput placeholder="Meal Name" formControlName="singlemealname">
+      <input matInput placeholder="Meal Name" formControlName="beveragename">
   </mat-form-field>
 
   <mat-form-field appearance="outline">
       <mat-label>Value</mat-label>
-      <input placeholder="Value, cost" matInput formControlName="singlemealprice">
+      <input placeholder="Value, cost" matInput formControlName="beverageprice">
   </mat-form-field>
 
   <mat-form-field appearance="outline">
       <mat-label>Date Added</mat-label>
-      <input matInput [matDatepicker]="picker" [matDatepicker]="picker" matInput formControlName="date">
+      <input matInput [matDatepicker]="picker" [matDatepicker]="picker">
       <mat-hint>MM/DD/YYYY</mat-hint>
       <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
@@ -35,23 +35,3 @@
 </div>
 
 </form>
-
-
-
-<!--<h4 mat-dialog-title> Add Category</h4>
-
-<form>
-<div mat-dialog-content>
-    <mat-form-field appearance="outline">
-        <mat-label>Category</mat-label>
-        <input placeholder="Category" matInput formControlName="name">
-    </mat-form-field>
-    
-</div>
-<div mat-dialog-actions>
-  ///<button mat-raised-button color="warn" mat-dialog-close>Close</button>///
-  <button mat-raised-button class="addbutton" [mat-dialog-close]="true" type="submit">Add Category</button>
-</div>
-</form>
-
-<br>-->
