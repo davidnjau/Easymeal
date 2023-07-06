@@ -1,4 +1,15 @@
 .comboss{
+  margin:80px 0 0 70px;
+}
+.comboss .addmealbtn button{
+    
+  height:35px;
+  width:120px;
+  background-color:rgb(5, 137, 19) ;
+  color: white;
+
+}
+/*.comboss{
     height: 500px;
     width: 1400px;
     padding: 30px 0 0px 30px;
@@ -122,5 +133,5 @@
 }
   
 
-/**/
+
 

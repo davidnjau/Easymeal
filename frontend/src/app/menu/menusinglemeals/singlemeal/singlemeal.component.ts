@@ -43,7 +43,7 @@ ngOnInit(): void {
 
 
 openAddEditSMealForm() {
-  const dialogRef = this._dialog.open(AddmealdialogComponent,{width:"55%"});
+  const dialogRef = this._dialog.open(AddmealdialogComponent,{width:"60%"});
   dialogRef.afterClosed().subscribe({
     next: (val) => {
       if (val) {

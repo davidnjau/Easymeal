@@ -2,6 +2,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef,MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { TrendingService } from 'src/app/trending.service';
+import { SinglemealComponent } from '../menusinglemeals/singlemeal/singlemeal.component';
 //import { CoreService } from 'src/app/core.service';
 import Swal from 'sweetalert2';
 

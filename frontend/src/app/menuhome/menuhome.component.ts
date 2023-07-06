@@ -69,7 +69,7 @@ ngOnInit(): void {
 }
 
 openAddEditMealForm() {
-  const dialogRef = this._dialog.open(MenudialogComponent,{width:"55%"});
+  const dialogRef = this._dialog.open(MenudialogComponent,{width:"60%"});
   dialogRef.afterClosed().subscribe({
     next: (val) => {
       if (val) {
@@ -82,51 +82,6 @@ openAddEditMealForm() {
 
 getTrendingcomboList() {
   this._empService.getTrendingcomboList().subscribe({
-    next: (res) => {
-      this.dataSource = new MatTableDataSource(res);
-      this.dataSource.sort = this.sort;
-      this.dataSource.paginator = this.paginator;
-    },
-    error: console.log,
-  });
-}
-
-
-openAddEditSMealForm() {
-  const dialogRef = this._dialog.open(MenudialogComponent,{width:"55%"});
-  dialogRef.afterClosed().subscribe({
-    next: (val) => {
-      if (val) {
-        console.log(val);
-        this.getSinglemealList();
-      }
-    },
-  });
-}
-getSinglemealList() {
-  this._empService.getSinglemealList().subscribe({
-    next: (res) => {
-      this.dataSource = new MatTableDataSource(res);
-      this.dataSource.sort = this.sort;
-      this.dataSource.paginator = this.paginator;
-    },
-    error: console.log,
-  });
-}
-
-openAddEditBevForm() {
-  const dialogRef = this._dialog.open(MenudialogComponent,{width:"55%"});
-  dialogRef.afterClosed().subscribe({
-    next: (val) => {
-      if (val) {
-        console.log(val);
-        this.getBeverageList();
-      }
-    },
-  });
-}
-getBeverageList() {
-  this._empService.getBeverageList().subscribe({
     next: (res) => {
       this.dataSource = new MatTableDataSource(res);
       this.dataSource.sort = this.sort;
@@ -159,26 +114,7 @@ deleteTrendingcombomeal(id: number) {
     error: console.log,
   });
 }
-deleteSinglemeal(id: number) {
-  this._empService.deleteSinglemeal(id).subscribe({
-    next: (res) => {
-      //this._coreService.openSnackBar('Employee deleted!', 'done');
-      Swal.fire("Meal deleted successfully!", 'success');
-      this.getSinglemealList();
-    },
-    error: console.log,
-  });
-}
-deleteBeverage(id: number) {
-  this._empService.deleteBeverage(id).subscribe({
-    next: (res) => {
-      //this._coreService.openSnackBar('Employee deleted!', 'done');
-      Swal.fire("Meal deleted successfully!", 'success');
-      this.getBeverageList();
-    },
-    error: console.log,
-  });
-}
+
 
 openEditForm(data: any) {
   const dialogRef = this._dialog.open(MenudialogComponent, {
@@ -190,34 +126,6 @@ openEditForm(data: any) {
     console.log('val', val);
       if (val) {
         this.getTrendingcomboList();
-      }
-   },
-  });
-}
-openEditSForm(data: any) {
-  const dialogRef = this._dialog.open(MenudialogComponent, {
-    data,
-  });
-
-  dialogRef.afterClosed().subscribe({
-   next: (val) => {
-    console.log('val', val);
-      if (val) {
-        this.getSinglemealList();
-      }
-   },
-  });
-}
-openEditBForm(data: any) {
-  const dialogRef = this._dialog.open(MenudialogComponent, {
-    data,
-  });
-
-  dialogRef.afterClosed().subscribe({
-   next: (val) => {
-    console.log('val', val);
-      if (val) {
-        this.getBeverageList();
       }
    },
   });
