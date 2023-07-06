@@ -28,15 +28,6 @@ export class MenudialogComponent implements OnInit{
       value:'',
       date:'',
       action:'',
-     /* ordernumber:'',
-      price:'',
-      singlemealname:'',
-      singlemealprice:'',
-      singlemealphoto:'',
-      beveragename:'',
-      beverageprice:'',
-      beveragephoto:'',*/
-      
     });
   }
   

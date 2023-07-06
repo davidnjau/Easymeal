@@ -10,7 +10,7 @@ import Swal from 'sweetalert2';
   templateUrl: './addmealdialog.component.html',
   styleUrls: ['./addmealdialog.component.css']
 })
-export class AddmealdialogComponent {
+export class AddmealdialogComponent implements OnInit {
 
   smealForm: FormGroup;
   

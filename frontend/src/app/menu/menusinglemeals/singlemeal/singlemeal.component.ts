@@ -40,8 +40,6 @@ ngOnInit(): void {
   this.getSinglemealList();
 }
 
-
-
 openAddEditSMealForm() {
   const dialogRef = this._dialog.open(AddmealdialogComponent,{width:"60%"});
   dialogRef.afterClosed().subscribe({
@@ -53,6 +51,7 @@ openAddEditSMealForm() {
     },
   });
 }
+
 getSinglemealList() {
   this._empService.getSinglemealList().subscribe({
     next: (res) => {

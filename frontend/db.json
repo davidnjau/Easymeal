@@ -96,33 +96,19 @@
   "trendingcombo": [
     {
       "id": 1,
-      "comboname": "Ugali & Beefstew",
-      "ordernumber": "500 orders today",
-      "price": "200KSH",
-      "photo": "assets/ugali_and_beef.jpg",
-      "value": "Ksh5000",
-      "date": "",
-      "singlemealname": "Ugali",
-      "singlemealprice": "Ksh5000",
-      "singlemealphoto": "assets/ugali.jpg",
-      "beveragename": "House Coffee",
-      "beverageprice": "Ksh5000",
-      "beveragephoto": "assets/coffee.jpg"
+      "photo": "",
+      "comboname": "",
+      "value": "",
+      "date": "2023-06-30T21:00:00.000Z",
+      "action": ""
     },
     {
       "id": 2,
-      "comboname": "Pizza and Chips",
-      "ordernumber": "5540 orders today",
-      "price": "200KSH",
       "photo": "assets/pizza_and_chips.jpg",
+      "comboname": "Pizza and Chips",
       "value": "Ksh5000",
-      "date": "",
-      "singlemealname": "Chapati",
-      "singlemealprice": "Ksh5000",
-      "singlemealphoto": "assets/chapati.jpg",
-      "beveragename": "Regular/Masala Tea",
-      "beverageprice": "Ksh5000",
-      "beveragephoto": "assets/masala_tea.jpg"
+      "date": "2023-06-30T21:00:00.000Z",
+      "action": ""
     },
     {
       "id": 3,
@@ -159,7 +145,7 @@
       "photo": "assets/pizza_and_chips.jpg",
       "comboname": "Pizza andd chipo",
       "value": "Ksh 300",
-      "date": "",
+      "date": "2022-01-31T21:00:00.000Z",
       "action": ""
     }
   ]
