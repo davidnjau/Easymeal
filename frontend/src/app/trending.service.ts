@@ -69,7 +69,7 @@ export class TrendingService {
 
 
 
-  trendingcomboList : Trendingcombo[] = [];         //display all trendingcombos
+trendingcomboList : Trendingcombo[] = [];         //display all trendingcombos
   
 
 

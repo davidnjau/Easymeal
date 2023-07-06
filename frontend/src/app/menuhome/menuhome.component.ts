@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild, inject } from '@angular/core';
 import { Trendingcombo } from '../trendingcombo';
 import {MatDialog, MatDialogConfig} from '@angular/material/dialog';
 import { MenudialogComponent } from '../menudialog/menudialog.component';
+import { MenusinglemealsComponent } from '../menu/menusinglemeals/menusinglemeals.component';
 import { TrendingService } from '../trending.service';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
@@ -68,8 +69,20 @@ ngOnInit(): void {
   this.getTrendingcomboList();
 }
 
+openAddEditCategoryForm() {
+  const dialogRef = this._dialog.open(MenusinglemealsComponent,{width:"60%"});
+  dialogRef.afterClosed().subscribe({
+    next: (val) => {
+      if (val) {
+        console.log(val);
+        this.getTrendingcomboList();
+      }
+    },
+  });
+}
+
 openAddEditMealForm() {
-  const dialogRef = this._dialog.open(MenudialogComponent,{width:"60%"});
+  const dialogRef = this._dialog.open(MenudialogComponent,{width:"55%"});
   dialogRef.afterClosed().subscribe({
     next: (val) => {
       if (val) {
