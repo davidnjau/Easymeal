@@ -103,3 +103,6 @@ tr th{
 .datatable {
  margin: 0 0 0 0px;
 }
+.datatable .tabled .imgiconpadding{
+    margin-right:5px;
+}

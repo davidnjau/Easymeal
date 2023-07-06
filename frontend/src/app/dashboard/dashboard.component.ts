@@ -18,8 +18,8 @@ import { MatTableDataSource } from '@angular/material/table';
 export class DashboardComponent implements OnInit {
 
   displayedColumns = [
-    /*'imgicon',
-    'idno',*/
+     'imgicon',
+    //'idno',
     'name',
     'item',
     'value',

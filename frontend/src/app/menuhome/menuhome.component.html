@@ -2,7 +2,7 @@
 <div class="menubar">
     <p>Menu Items</p>
     <form class="input" action="/action_page.php">
-        <input type="text" placeholder="Search Item" name="search" #filter>
+        <input type="text" placeholder="Search Item" name="search" #filter  (keyup)="applyFilter($event)" #input>
         <button type="submit"  (click)="filterResults(filter.value)">Search</button>
       </form>
       <form class="input" action="/action_page.php">
@@ -61,13 +61,13 @@
               <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
               <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   
-              <!-- Row shown when there is no matching data. 
+              <!-- Row shown when there is no matching data. -->
               <tr class="mat-row" *matNoDataRow>
-                <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
-              </tr>-->
+                <td class="mat-cell" colspan="4">No data matching the search filter "{{input.value}}"</td>
+              </tr>
             </table>
   
-            <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+            <mat-paginator [pageSizeOptions]="[5, 10]" aria-label="Select page of users"></mat-paginator>
       </section>
 
     <!--<section class="combos">

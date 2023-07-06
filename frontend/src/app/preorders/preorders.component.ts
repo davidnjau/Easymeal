@@ -17,8 +17,8 @@ import { Users } from '../users';
 })
 export class PreordersComponent implements OnInit {
   displayedColumns = [
-    /*'imgicon',
-    'idno',*/
+    'imgicon',
+    //'idno',
     'name',
     'item',
     'value',

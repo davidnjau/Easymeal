@@ -154,3 +154,8 @@ tr th{
     content: "";
     clear: both;
   }
+
+  table ng-container td img{
+    width:40px;
+    height:30px;
+  }

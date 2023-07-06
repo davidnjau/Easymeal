@@ -3,7 +3,7 @@
   
   <form [formGroup]="preorderForm" (ngSubmit)="onFormSubmit()">
     <mat-form-field appearance="outline">
-      <mat-label>User name</mat-label>
+      <mat-label>User's name</mat-label>
       <input matInput type="text" placeholder="Enter your name" formControlName="name">
   </mat-form-field>
   
@@ -12,7 +12,7 @@
   </mat-form-field>
   
   <mat-form-field appearance="outline">
-      <mat-label>Item Name</mat-label>
+      <mat-label>Quantity</mat-label>
       <input matInput placeholder="Quantity " formControlName="qty">
   </mat-form-field>
 
@@ -24,7 +24,7 @@
 
   <mat-form-field appearance="outline">
       <mat-label>Date Added</mat-label>
-      <input matInput [matDatepicker]="picker" [matDatepicker]="picker">
+      <input matInput [matDatepicker]="picker" formControlName="date">
       <mat-hint>MM/DD/YYYY</mat-hint>
       <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
@@ -32,8 +32,8 @@
 
   <mat-form-field appearance="outline">
     <mat-label>Status</mat-label>
-    <mat-select>
-        <mat-option *ngFor="let order of orders" [value]="order.value" formControlName="status">{{order.viewValue}}</mat-option>
+    <mat-select formControlName="status">
+        <mat-option *ngFor="let order of orders" [value]="order.value" >{{order.viewValue}}</mat-option>
     </mat-select>
    <!--supposed to be a matselect-->
 </mat-form-field>

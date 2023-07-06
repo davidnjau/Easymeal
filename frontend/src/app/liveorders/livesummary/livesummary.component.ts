@@ -21,9 +21,9 @@ export class LivesummaryComponent implements OnInit{
   
 
   orders: Orderstatus[] = [
-    {value: 'completed-0', viewValue: 'Completed'},
-    {value: 'pending-1', viewValue: 'Pending'},
-    {value: 'cancelled-2', viewValue: 'Cancelled'},
+    {value: 'completed', viewValue: 'Completed'},
+    {value: 'pending', viewValue: 'Pending'},
+    {value: 'cancelled', viewValue: 'Cancelled'},
   ];
  
   preorderForm: FormGroup;
@@ -43,10 +43,12 @@ export class LivesummaryComponent implements OnInit{
       date:'',
       status:'',
       action:'',
+      imgicon: "../assets/user.png",
     });
   }
   
     ngOnInit(): void {
+      console.log(this.data)
       this.preorderForm.patchValue(this.data);
     }
   
