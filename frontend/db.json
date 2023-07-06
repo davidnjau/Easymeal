@@ -1,12 +1,12 @@
 {
   "users": [
     {
-      "itemid": "1",
-      "itemname": "Rice",
-      "datein": "",
-      "qtyin": "4 Kgs",
-      "currentqty": "10 Kgs",
-      "qtystatus": "Good",
+      "name": "Joel K",
+      "item": "Fries",
+      "qty": "1",
+      "value": "Ksh.100",
+      "date": "",
+      "status": "pending",
       "action": "",
       "id": 1
     },
@@ -20,35 +20,22 @@
       "id": 2
     },
     {
-      "imgicon": "../assets/user.png",
-      "idno": "ID2435635",
       "name": "Bosun Jones",
       "item": "Chapati and Beans",
-      "value": "Ksh5000",
       "qty": 12,
+      "value": "Ksh.500",
       "date": "25th May 2019",
       "status": "Completed",
-      "staffimg": "../assets/staffimg4.jpg",
-      "id": 4,
-      "staffname": "Kerri Barber",
-      "position": "Cashier",
-      "department": "Sales",
-      "joined": "9.12.2021",
-      "mobile": "0722000000",
-      "itemid": 4,
-      "itemname": "Tomatoes",
-      "datein": "25/2/2021",
-      "qtyin": "25 Kgs",
-      "currentqty": "20 Kgs",
-      "qtystatus": "Good"
+      "action": "",
+      "id": 4
     },
     {
-      "itemid": 6,
-      "itemname": "Maize Flour",
-      "datein": "25/2/2021",
-      "qtyin": "25 Kgs",
-      "currentqty": "1 Kgs",
-      "qtystatus": "low",
+      "name": "",
+      "item": "",
+      "qty": "",
+      "value": "",
+      "date": "",
+      "status": "",
       "action": "",
       "id": 6
     },

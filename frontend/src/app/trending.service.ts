@@ -65,10 +65,10 @@ export class TrendingService {
 
 
 
+url = 'http://localhost:3000/trendingcombo';
 
 
-
-
+/*
 trendingcomboList : Trendingcombo[] = [];         //display all trendingcombos
   
 
@@ -80,9 +80,9 @@ getAllTrendingcombo(): Trendingcombo[] {
 getTrendingcomboById(id: number): Trendingcombo| undefined {
   return this.trendingcomboList.find(trendingcombo => trendingcombo.id === id);
 }
-}
+}*/
 
-/*
+
   //service function to inject in components (other than menu for now)altered to //use asynchronous code to make a get request over HTTP
   async getAllTrendingcombo(): Promise<Trendingcombo[]> {      
       const data = await fetch(this.url);
@@ -93,4 +93,4 @@ getTrendingcomboById(id: number): Trendingcombo| undefined {
       const data = await fetch(`${this.url}/${id}`);
       return await data.json() ?? {};
     }
-}*/
+}

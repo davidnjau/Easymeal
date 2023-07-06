@@ -31,26 +31,59 @@
     </div>
     <section class="dropdown">
         <select name="category" id="category" placeholder="select category" #filter > <!--The dropdown, to show ordersummary contents-->
-          <option value="select category" (click)="filterResults(filter.value)" >Select Category</option>  <!--Click event to filter by item(not working properly yet)-->
+          <option value="select category" (click)="filterResultss(filter.value)" >Select Category</option>  <!--Click event to filter by item(not working properly yet)-->
           <option *ngFor="let users of usersList">{{users.item}}</option>
         </select>
     </section>
     <section class="datatable">
-        <table class="tabled">
-            <thead>
-                <tr>
-                    <th  margin-left="150px">Name</th>
-                    <th  margin-left="150px">Item</th>
-                    <th  margin-left="150px">Qty</th>
-                    <th  margin-left="150px">Value</th>
-                    <th  margin-left="150px">Date</th>
-                    <th  margin-left="150px">Status</th>
-                </tr>
-            </thead>
+        <table class="tabled" mat-table [dataSource] = "dataSource" matSort>
+
+          <!-- Progress Column -->
+          <!--<ng-container matColumnDef="imgicon">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header></th>
+            <td mat-cell mat-cell *matCellDef="let row">{{row.imgicon}}</td>
+        </ng-container>-->
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Names </th>
+            <!-- <td *ngFor="let users of usersList">{{users.imgicon}}</td> -->
+            <td mat-cell mat-cell *matCellDef="let row">{{row.name}}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="item">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Item </th>
+            <td mat-cell *matCellDef="let row"> {{row.item}}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="qty">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Qty</th>
+            <td mat-cell *matCellDef="let row"> {{row.qty}}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="value">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Value</th>
+            <td mat-cell *matCellDef="let row"> {{row.value}}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="date">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Date </th>
+            <td mat-cell *matCellDef="let row"> {{row.date }}</td>
+          </ng-container> 
+          <ng-container matColumnDef="status">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Status </th>
+            <td mat-cell *matCellDef="let row"> {{row.status}}</td>
+          </ng-container> 
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+          <!-- Row shown when there is no matching data. 
+          <tr class="mat-row" *matNoDataRow>
+            <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+          </tr>-->
         </table>
-        </section>
-    <app-rest *ngFor="let users of usersList" [users]="users"></app-rest>
-                             <!--filteredusersList-->
+
+       <mat-paginator [pageSizeOptions]="[10]" aria-label="Select page of users"></mat-paginator>
+  </section>
 </section>
 
 

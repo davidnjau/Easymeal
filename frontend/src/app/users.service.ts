@@ -36,6 +36,30 @@ export class UsersService {
     return this._http.post('http://localhost:3000/users', data);
   }
 
+
+
+  getPreorderList(): Observable<any> {
+    return this._http.get('http://localhost:3000/users');
+  }
+  updatePreorder(id: number, data: any): Observable<any> {
+    return this._http.put(`http://localhost:3000/users/${id}`, data);
+  }
+  deletePreorder(id: number): Observable<any> {
+    return this._http.delete(`http://localhost:3000/users/${id}`);
+  }
+  addPreorder(data: any): Observable<any> {
+    return this._http.post('http://localhost:3000/users', data);
+  }
+
+
+
+
+
+
+
+
+
+
   
   ////
   url = 'http://localhost:3000/users';

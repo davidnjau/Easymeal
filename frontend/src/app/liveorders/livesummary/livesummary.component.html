@@ -1,19 +1,46 @@
-<section class="datatable">
-    <table class="tabled">
-       
-        
-        <tbody>
-            <tr>
-                <td class="aligntd" width="50px"><div class="icondiv"><img [src]="users.imgicon" alt="image of {{users.name}}" width="46px"></div></td>
-                <td width="200px"> <div class="picnameid"><p>{{users.name}}</p> <p class="idno">{{users.idno}}</p></div></td>
-                <td width="200px">{{users.item}}</td>
-                <td width="200px">{{users.qty}}</td>
-                <td width="200px">{{users.value}}</td>
-                <td width="200px">{{users.date}}</td>
-                <td width="200px" class="backbox">{{users.status}}</td>
-                <td width="200px"><fa-icon icon="edit"></fa-icon><fa-icon icon="delete-left"></fa-icon></td>
 
-            </tr>
-        </tbody> 
-    </table>
-</section>
+<h4 mat-dialog-title> Add Item</h4>
+  
+  <form [formGroup]="preorderForm" (ngSubmit)="onFormSubmit()">
+    <mat-form-field appearance="outline">
+      <mat-label>User name</mat-label>
+      <input matInput type="text" placeholder="Enter your name" formControlName="name">
+  </mat-form-field>
+  
+  <mat-form-field appearance="outline">
+      <input placeholder="Item name" matInput formControlName="item">
+  </mat-form-field>
+  
+  <mat-form-field appearance="outline">
+      <mat-label>Item Name</mat-label>
+      <input matInput placeholder="Quantity " formControlName="qty">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Price</mat-label>
+    <input placeholder="Item Price" matInput formControlName="value">
+</mat-form-field>
+
+
+  <mat-form-field appearance="outline">
+      <mat-label>Date Added</mat-label>
+      <input matInput [matDatepicker]="picker" [matDatepicker]="picker">
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Status</mat-label>
+    <mat-select>
+        <mat-option *ngFor="let order of orders" [value]="order.value" formControlName="status">{{order.viewValue}}</mat-option>
+    </mat-select>
+   <!--supposed to be a matselect-->
+</mat-form-field>
+  
+<div mat-dialog-actions class="action">
+  <!--<button mat-raised-button type="button" [mat-dialog-close]="false">Close</button>-->
+  <button mat-raised-button color="primary" type="submit">{{ data ? 'Update': 'Order an item' }}</button>
+</div>
+
+</form>

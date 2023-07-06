@@ -31,3 +31,19 @@ tbody .picnameid .idno{
 .datatable{
     margin:0px 0 0 40px ;
 }
+
+mat-form-field{
+    display: block important;
+    position:relative;
+    text-align: left;
+    width:100%;
+    color: black;
+    padding-bottom: 10px;
+    
+}
+.addbutton{
+    width:60%;
+    background-color: green;
+    height:50px;
+    align-items: center;
+}

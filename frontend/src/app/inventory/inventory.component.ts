@@ -39,7 +39,7 @@ export class InventoryComponent  implements OnInit {
     private _empService: UsersService,
     //private _coreService: CoreService
   ){
-    this.trendingcomboList = this.trendingservice.getAllTrendingcombo();
+    //this.trendingcomboList = this.trendingservice.getAllTrendingcombo();
   }
   
 

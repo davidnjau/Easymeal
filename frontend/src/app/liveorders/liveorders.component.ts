@@ -1,48 +1,122 @@
-import { Component, inject } from '@angular/core';
-import { TrendingService } from '../trending.service';
-import { Trendingcombo } from '../trendingcombo';
-import { RestComponent } from '../rest/rest.component';
-import { Users } from '../users';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { LivesummaryComponent } from '../liveorders/livesummary/livesummary.component';
 import { UsersService } from '../users.service';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
+//import { CoreService } from '../core.service';
+import Swal from 'sweetalert2';
+import { Users } from '../users'; 
 
 @Component({
   selector: 'app-liveorders',
   templateUrl: './liveorders.component.html',
   styleUrls: ['./liveorders.component.css']
 })
-export class LiveordersComponent {
+export class LiveordersComponent implements OnInit{
+
+  displayedColumns = [
+    /*'imgicon',
+    'idno',*/
+    'name',
+    'item',
+    'value',
+    'qty',
+    'date',
+    'status',
+    'action',
+  ];
+  dataSource!: MatTableDataSource<any>;
+
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatSort) sort!: MatSort;
+
+  constructor(
+    private _dialog: MatDialog,
+    private _empService: UsersService,
+    //private _coreService: CoreService
+  ) {}
+
 
   
-  //combodishes summary details array-mock (transfered to trending service)
-  trendingcomboList : Trendingcombo []=[];
-  trendingservice:TrendingService = inject(TrendingService);
-
-  
-    //ordersummary details array-mock (transfered to users service)
+////
     usersList : Users[] = [];
     filteredusersList: Users[] = [];
-    usersservice:UsersService = inject(UsersService);
-  
-    //add/edit/delete popup  dialog function 
-    constructor(/*private dialog:MatDialog*/){ 
-    
-    this.trendingcomboList = this.trendingservice.getAllTrendingcombo();
-    
-    ////
-  
-    this.usersservice.getAllUsers().then((usersList: Users[]) => {
-        this.usersList = this.usersList;
-        this.filteredusersList = usersList;
-    });
-    }
+  //implementing filterresult event handler function to return the searched staff by department
+ filterResults(text: string) {
+  if (!text) {
+    this.filteredusersList = this.usersList;
+  }
+  this.filteredusersList = this.usersList.filter(users => users?.name.toLowerCase().includes(text.toLowerCase()));
+}
+////
 
- // implementing filterresult event handler function to return the selected itemname
-  filterResults(text: string) {
-    if (!text) {
-      this.filteredusersList = this.usersList;
+
+  ngOnInit(): void {
+    this.getPreorderList();
+  }
+
+  /*openAddEditPreordersForm() {
+    const dialogRef = this._dialog.open(LivesummaryComponent,{width:"60%", height:"80%"});
+    dialogRef.afterClosed().subscribe({
+      next: (val) => {
+        if (val) {
+          console.log(val);
+          this.getEmployeeList();
+        }
+      },
+    });
+  }*/
+
+  getPreorderList() {
+    this._empService.getPreorderList().subscribe({
+      next: (res) => {
+        console.log(res);
+        this.dataSource = new MatTableDataSource(res);
+        this.dataSource.sort = this.sort;
+        this.dataSource.paginator = this.paginator;
+      },
+      error: console.log,
+    });
+  }
+
+
+  ////
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+
+    if (this.dataSource.paginator) {
+      this.dataSource.paginator.firstPage();
     }
-    this.filteredusersList = this.usersList.filter(
-      users => users?.item.toLowerCase().includes(text.toLowerCase())
-    );
+  }
+  ////
+
+
+  deletepreorder(id: number) {
+    this._empService.deletePreorder(id).subscribe({
+      next: (res) => {
+        //this._coreService.openSnackBar('Employee deleted!', 'done');
+        Swal.fire("Employee deleted successfully!", 'success');
+        this.getPreorderList();
+      },
+      error: console.log,
+    });
+  }
+
+  openEditForm(data: any) {
+    const dialogRef = this._dialog.open(LivesummaryComponent, {
+      data,
+    });
+
+    dialogRef.afterClosed().subscribe({
+     next: (val) => {
+      console.log('val', val);
+        if (val) {
+          this.getPreorderList();
+        }
+     },
+    });
   }
 }
