@@ -1,14 +1,13 @@
 {
   "users": [
     {
-      "name": "Joel K",
-      "item": "Fries",
-      "qty": "1",
-      "value": "Ksh.100",
-      "date": "2023-06-30T21:00:00.000Z",
-      "status": "pending",
+      "itemid": "",
+      "itemname": "",
+      "datein": "",
+      "qtyin": "",
+      "currentqty": "",
+      "qtystatus": "Good",
       "action": "",
-      "imgicon": "../assets/user.png",
       "id": 1
     },
     {
@@ -28,7 +27,7 @@
       "qty": "15",
       "value": "Ksh.500",
       "date": "2023-07-14T21:00:00.000Z",
-      "status": "pending",
+      "status": "completed",
       "action": "",
       "imgicon": "../assets/user.png",
       "id": 4
@@ -54,11 +53,12 @@
       "id": 7
     },
     {
-      "staffname": "Julia Julls",
-      "department": "Sales",
-      "position": "Cashier",
-      "joined": "",
-      "mobile": "0712444422",
+      "itemid": "",
+      "itemname": "",
+      "datein": "",
+      "qtyin": "",
+      "currentqty": "",
+      "qtystatus": "",
       "action": "",
       "id": 8
     },
@@ -73,11 +73,11 @@
       "id": 9
     },
     {
-      "itemid": "",
-      "itemname": "Salts",
+      "itemid": "6",
+      "itemname": "Salt",
       "datein": "",
       "qtyin": "16 Kgs",
-      "currentqty": "",
+      "currentqty": "5",
       "qtystatus": "",
       "action": "",
       "id": 10

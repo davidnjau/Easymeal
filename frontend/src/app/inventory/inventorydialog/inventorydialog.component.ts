@@ -5,6 +5,11 @@ import { MatDialogRef,MAT_DIALOG_DATA } from '@angular/material/dialog';
 import Swal from 'sweetalert2';
 import { UsersService } from 'src/app/users.service';
 
+ //select dropdown interface
+interface Quantitystatus {
+  value: string;
+  viewValue: string;
+}
 
 @Component({
   selector: 'app-inventorydialog',
@@ -12,7 +17,16 @@ import { UsersService } from 'src/app/users.service';
   styleUrls: ['./inventorydialog.component.css']
 })
 export class InventorydialogComponent implements OnInit{
+
+  //select dropdown array
+  orders: Quantitystatus[] = [
+    {value: 'Good', viewValue: 'Good'},
+    {value: 'Low', viewValue: 'Low'},
+  ];
+ 
+
   inventoryForm: FormGroup;
+
   constructor(
     private _fb: FormBuilder,
     private _empService: UsersService,

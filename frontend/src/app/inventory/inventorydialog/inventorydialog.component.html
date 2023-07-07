@@ -28,7 +28,9 @@
     </mat-form-field>
     <mat-form-field appearance="outline">
         <mat-label>Qty Status</mat-label>
-        <input placeholder=" Quantity status eg. low or good" matInput formControlName="qtystatus">
+        <mat-select formControlName="qtystatus">
+            <mat-option *ngFor="let order of orders" [value]="order.value" >{{order.viewValue}}</mat-option>
+        </mat-select>
     </mat-form-field>
     
 </mat-dialog-content>
