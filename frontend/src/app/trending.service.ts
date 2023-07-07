@@ -83,14 +83,4 @@ getTrendingcomboById(id: number): Trendingcombo| undefined {
 }*/
 
 
-  //service function to inject in components (other than menu for now)altered to //use asynchronous code to make a get request over HTTP
-  async getAllTrendingcombo(): Promise<Trendingcombo[]> {      
-      const data = await fetch(this.url);
-      return await data.json() ?? [];
-    }
-
-    async getTrendingcomboById(id:number): Promise<Trendingcombo| undefined> {
-      const data = await fetch(`${this.url}/${id}`);
-      return await data.json() ?? {};
-    }
 }

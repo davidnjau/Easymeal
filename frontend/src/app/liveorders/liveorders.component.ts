@@ -119,4 +119,14 @@ export class LiveordersComponent implements OnInit{
      },
     });
   }
+/*
+  //Summary Total Function
+
+  const response = {trendingcombo:[]}
+  this.http.get('http://localhost:3000/trendingcombo').sub
+  'res'
+    .map(response.trendingcombo)
+    .map(res => res.value)
+    .reduce((a, b) => a + b)
+    .subscribe(res => console.log(res))*/
 }
