@@ -97,16 +97,16 @@
     {
       "id": 1,
       "photo": "",
-      "comboname": "",
-      "value": "",
+      "comboname": "rice and beef",
+      "value": "Ksh 2000",
       "date": "2023-06-30T21:00:00.000Z",
       "action": ""
     },
     {
       "id": 2,
-      "photo": "assets/pizza_and_chips.jpg",
-      "comboname": "Pizza and Chips",
-      "value": "Ksh5000",
+      "beveragephoto": "",
+      "beveragename": "coffee",
+      "beverageprice": "Ksh 200",
       "date": "2023-06-30T21:00:00.000Z",
       "action": ""
     },
@@ -123,22 +123,16 @@
       "singlemealphoto": "assets/rice.jpg",
       "beveragename": "Regular/Hearbal Tea",
       "beverageprice": "Ksh5000",
-      "beveragephoto": "assets/green_tea.jpg"
+      "beveragephoto": "assets/green_tea.jpg",
+      "iconfield": ""
     },
     {
       "id": 4,
-      "comboname": "Chapati & Beans",
-      "ordernumber": "5540 orders today",
-      "price": "200KSH",
-      "photo": "assets/chapati_and_beef.jpg",
-      "value": "Ksh5000",
-      "date": "",
-      "singlemealname": "Chips",
-      "singlemealprice": "Ksh5000",
-      "singlemealphoto": "assets/chips.jpg",
+      "beveragephoto": "assets/teapot.jpg",
       "beveragename": "Tea Pot",
       "beverageprice": "Ksh5000",
-      "beveragephoto": "assets/teapot.jpg"
+      "date": "",
+      "action": ""
     },
     {
       "id": "5",
@@ -146,6 +140,14 @@
       "comboname": "Pizza andd chipo",
       "value": "Ksh 300",
       "date": "2022-01-31T21:00:00.000Z",
+      "action": ""
+    },
+    {
+      "id": "7",
+      "singlemealphoto": "pizz.jpg",
+      "singlemealname": "Pizza",
+      "singlemealprice": "Ksh 300",
+      "date": "2023-06-30T21:00:00.000Z",
       "action": ""
     }
   ]

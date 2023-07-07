@@ -2,9 +2,9 @@
 <section class="comboss">
 
     <div article-title><p>Meals</p></div>
-    <div class="addmealbtn"><button name="category" id="category" placeholder="select category" click="openAddEditSMealForm()"> <!--The dropdown, to hide or show a form contents-->
-        Add Item
-    </button> </div> 
+    <div class="addmealbtn"><button (click)="openAddEditSMealForm()" name="category" id="category" placeholder="select category" ><!--The dropdown, to hide or show a form contents-->
+        Add Item</button> 
+   </div> 
 
     <section class="datatable">
         <table  class="tabled" mat-table [dataSource] = "dataSource" matSort>

@@ -20,7 +20,7 @@ import { LivesummaryComponent } from './liveorders/livesummary/livesummary.compo
 import { PreordersComponent } from './preorders/preorders.component';
 import { StaffComponent } from './staff/staff.component';
 import { InventoryComponent } from './inventory/inventory.component';
-import { StaffingComponent } from './staff/staffing/staffing.component';
+import { StepperorderdialogComponent } from './menu/stepperorderdialog/stepperorderdialog.component';
 import { OndutyComponent } from './staff/onduty/onduty.component';
 import { OffdutyComponent } from './staff/offduty/offduty.component';
 import { InventoryitemsComponent } from './inventory/inventoryitems/inventoryitems.component';
@@ -50,6 +50,7 @@ import { MenudialogComponent } from './menudialog/menudialog.component';
 import { AddmealdialogComponent } from './menu/addmealdialog/addmealdialog.component';
 import { SinglemealComponent } from './menu/menusinglemeals/singlemeal/singlemeal.component';
 import { BeveragedialogComponent } from './menu/menubeverages/beveragedialog/beveragedialog.component';
+import {MatStepperModule} from '@angular/material/stepper';
 
 @NgModule({
   declarations: [
@@ -67,7 +68,7 @@ import { BeveragedialogComponent } from './menu/menubeverages/beveragedialog/bev
     PreordersComponent,
     StaffComponent,
     InventoryComponent,
-    StaffingComponent,
+    StepperorderdialogComponent,
     OndutyComponent,
     OffdutyComponent,
     InventoryitemsComponent,
@@ -102,7 +103,8 @@ import { BeveragedialogComponent } from './menu/menubeverages/beveragedialog/bev
     MatPaginatorModule,
     MatSortModule,
     MatSnackBarModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatStepperModule
   ],
   providers: [],
   bootstrap: [AppComponent],
