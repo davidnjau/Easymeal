@@ -47,6 +47,9 @@ export class TrendingService {
   getBeverageList(): Observable<any> {
     return this._http.get('http://localhost:3000/trendingcombo');
   }
+  gettotalorders(): Observable<any> {
+    return this._http.get('http://localhost:3000/trendingcombo');
+  }
 
 
 

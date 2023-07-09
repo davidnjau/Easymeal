@@ -8,6 +8,7 @@ import { MatTableDataSource } from '@angular/material/table';
 //import { CoreService } from '../core.service';
 import Swal from 'sweetalert2';
 import { Users } from '../users'; 
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-liveorders',
@@ -35,10 +36,9 @@ export class LiveordersComponent implements OnInit{
   constructor(
     private _dialog: MatDialog,
     private _empService: UsersService,
+    private http:HttpClient
     //private _coreService: CoreService
   ) {}
-
-
   
 ////
     usersList : Users[] = [];
@@ -51,11 +51,36 @@ export class LiveordersComponent implements OnInit{
   this.filteredusersList = this.usersList.filter(users => users?.name.toLowerCase().includes(text.toLowerCase()));
 }
 ////
-
+//analytics functions
+totals: number = 0;
+productcalc: number = 0;
 
   ngOnInit(): void {
     this.getPreorderList();
+
+    this.http.get<any[]>('http://localhost:3000/users').subscribe(data =>{
+      this.totals = this.calculateSum(data, 'qty');
+    });
+
+    this.http.get<any[]>('http://localhost:3000/users').subscribe(data =>{
+      this.productcalc = this.calculateProduct(data, 'value', 'qty');
+    });
   }
+
+  calculateSum(data:any[], qty:string):number{
+    return data.reduce((sum, item) => sum + item[qty], 0);
+  }
+
+  calculateProduct(data:any[], value:string, qty:string):number{
+    return data.reduce((product, item) => product + item[value] * item[qty], 0);
+  }
+  /*///or
+  let productcalc = 1;
+  data.forEach(item =>{
+    productcalc *= item[value] * item[qty];
+  });
+  return productcalc;
+   }*/
 
   /*openAddEditPreordersForm() {
     const dialogRef = this._dialog.open(LivesummaryComponent,{width:"60%", height:"80%"});
@@ -122,11 +147,34 @@ export class LiveordersComponent implements OnInit{
 /*
   //Summary Total Function
 
-  const response = {trendingcombo:[]}
-  this.http.get('http://localhost:3000/trendingcombo').sub
-  'res'
+  const response = {trendingcombo}
+  this.http.get('http://localhost:3000/trendingcombo').subscribe({
+    next : (res)=>{
+      console.log(res)
+    }
+  });
+   const response = {trendingcombo:[]}
+  this.http.get('http://localhost:3000/trendingcombo').
+    .map(response.trendingcombo)
+    .map(res => res.value)
+    .reduce((a, b) => a + b)
+    .subscribe(res => console.log(res))
+    ///
+
+    const total = 0;
+    this._empService.get().subscribe(
+    trendingcombo.forEach(item=>{
+      total += item.value;
+    });
+    console.log("Total preorder earnings: ", total)
+    );
+
+    const response = {trendingcombo:[]}
+  this._empService.http.get('http://localhost:3000/trendingcombo')
     .map(response.trendingcombo)
     .map(res => res.value)
     .reduce((a, b) => a + b)
     .subscribe(res => console.log(res))*/
+
+    
 }

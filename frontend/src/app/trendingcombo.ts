@@ -2,15 +2,15 @@ export interface Trendingcombo {
   id: number;
   comboname: string;
   ordernumber: string;
-  price: string;
+  price: number;
   photo: string;
-  value: string;
+  value: number;
   date: string;
   singlemealname: string;
-  singlemealprice: string;
+  singlemealprice: number;
   singlemealphoto:string;
   beveragename:string;
-  beverageprice:string;
+  beverageprice:number;
   beveragephoto:string;
 }
 

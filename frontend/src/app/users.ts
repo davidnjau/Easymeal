@@ -4,7 +4,7 @@ export interface Users{
     name: string;
     item: string;
     qty: number;
-    value: string;
+    value: number;
     date: string;
     status: string;
     //action:string;
