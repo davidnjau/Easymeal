@@ -1,4 +1,51 @@
 {
+  "customers":[
+    {
+      "name": "Kent Larry",
+      "item": "Rice and Beans",
+      "qty": "3",
+      "value": 400,
+      "date": "2023-07-02T21:00:00.000Z",
+      "status": "pending",
+      "action": "",
+      "imgicon": "../assets/user.png",
+      "id": 1
+    },
+    {
+      "name": "Job Kay",
+      "item": "Pizza",
+      "qty": 3,
+      "value": 200,
+      "date": "2023-06-30T21:00:00.000Z",
+      "status": "completed",
+      "action": "",
+      "imgicon": "../assets/user.png",
+      "id": 2
+    },
+    {
+      "name": "Bosun Jones",
+      "item": "Chapati and Beans",
+      "qty": 15,
+      "value": 500,
+      "date": "2023-07-14T21:00:00.000Z",
+      "status": "completed",
+      "action": "",
+      "imgicon": "../assets/user.png",
+      "id": 3
+    },
+    {
+      "name": "Harry J",
+      "item": "chips",
+      "qty": 1,
+      "value": 401,
+      "date": "2023-07-06T21:00:00.000Z",
+      "status": "completed",
+      "action": "",
+      "imgicon": "../assets/user.png",
+      "id": 4
+    }
+
+  ],
   "users": [
     {
       "name": "Kent Larry",
@@ -43,74 +90,9 @@
       "action": "",
       "imgicon": "../assets/user.png",
       "id": 6
-    },
-    {
-      "staffname": "Garet Jay",
-      "department": "Sales",
-      "position": "Cashier",
-      "joined": "",
-      "mobile": "0712444444",
-      "action": "",
-      "id": 7
-    },
-    {
-      "itemid": "",
-      "itemname": "",
-      "datein": "",
-      "qtyin": "",
-      "currentqty": "",
-      "qtystatus": "",
-      "action": "",
-      "id": 8
-    },
-    {
-      "itemid": "",
-      "itemname": "sugar",
-      "datein": "",
-      "qtyin": "10 kgs ",
-      "currentqty": "2 Kgs",
-      "qtystatus": "Low",
-      "action": "",
-      "id": 9
-    },
-    {
-      "itemid": "6",
-      "itemname": "Salt",
-      "datein": "",
-      "qtyin": "16 Kgs",
-      "currentqty": "5",
-      "qtystatus": "",
-      "action": "",
-      "id": 10
-    },
-    {
-      "itemid": "5",
-      "itemname": "Milk",
-      "datein": "",
-      "qtyin": "20 litres",
-      "currentqty": "3 litres",
-      "qtystatus": "low",
-      "action": "",
-      "id": 11
     }
   ],
   "trendingcombo": [
-    {
-      "id": 1,
-      "photo": "",
-      "comboname": "rice and beef",
-      "value": 2000,
-      "date": "2023-06-30T21:00:00.000Z",
-      "action": ""
-    },
-    {
-      "id": 2,
-      "beveragephoto": "",
-      "beveragename": "coffee",
-      "beverageprice": 200,
-      "date": "2023-06-30T21:00:00.000Z",
-      "action": ""
-    },
     {
       "id": 3,
       "comboname": "Rice & Beans",
@@ -119,12 +101,122 @@
       "photo": "assets/rice_and_beans.jpg",
       "value": 5000,
       "date": "",
-      "singlemealname": "Rice",
-      "singlemealprice": 5000,
-      "singlemealphoto": "assets/rice.jpg",
       "beveragename": "Regular/Hearbal Tea",
       "beverageprice": 500,
       "beveragephoto": "assets/green_tea.jpg",
+      "iconfield": ""
+    }
+  ],
+  "menucombomeal": [
+    {
+      "id": 1,
+      "photo": "assets/ugali_and_beef.jpg",
+      "comboname": "Ugali and Beef",
+      "value": 3000,
+      "date": "2022-01-31T21:00:00.000Z",
+      "action": ""
+    },
+    {
+      "id": 2,
+      "photo": "assets/chapati_and_beef.jpg",
+      "comboname": "Chapati and Beef",
+      "value": 5000,
+      "date": "2023-06-30T21:00:00.000Z",
+      "action": ""
+    },
+    {
+      "id": 3,
+      "photo": "assets/rice_and_beef.jpg",
+      "comboname": "rice and beef",
+      "value": 2000,
+      "date": "2023-06-30T21:00:00.000Z",
+      "action": ""
+    },
+    {
+      "id": "4",
+      "photo": "assets/pizza_and_chips.jpg",
+      "comboname": "Pizza andd chipo",
+      "value": 3000,
+      "date": "2022-01-31T21:00:00.000Z",
+      "action": ""
+    },
+    {
+      "id": 5,
+      "photo": "assets/rice_and_beans.jpg",
+      "comboname": "Rice & Beans",
+      "value": "3000",
+      "date": "2023-06-30T21:00:00.000Z",
+      "action": ""
+    }
+  ],
+  "singlemeals": [
+    {
+      "id": 1,
+      "singlemealphoto": "assets/ugali.jpg",
+      "singlemealname": "Ugali",
+      "singlemealprice": 5000,
+      "date": "2022-01-31T21:00:00.000Z",
+      "action": ""
+    },
+    {
+      "id": 2,
+      "singlemealphoto": "assets/chapati.jpg",
+      "singlemealname": "Chapati",
+      "singlemealprice": 5000,
+      "date": "2022-01-31T21:00:00.000Z",
+      "action": ""
+    },
+    {
+      "id": 3,
+      "singlemealphoto": "assets/rice.jpg",
+      "singlemealname": "Rice",
+      "singlemealprice": 5000,
+      "date": "2022-01-31T21:00:00.000Z",
+      "action": ""
+    },
+    {
+      "id": 4,
+      "singlemealphoto": "assets/.jpg",
+      "singlemealname": "Pizza",
+      "singlemealprice": 5000,
+      "date": "2022-01-31T21:00:00.000Z",
+      "action": ""
+    },
+    {
+      "id": 5,
+      "singlemealphoto": "assets/chips.jpg",
+      "singlemealname": "Fries",
+      "singlemealprice": 5000,
+      "date": "2022-01-31T21:00:00.000Z",
+      "action": ""
+    }
+  ],
+  "beveragess": [
+    {
+      "id": 1,
+      "beveragephoto": "assets/coffee.jpg",
+      "beveragename": "House Coffee",
+      "beverageprice": 5000,
+      "date": "2022-02-31T21:00:00.000Z",
+      "action": "",
+      "iconfield": ""
+    },
+    {
+      "id": 2,
+      "beveragephoto": "assets/masala.jpg",
+      "beveragename": "Regular/Masala Tea",
+      "beverageprice": 5000,
+      "date": "2022-02-31T21:00:00.000Z",
+      "action": "",
+      "iconfield": ""
+    },
+    {
+      "id": 3,
+      "beveragephoto": "assets/green_tea.jpg",
+      "beveragename": "Regular/Herbal Tea",
+      "beverageprice": 5000,
+      "date": "2022-02-31T21:00:00.000Z",
+      "action": "",
       "iconfield": ""
     },
     {
@@ -132,24 +224,131 @@
       "beveragephoto": "assets/teapot.jpg",
       "beveragename": "Tea Pot",
       "beverageprice": 5000,
-      "date": "",
+      "date": "2022-02-31T21:00:00.000Z",
+      "action": "",
+      "iconfield": ""
+    }
+  ],
+  "inventoryitems": [
+    {
+      "id": 1,
+      "itemname": "sugar",
+      "datein": "2022-03-31T21:00:00.000Z",
+      "qtyin": "10 kgs ",
+      "currentqty": "2 Kgs",
+      "qtystatus": "Low",
       "action": ""
     },
     {
-      "id": "5",
-      "photo": "assets/pizza_and_chips.jpg",
-      "comboname": "Pizza andd chipo",
-      "value": 300,
-      "date": "2022-01-31T21:00:00.000Z",
+      "id": 2,
+      "itemname": "Salt",
+      "datein": "2022-03-31T21:00:00.000Z",
+      "qtyin": "10 kgs ",
+      "currentqty": "20 Kgs",
+      "qtystatus": "Low",
       "action": ""
     },
     {
-      "id": "7",
-      "singlemealphoto": "pizz.jpg",
-      "singlemealname": "Pizza",
-      "singlemealprice": 300,
-      "date": "2023-06-30T21:00:00.000Z",
+      "id": 3,
+      "itemname": "sugar",
+      "datein": "2023-07-03T21:00:00.000Z",
+      "qtyin": "10 kgs ",
+      "currentqty": "2 Kgs",
+      "qtystatus": "Low",
       "action": ""
+    },
+    {
+      "id": 4,
+      "itemname": "Flour",
+      "datein": "2023-07-07T21:00:00.000Z",
+      "qtyin": "10 kgs ",
+      "currentqty": "12 Kgs",
+      "qtystatus": "Good",
+      "action": ""
+    }
+  ],
+  "staffonduty": [
+    {
+      "staffname": "Grant Marshall",
+      "department": "Kitchen",
+      "position": "Head Chef",
+      "joined": "2021-07-02T21:00:00.000Z",
+      "mobile": "0712444444",
+      "action": "",
+      "id": 1,
+      "imgicon": "../assets/staffimg1.jpg"
+    },
+    {
+      "staffname": "Pena Valdez",
+      "department": "Kitchen",
+      "position": "Sous Chef",
+      "joined": "2021-07-02T21:00:00.000Z",
+      "mobile": "0712444444",
+      "action": "",
+      "id": 2,
+      "imgicon": "../assets/staffimg2.jpg"
+    },
+    {
+      "staffname": "Jessica Miles",
+      "department": "Store",
+      "position": "Store Keeper",
+      "joined": "2021-07-02T21:00:00.000Z",
+      "mobile": "0712444444",
+      "action": "",
+      "id": 3,
+      "imgicon": "../assets/staffimg3.jpg"
+    },
+    {
+      "staffname": "Kerri Barber",
+      "department": "Sales",
+      "position": "Cashier",
+      "joined": "2021-07-02T21:00:00.000Z",
+      "mobile": "0712444444",
+      "action": "",
+      "id": 4,
+      "imgicon": "../assets/staffimg4.jpg"
+    },
+    {
+      "staffname": "Garet Jay",
+      "department": "Kitchen",
+      "position": "Waiter",
+      "joined": "2021-07-02T21:00:00.000Z",
+      "mobile": "0712444444",
+      "action": "",
+      "id": 5,
+      "imgicon": "../assets/staffimg5.jpg"
+    },
+    {
+      "staffname": "Joael Kip",
+      "department": "Store",
+      "position": "Store keeper",
+      "joined": "",
+      "mobile": "0710000000",
+      "action": "",
+      "imgicon": "",
+      "id": 6
+    }
+  ],
+  "staffoffduty": [
+    {
+      "staffname": "Natasha Gamble",
+      "department": "Kitchen",
+      "position": "Waiter",
+      "joined": "2021-07-02T21:00:00.000Z",
+      "mobile": "0712444444",
+      "action": "",
+      "id": 6,
+      "imgicon": "../assets/staffimg6.jpg"
+    },
+    {
+      "staffname": "White Castaneda",
+      "department": "Kitchen",
+      "position": "Waiter",
+      "joined": "2021-07-02T21:00:00.000Z",
+      "mobile": "0712444444",
+      "action": "",
+      "id": 7,
+      "imgicon": "../assets/staffimg2.jpg"
     }
   ]
 }
