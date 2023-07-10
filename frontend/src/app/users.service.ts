@@ -29,6 +29,26 @@ export class UsersService {
   }
 
 
+
+  addOffdutyEmployee(data: any): Observable<any> {
+    return this._http.post('http://localhost:3000/staffoffduty', data);
+  }
+
+  updateOffdutyEmployee(id: number, data: any): Observable<any> {
+    return this._http.put(`http://localhost:3000/staffoffduty/${id}`, data);
+  }
+
+  getOffdutyEmployeeList(): Observable<any> {
+    return this._http.get('http://localhost:3000/staffoffduty');
+  }
+
+  deleteOffdutyEmployee(id: number): Observable<any> {
+    return this._http.delete(`http://localhost:3000/staffoffduty/${id}`);
+  }
+
+
+
+
   getPreorderList(): Observable<any> {
     return this._http.get('http://localhost:3000/customers');
   }
@@ -42,6 +62,8 @@ export class UsersService {
     return this._http.post('http://localhost:3000/customers', data);
   }
 
+
+  
 
   getLiveorderList(): Observable<any> {
     return this._http.get('http://localhost:3000/live');

@@ -7,18 +7,18 @@
       </div>
 </div> 
 
-  <nav mat-tab-nav-bar [tabPanel]="tabPanel">
+  <!-- <nav mat-tab-nav-bar [tabPanel]="tabPanel">
     <div class="analytics">
     <a mat-tab-link *ngFor="let link of links"
        (click)="activeLink = link"
        [active]="activeLink == link" color="orangered"> {{link}} </a>
       </div>
   </nav>
-<mat-tab-nav-panel #tabPanel>
+<mat-tab-nav-panel #tabPanel> -->
 
-  <hr>
-
-  <section class="ordersummary">
+  <mat-tab-group>
+    <mat-tab label="All">
+        <section class="ordersummary">
 
           <form class="input" action="/action_page.php">
             <input type="text" placeholder="" name="search" #filter  (keyup)="applyFilter($event)" #input>
@@ -84,8 +84,27 @@
           <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
     </section>
   </section>
+  <app-offduty></app-offduty>
+    </mat-tab>
 
-  </mat-tab-nav-panel>
+
+
+    <mat-tab label="Onduty">
+     <app-onduty></app-onduty>
+    </mat-tab>
+
+
+    <mat-tab label="Offduty">
+     <app-offduty></app-offduty>
+    </mat-tab>
+
+  </mat-tab-group>
+
+  <hr>
+
+ 
+
+ 
   
   
   <!-- <div class="analytics">
@@ -103,51 +122,6 @@
   </div> -->
   
 
-
-
-
-
-<!--
-<div class="chefnote">
-    <p>Staff</p>
-        <div class="title">
-            <form class="inputone" action="/action_page.php">
-            <button mat-raised-button type="submit" (click)="openDialog()">Add Staff</button>
-                    <!// (click)="openDialog()"///
-            </form>
-        </div>
-</div> 
-
-<section class="ordersummary">
-
-    <form class="input" action="/action_page.php">
-        <input type="text" placeholder="" name="search" #filter>
-        <button type="submit" (click)="filterResults(filter.value)">Search</button>
-      </form>
-
-
-      <section class="datatable">
-        <table class="tabled">
-            <thead>
-                <tr>
-                    <th width="200px">Name</th>
-                    <th width="200px">Position</th>
-                    <th width="200px">Department</th>
-                    <th width="200px">Joined</th>
-                    <th width="200px">Mobile</th>
-                    <th width="200px">Action</th>
-                </tr>
-            </thead>
-        </table>
-        </section>
-    <app-staffing *ngFor="let users of filteredusersList" [users]="users"></app-staffing>
-    
-</section>
-
-
-<router-outlet></router-outlet>
-
--->
 
 
 

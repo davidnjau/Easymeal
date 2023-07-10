@@ -17,8 +17,7 @@ import { Staff } from '../staff';
   styleUrls: ['./staff.component.css'],
 })
 export class StaffComponent implements OnInit {
-  links = ['All', 'Onduty', 'Offduty'];
-  activeLink = this.links[0];
+  
 
   displayedColumns = [
     'imgicon',
