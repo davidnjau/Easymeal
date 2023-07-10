@@ -19,9 +19,11 @@
     <div article-title><p>Trending Combos</p></div>
 
     <section class="combos">
-    <app-trendingcombo  *ngFor="let trendingcombo of trendingcomboList"
-      ></app-trendingcombo>
-    </section>
+      <article>
+        <a routerLinkActive="active" routerLink="./menuhome"><img class="combo-photo" [src]="tc.photo" alt="Exterior photo of {{tc.comboname}}"></a> 
+        <a routerLinkActive="active" routerLink="./menuhome"><h2 class="combo-heading">{{tc.comboname }} <br> <p>{{tc.ordernumber}}</p></h2></a> 
+        <div  class="combo-details"><p> {{tc.price }}</p></div>
+    </article> 
 </section>
 
 <section class="ordersummary">

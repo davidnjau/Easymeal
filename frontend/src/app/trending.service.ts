@@ -51,7 +51,7 @@ export class TrendingService {
 url = 'http://localhost:3000/trendingcombo';
 
 
-
+/*
 trendingcomboList : Trendingcombo[] = [];         //display all trendingcombos
 
 
@@ -62,7 +62,7 @@ getAllTrendingcombo(): Trendingcombo[] {
 getTrendingcomboById(id: number): Trendingcombo| undefined {
   return this.trendingcomboList.find(trendingcombo => trendingcombo.id === id);
 }
-
+}*/
 
 
 }

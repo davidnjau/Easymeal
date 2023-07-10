@@ -7,6 +7,8 @@ import { UsersService } from '../users.service';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { HttpClient } from '@angular/common/http';
+import { MenuProductsService } from '../menu-products.service';
 
 //import { TrendingcomboComponent } from '../trendingcombo/trendingcombo.component';
 
@@ -35,12 +37,16 @@ export class DashboardComponent implements OnInit {
 
   constructor(
     private _dialog: MatDialog,
-    private _empService: UsersService,
+    private _emService: UsersService,
+    private _empService: TrendingService,
+    private http:HttpClient,
     //private _coreService: CoreService
   ) {}
 
   ngOnInit(): void {
     this.getPreorderList();
+
+    this.getTrendingcomboList();
   }
 
  /* trendingcomboList : Trendingcombo []=[];
@@ -61,7 +67,7 @@ export class DashboardComponent implements OnInit {
   */
 
   getPreorderList() {
-    this._empService.getPreorderList().subscribe({
+    this._emService.getPreorderList().subscribe({
       next: (res) => {
         console.log(res);
         this.dataSource = new MatTableDataSource(res);
@@ -98,6 +104,18 @@ export class DashboardComponent implements OnInit {
     this.filteredusersList = this.usersList.filter(users => users?.staffname.toLowerCase().includes(text.toLowerCase()));
   }
 ////
+
+
+
+tc: any = [];
+
+getTrendingcomboList(): void {
+  this._empService.getTrendingcomboList().subscribe(res => {
+      this.tc= res;
+      console.log(res);
+      
+    });
+  }
 
 
 

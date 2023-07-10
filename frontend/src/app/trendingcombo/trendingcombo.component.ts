@@ -1,5 +1,4 @@
 import { Component, Input, OnInit, inject} from '@angular/core';
-import { MatTableDataSource } from '@angular/material/table';
 import { Trendingcombo } from '../trendingcombo';
 import { TrendingService } from '../trending.service';
 import { MenuProductsService } from '../menu-products.service';
@@ -14,31 +13,28 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./trendingcombo.component.css']
 })
 
-export class TrendingcomboComponent {
+export class TrendingcomboComponent implements OnInit {
 
-  dataSource!: MatTableDataSource<any>;
 
   constructor(
     private _empService: TrendingService,
+    
     private http:HttpClient,
     //private _coreService: CoreService
-    //this.trendingcomboList = this.trendingservice.getAllTrendingcombo();
+
   ) {}
 
   ngOnInit(): void {
     this.getTrendingcomboList();
   }
 
-
+  tc: any = [];
 
   getTrendingcomboList(): void {
-    this._empService.getTrendingcomboList().subscribe({
-      next: (res) => {
-        this.dataSource = new MatTableDataSource(res);
+    this._empService.getTrendingcomboList().subscribe(res => {
+        this.tc= res;
         console.log(res);
-      },
-      error: console.log,
-    });
-  }
-
+        
+      });
+    }
 }
