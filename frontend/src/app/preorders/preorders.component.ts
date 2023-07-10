@@ -49,10 +49,13 @@ productcalc: number = 0;
     this.getPreorderList();
 
     this.http.get<any[]>('http://localhost:3000/users').subscribe(data =>{
-      /*console.log(data);
+      console.log(data);
       const val = data.map(v => v.value);
-      console.log({val});*/
-      this.totals = this.calculateSum(data, 'value');
+      console.log("val",val);
+      
+      this.totals = this.calculateSum(data, 'qty');
+      console.log("totals",this.totals);
+      
     });
 
     this.http.get<any[]>('http://localhost:3000/users').subscribe(data =>{

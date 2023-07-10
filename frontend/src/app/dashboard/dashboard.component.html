@@ -16,14 +16,14 @@
 </nav>
 
 <section class="comboss">
-    <div article-title><p>Trending Combos</p></div>
-
-    <section class="combos">
-      <article>
-        <a routerLinkActive="active" routerLink="./menuhome"><img class="combo-photo" [src]="tc.photo" alt="Exterior photo of {{tc.comboname}}"></a> 
-        <a routerLinkActive="active" routerLink="./menuhome"><h2 class="combo-heading">{{tc.comboname }} <br> <p>{{tc.ordernumber}}</p></h2></a> 
-        <div  class="combo-details"><p> {{tc.price }}</p></div>
-    </article> 
+  <section class="combos">
+  <article *ngFor="let t of tc">
+    <img class="combo-photo" [src]="t.photo" alt="Exterior photo of {{t.comboname}}">
+    <h2 class="combo-heading">{{t.comboname }} <br> <p>{{t.ordernumber}} orders today</p></h2>
+    <div  class="combo-details"><p> {{t.price }} Ksh</p></div>
+</article> 
+</section>
+      
 </section>
 
 <section class="ordersummary">

@@ -1,8 +1,8 @@
 export interface Trendingcombo {
   id: number;
   comboname: string;
-  ordernumber: string;
-  price: string;
+  ordernumber: number;
+  price: number;
   photo: string;
 }
 

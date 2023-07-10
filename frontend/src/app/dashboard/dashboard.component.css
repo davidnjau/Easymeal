@@ -63,6 +63,47 @@ nav .analytics ul .chefnote p{
     font-size: xx-large;
 }
 
+.combos .combo-heading{
+    color: rgb(48, 45, 45);
+    font-size: small;
+    line-height: 1rem;
+    margin-left: 30px;
+}
+.combos .combo-heading p{
+    color: rgb(107, 106, 106);
+    font-size: small;
+}
+
+.combos .combo-details p{
+    color: rgb(194, 191, 191);
+    font-size: small;
+    /*background-color:  orangered;*/
+    background-image: linear-gradient(180deg, rgb(201, 85, 85),rgb(230, 113, 35));
+    padding-top:17px;
+    width: 50px;
+    height: 40px;
+    border-radius:50%;
+    position: absolute;
+    margin: -90px 0 0 230px;
+}
+/*
+.combos article{
+    display:;
+    width: 300px;
+    height: 200px;
+    margin-right: 30px;
+    display: inline-flex;
+    text-align: center;
+    border-radius: 15px;
+}*/
+.combos  img{
+    border-radius: 10%;
+    width:300px;
+    height: 200px;
+    margin-right: 80px;
+}
+
+
 .ordersummary{ 
     height: 560px;
     width: 1400px;

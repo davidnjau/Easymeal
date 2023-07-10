@@ -49,23 +49,6 @@ export class DashboardComponent implements OnInit {
     this.getTrendingcomboList();
   }
 
- /* trendingcomboList : Trendingcombo []=[];
-  trendingservice:TrendingService = inject(TrendingService);
-
-
-  //ordersummary details array-mock (transfered to users service)
-  usersList : Users[] = [];
-  filteredusersList: Users[] = [];
-  usersservice:UsersService = inject(UsersService);
-
-  //add/edit/delete popup  dialog function 
-  constructor(/*private dialog:MatDialog){ 
-  
-  this.trendingcomboList = this.trendingservice.getAllTrendingcombo();
-  ////
-  }
-  */
-
   getPreorderList() {
     this._emService.getPreorderList().subscribe({
       next: (res) => {
@@ -77,21 +60,6 @@ export class DashboardComponent implements OnInit {
       error: console.log,
     });
   }
-
-    /////
-      trendingcomboList : Trendingcombo[] = [];
-      filteredcomboList  : Trendingcombo[] = [];
- // implementing filterresult event handler function to return the selected itemname
-  filterResults(text: string) {
-    if (!text) {
-      this.filteredcomboList = this.trendingcomboList;
-    }
-
-    this.filteredcomboList = this.trendingcomboList.filter(
-      trendingcombo =>  trendingcombo ?.comboname.toLowerCase().includes(text.toLowerCase())
-    );
-  }
-  /////
 
   ////
   usersList : Users[] = [];
