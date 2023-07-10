@@ -7,7 +7,6 @@ import { PreordersComponent } from './preorders/preorders.component';
 import { StaffComponent } from './staff/staff.component';
 import { OndutyComponent } from './staff/onduty/onduty.component';
 import { OffdutyComponent } from './staff/offduty/offduty.component';
-import { TrendingcomboComponent } from './trendingcombo/trendingcombo.component';
 import { InventoryComponent } from './inventory/inventory.component';
 
 const routes: Routes = [

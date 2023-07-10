@@ -29,15 +29,6 @@ export class MenuhomeComponent implements OnInit  {
     'value',
     'date',
     'action',
-    /*'ordernumber',
-    'price',
-    'singlemealname',
-    'singlemealprice',
-    'singlemealphoto',
-    'beveragename',
-    'beverageprice',
-    'beveragephoto',*/
-    
   ];
   dataSource!: MatTableDataSource<any>;
 
@@ -68,7 +59,7 @@ this.filteredcomboList = this.trendingcomboList.filter(trendingcombo => trending
 ngOnInit(): void {
   this.getcomboList();
 }
-
+////
 openAddEditCategoryForm() {
   const dialogRef = this._dialog.open(MenusinglemealsComponent,{width:"60%"});
   dialogRef.afterClosed().subscribe({
@@ -80,6 +71,7 @@ openAddEditCategoryForm() {
     },
   });
 }
+////
 
 openAddEditMealForm() {
   const dialogRef = this._dialog.open(MenudialogComponent,{width:"55%"});

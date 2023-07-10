@@ -11,31 +11,32 @@ interface Orderstatus {
   value: string;
   viewValue: string;
 }
+
 @Component({
-  selector: 'app-livesummary',
-  templateUrl: './livesummary.component.html',
-  styleUrls: ['./livesummary.component.css']
+  selector: 'app-presummary',
+  templateUrl: './presummary.component.html',
+  styleUrls: ['./presummary.component.css']
 })
+export class PresummaryComponent implements OnInit{
 
-export class LivesummaryComponent implements OnInit{
   
-
   orders: Orderstatus[] = [
-    {value: 'Received', viewValue: 'Received'},
+    {value: 'pending', viewValue: 'pending'},
     {value: 'pending', viewValue: 'Pending'},
-    {value: 'cancelled', viewValue: 'Cancelled'},
+    {value: 'pending', viewValue: 'pending'},
   ];
  
-  liveorderForm: FormGroup;
+  preorderForm: FormGroup;
+  
   
   constructor(
     private _fb: FormBuilder,
     private _empService: UsersService,
-    private _dialogRef: MatDialogRef<LivesummaryComponent>,
+    private _dialogRef: MatDialogRef<PresummaryComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
    // private _coreService: CoreService
   ) {
-    this.liveorderForm = this._fb.group({
+    this.preorderForm = this._fb.group({
       name:'',
       item:'',
       qty:'',
@@ -49,24 +50,14 @@ export class LivesummaryComponent implements OnInit{
   
     ngOnInit(): void {
       console.log(this.data)
-      this.liveorderForm.patchValue(this.data);
+      this.preorderForm.patchValue(this.data);
     }
-  
-  
-  /*
-    Reactiveform = new FormGroup({
-      staffname: new FormControl("", Validators.required),
-      mobile: new FormControl("", Validators.required),
-      department: new FormControl("", Validators.required),
-      position: new FormControl("", Validators.required),
-      staffimg: new FormControl("")
-    });*/
-  
-    
+
+
     onFormSubmit() {
-      if (this.liveorderForm.valid) {
+      if (this.preorderForm.valid) {
         if (this.data) {
-          this._empService.updateLiveorder(this.data.id, this.liveorderForm.value).subscribe({
+          this._empService.updatePreorder(this.data.id, this.preorderForm.value).subscribe({
               next: (val: any) => {
                 //this._coreService.openSnackBar('Employee details updated!');
                 Swal.fire("Meal details updated successfully!", 'success');
@@ -78,7 +69,7 @@ export class LivesummaryComponent implements OnInit{
               },
             });
         } else {
-          this._empService.addLiveorder(this.liveorderForm.value).subscribe({
+          this._empService.addPreorder(this.preorderForm.value).subscribe({
             next: (value: any) => {
               //this._coreService.openSnackBar('Employee added successfully');
               Swal.fire("Meal details added successfully!", 'success');

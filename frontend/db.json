@@ -6,7 +6,7 @@
       "qty": 3,
       "value": 200,
       "date": "2023-06-30T21:00:00.000Z",
-      "status": "completed",
+      "status": "pending",
       "action": "",
       "imgicon": "../assets/user.png",
       "id": 2
@@ -17,7 +17,7 @@
       "qty": 15,
       "value": 500,
       "date": "2023-07-14T21:00:00.000Z",
-      "status": "completed",
+      "status": "pending",
       "action": "",
       "imgicon": "../assets/user.png",
       "id": 3
@@ -28,10 +28,56 @@
       "qty": 1,
       "value": 401,
       "date": "2023-07-06T21:00:00.000Z",
-      "status": "completed",
+      "status": "pending",
       "action": "",
       "imgicon": "../assets/user.png",
       "id": 4
+    }
+  ],
+  "live": [
+    {
+      "name": "Job Kay",
+      "item": "Pizza",
+      "qty": 3,
+      "value": 200,
+      "date": "2023-06-30T21:00:00.000Z",
+      "status": "Received",
+      "action": "",
+      "imgicon": "../assets/user.png",
+      "id": 2
+    },
+    {
+      "name": "Bosun Jones",
+      "item": "Chapati and Beans",
+      "qty": 15,
+      "value": 500,
+      "date": "2023-07-14T21:00:00.000Z",
+      "status": "Pending",
+      "action": "",
+      "imgicon": "../assets/user.png",
+      "id": 3
+    },
+    {
+      "name": "Harry J",
+      "item": "chips",
+      "qty": 1,
+      "value": 401,
+      "date": "2023-07-06T21:00:00.000Z",
+      "status": "Received",
+      "action": "",
+      "imgicon": "../assets/user.png",
+      "id": 4
+    },
+    {
+      "name": "Kay Kay",
+      "item": "Pizza",
+      "qty": 3,
+      "value": 200,
+      "date": "2023-06-30T21:00:00.000Z",
+      "status": "cancelled",
+      "action": "",
+      "imgicon": "../assets/user.png",
+      "id": 5
     }
   ],
   "users": [
@@ -98,7 +144,7 @@
     {
       "id": 3,
       "comboname": "Rice & Beans",
-      "ordernumber":5540,
+      "ordernumber": 5540,
       "price": 200,
       "photo": "./assets/rice_and_beans.jpg"
     },
@@ -113,15 +159,15 @@
   "menucombomeal": [
     {
       "id": 1,
-      "photo": "assets/ugali_and_beef.jpg",
+      "photo": "./assets/ugali_and_beef.jpg",
       "comboname": "Ugali and Beef",
       "value": 3000,
-      "date": "2022-01-31T21:00:00.000Z",
+      "date": "2022-01 -31T21:00:00.000Z",
       "action": ""
     },
     {
       "id": 2,
-      "photo": "assets/chapati_and_beef.jpg",
+      "photo": "./assets/chapati_and_beef.jpg",
       "comboname": "Chapati and Beef",
       "value": 5000,
       "date": "2023-06-30T21:00:00.000Z",
@@ -129,15 +175,15 @@
     },
     {
       "id": 3,
-      "photo": "assets/rice_and_beef.jpg",
+      "photo": "./assets/rice_and_beef.jpg",
       "comboname": "rice and beef",
       "value": 2000,
       "date": "2023-06-30T21:00:00.000Z",
       "action": ""
     },
     {
-      "id": "4",
-      "photo": "assets/pizza_and_chips.jpg",
+      "id": 4,
+      "photo": "./assets/pizza_and_chips.jpg",
       "comboname": "Pizza andd chipo",
       "value": 3000,
       "date": "2022-01-31T21:00:00.000Z",
@@ -145,7 +191,7 @@
     },
     {
       "id": 5,
-      "photo": "assets/rice_and_beans.jpg",
+      "photo": "./assets/rice_and_beans.jpg",
       "comboname": "Rice & Beans",
       "value": "3000",
       "date": "2023-06-30T21:00:00.000Z",
@@ -155,7 +201,7 @@
   "singlemeals": [
     {
       "id": 1,
-      "singlemealphoto": "assets/ugali.jpg",
+      "singlemealphoto": "./assets/ugali.jpg",
       "singlemealname": "Ugali",
       "singlemealprice": 5000,
       "date": "2022-01-31T21:00:00.000Z",
@@ -163,7 +209,7 @@
     },
     {
       "id": 2,
-      "singlemealphoto": "assets/chapati.jpg",
+      "singlemealphoto": "./assets/chapati.jpg",
       "singlemealname": "Chapati",
       "singlemealprice": 5000,
       "date": "2022-01-31T21:00:00.000Z",
@@ -171,7 +217,7 @@
     },
     {
       "id": 3,
-      "singlemealphoto": "assets/rice.jpg",
+      "singlemealphoto": "./assets/rice.jpg",
       "singlemealname": "Rice",
       "singlemealprice": 5000,
       "date": "2022-01-31T21:00:00.000Z",
@@ -179,7 +225,7 @@
     },
     {
       "id": 4,
-      "singlemealphoto": "assets/.jpg",
+      "singlemealphoto": "./assets/pizza_and_chips.jpg",
       "singlemealname": "Pizza",
       "singlemealprice": 5000,
       "date": "2022-01-31T21:00:00.000Z",
@@ -187,7 +233,7 @@
     },
     {
       "id": 5,
-      "singlemealphoto": "assets/chips.jpg",
+      "singlemealphoto": "./assets/chips.jpg",
       "singlemealname": "Fries",
       "singlemealprice": 5000,
       "date": "2022-01-31T21:00:00.000Z",
@@ -197,39 +243,35 @@
   "beveragess": [
     {
       "id": 1,
-      "beveragephoto": "assets/coffee.jpg",
+      "beveragephoto": "../assets/coffee.jpg",
       "beveragename": "House Coffee",
       "beverageprice": 5000,
       "date": "2022-02-31T21:00:00.000Z",
-      "action": "",
-      "iconfield": ""
+      "action": ""
     },
     {
       "id": 2,
-      "beveragephoto": "assets/masala.jpg",
+      "beveragephoto": "../assets/masala.jpg",
       "beveragename": "Regular/Masala Tea",
       "beverageprice": 5000,
       "date": "2022-02-31T21:00:00.000Z",
-      "action": "",
-      "iconfield": ""
+      "action": ""
     },
     {
       "id": 3,
-      "beveragephoto": "assets/green_tea.jpg",
+      "beveragephoto": "../assets/green_tea.jpg",
       "beveragename": "Regular/Herbal Tea",
       "beverageprice": 5000,
       "date": "2022-02-31T21:00:00.000Z",
-      "action": "",
-      "iconfield": ""
+      "action": ""
     },
     {
       "id": 4,
-      "beveragephoto": "assets/teapot.jpg",
+      "beveragephoto": "../assets/teapot.jpg",
       "beveragename": "Tea Pot",
       "beverageprice": 5000,
       "date": "2022-02-31T21:00:00.000Z",
-      "action": "",
-      "iconfield": ""
+      "action": ""
     }
   ],
   "inventoryitems": [

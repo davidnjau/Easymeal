@@ -23,12 +23,12 @@ export class StepperorderdialogComponent implements OnInit{
   displayedColumns1 = [
     'singlemealname',
     'singlemealprice',
-    'iconfield',
+    'iconfield2',
   ]
   displayedColumns2 = [
     'comboname',
     'value',
-    'iconfield',
+    'iconfield3',
   ]
 
   dataSource!: MatTableDataSource<any>;
@@ -43,18 +43,19 @@ export class StepperorderdialogComponent implements OnInit{
   secondFormGroup = this._formBuilder.group({
     singlemealname: ['', Validators.required],
     beverageprice: ['', Validators.required],
-    iconfield: ['', Validators.required],
+    iconfield2: ['', Validators.required],
   });
   thirdFormGroup = this._formBuilder.group({
     comboname: ['', Validators.required],
     value: ['', Validators.required],
-    iconfield: ['', Validators.required],
+    iconfield3: ['', Validators.required],
     
   });
   isLinear = false;
 
   constructor(private _formBuilder: FormBuilder,
-              private _empService: MenuProductsService) {}
+              private _empService: MenuProductsService
+              ) {}
 
   quantity:number=0;
   i=0;
@@ -77,7 +78,7 @@ export class StepperorderdialogComponent implements OnInit{
   ngOnInit(): void {
     this.getBeverageList();
     this.getSinglemealList();
-    this.getcomboList();
+    //this.getcomboList();
     
   }
   getBeverageList() {
@@ -97,7 +98,7 @@ export class StepperorderdialogComponent implements OnInit{
       error: console.log,
     });
   }
-
+/*
   getcomboList() {
     this._empService.getcomboList().subscribe({
       next: (res) => {
@@ -105,6 +106,6 @@ export class StepperorderdialogComponent implements OnInit{
       },
       error: console.log,
     });
-  }
+  }*/
 
 }

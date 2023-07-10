@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { LivesummaryComponent } from '../liveorders/livesummary/livesummary.component';
+import { PresummaryComponent } from './presummary/presummary.component';
 import { UsersService } from '../users.service';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
@@ -135,7 +135,7 @@ filteredusersList: Users[] = [];
   }
 
   openEditForm(data: any) {
-    const dialogRef = this._dialog.open(LivesummaryComponent, {
+    const dialogRef = this._dialog.open(PresummaryComponent, {
       data,
     });
 

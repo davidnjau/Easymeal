@@ -44,13 +44,13 @@ export class DashboardComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.getPreorderList();
+    this.getLiveorderList();
 
     this.getTrendingcomboList();
   }
 
-  getPreorderList() {
-    this._emService.getPreorderList().subscribe({
+  getLiveorderList() {
+    this._emService.getLiveorderList().subscribe({
       next: (res) => {
         console.log(res);
         this.dataSource = new MatTableDataSource(res);
@@ -84,8 +84,5 @@ getTrendingcomboList(): void {
       
     });
   }
-
-
-
-  
+ 
 } 

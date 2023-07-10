@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
@@ -10,7 +9,6 @@ import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontaweso
 import { faEllipsisH } from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { RestComponent } from './rest/rest.component';
-import { TrendingcomboComponent } from './trendingcombo/trendingcombo.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MenuhomeComponent } from './menuhome/menuhome.component';
 import { MenubeveragesComponent } from './menu/menubeverages/menubeverages.component';
@@ -51,6 +49,7 @@ import { SinglemealComponent } from './menu/menusinglemeals/singlemeal/singlemea
 import { BeveragedialogComponent } from './menu/menubeverages/beveragedialog/beveragedialog.component';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatTabsModule} from '@angular/material/tabs';
+import { PresummaryComponent } from './preorders/presummary/presummary.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +57,6 @@ import {MatTabsModule} from '@angular/material/tabs';
     FooterComponent,
     HeaderComponent,
     RestComponent,
-    TrendingcomboComponent,
     DashboardComponent,
     MenuhomeComponent,
     MenubeveragesComponent,
@@ -77,6 +75,7 @@ import {MatTabsModule} from '@angular/material/tabs';
     AddmealdialogComponent,
     SinglemealComponent,
     BeveragedialogComponent,
+    PresummaryComponent,
     
    
   ],
