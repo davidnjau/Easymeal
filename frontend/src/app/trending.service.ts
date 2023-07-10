@@ -17,36 +17,20 @@ export class TrendingService {
   addTrendingcombomeal(data: any): Observable<any> {
     return this._http.post('http://localhost:3000/trendingcombo', data);
   }
-  addSinglemeal(data: any): Observable<any> {
-    return this._http.post('http://localhost:3000/trendingcombo', data);
-  }
-  addBeverage(data: any): Observable<any> {
-    return this._http.post('http://localhost:3000/trendingcombo', data);
-  }
+  
 
   
 
   updateTrendingcombomeal(id: number, data: any): Observable<any> {
     return this._http.put(`http://localhost:3000/trendingcombo/${id}`, data);
   }
-  updateSinglemeal(id: number, data: any): Observable<any> {
-    return this._http.put(`http://localhost:3000trendingcombo/${id}`, data);
-  }
-  updateBeverage(id: number, data: any): Observable<any> {
-    return this._http.put(`http://localhost:3000/trendingcombo/${id}`, data);
-  }
-
+  
 
 
   getTrendingcomboList(): Observable<any> {
     return this._http.get('http://localhost:3000/trendingcombo');
   }
-  getSinglemealList(): Observable<any> {
-    return this._http.get('http://localhost:3000/trendingcombo');
-  }
-  getBeverageList(): Observable<any> {
-    return this._http.get('http://localhost:3000/trendingcombo');
-  }
+  
   /*
   gettotalorders(): Observable<any> {
     return this._http.get('http://localhost:3000/trendingcombo');
@@ -57,12 +41,7 @@ export class TrendingService {
   deleteTrendingcombomeal(id: number): Observable<any> {
     return this._http.delete(`http://localhost:3000/trendingcombo/${id}`);
   }
-  deleteSinglemeal(id: number): Observable<any> {
-    return this._http.delete(`http://localhost:3000/trendingcombo/${id}`);
-  }
-  deleteBeverage(id: number): Observable<any> {
-    return this._http.delete(`http://localhost:3000/trendingcombo/${id}`);
-  }
+ 
 
 
   
@@ -72,7 +51,7 @@ export class TrendingService {
 url = 'http://localhost:3000/trendingcombo';
 
 
-/*
+
 trendingcomboList : Trendingcombo[] = [];         //display all trendingcombos
 
 
@@ -83,7 +62,7 @@ getAllTrendingcombo(): Trendingcombo[] {
 getTrendingcomboById(id: number): Trendingcombo| undefined {
   return this.trendingcomboList.find(trendingcombo => trendingcombo.id === id);
 }
-}*/
+
 
 
 }

@@ -1,6 +1,9 @@
-import { Component, Input} from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, Input, OnInit, inject} from '@angular/core';
+import { MatTableDataSource } from '@angular/material/table';
 import { Trendingcombo } from '../trendingcombo';
+import { TrendingService } from '../trending.service';
+import { MenuProductsService } from '../menu-products.service';
+import { HttpClient } from '@angular/common/http';
 
 
 //import { DashboardComponent } from '../dashboard/dashboard.component';
@@ -12,6 +15,30 @@ import { Trendingcombo } from '../trendingcombo';
 })
 
 export class TrendingcomboComponent {
-  @Input() trendingcombo! :Trendingcombo;
+
+  dataSource!: MatTableDataSource<any>;
+
+  constructor(
+    private _empService: TrendingService,
+    private http:HttpClient,
+    //private _coreService: CoreService
+    //this.trendingcomboList = this.trendingservice.getAllTrendingcombo();
+  ) {}
+
+  ngOnInit(): void {
+    this.getTrendingcomboList();
+  }
+
+
+
+  getTrendingcomboList(): void {
+    this._empService.getTrendingcomboList().subscribe({
+      next: (res) => {
+        this.dataSource = new MatTableDataSource(res);
+        console.log(res);
+      },
+      error: console.log,
+    });
+  }
 
 }

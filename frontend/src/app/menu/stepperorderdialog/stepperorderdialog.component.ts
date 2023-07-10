@@ -5,7 +5,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatButtonModule} from '@angular/material/button';
 import { MatTableDataSource } from '@angular/material/table';
-import { TrendingService } from 'src/app/trending.service';
+import { MenuProductsService } from 'src/app/menu-products.service';
 
 
 @Component({
@@ -54,7 +54,7 @@ export class StepperorderdialogComponent implements OnInit{
   isLinear = false;
 
   constructor(private _formBuilder: FormBuilder,
-              private _empService: TrendingService) {}
+              private _empService: MenuProductsService) {}
 
   quantity:number=0;
   i=0;
@@ -77,7 +77,7 @@ export class StepperorderdialogComponent implements OnInit{
   ngOnInit(): void {
     this.getBeverageList();
     this.getSinglemealList();
-    this.getTrendingcomboList();
+    this.getcomboList();
     
   }
   getBeverageList() {
@@ -98,8 +98,8 @@ export class StepperorderdialogComponent implements OnInit{
     });
   }
 
-  getTrendingcomboList() {
-    this._empService.getTrendingcomboList().subscribe({
+  getcomboList() {
+    this._empService.getcomboList().subscribe({
       next: (res) => {
         this.dataSource = new MatTableDataSource(res);
       },

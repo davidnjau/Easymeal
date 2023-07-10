@@ -51,20 +51,20 @@ productcalc: number = 0;
     this.http.get<any[]>('http://localhost:3000/users').subscribe(data =>{
       /*console.log(data);
       const val = data.map(v => v.value);
-      console.log({val});
-      */
-      this.totals = this.calculateSum(data, 'qty');
+      console.log({val});*/
+      this.totals = this.calculateSum(data, 'value');
     });
 
     this.http.get<any[]>('http://localhost:3000/users').subscribe(data =>{
       this.productcalc = this.calculateProduct(data, 'value', 'qty');
     });
   }
-
-  calculateSum(data:any[], qty:string):number{
-    return data.reduce((sum, item) => sum + item[qty], 0);
+//sum
+  calculateSum(data:any[], value:string):number{
+    return data.reduce((sum, item) => sum + item[value], 0);
   }
 
+//product-sum
   calculateProduct(data:any[], value:string, qty:string):number{
     return data.reduce((product, item) => product + item[value] * item[qty], 0);
   }

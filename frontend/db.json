@@ -1,16 +1,5 @@
 {
-  "customers":[
-    {
-      "name": "Kent Larry",
-      "item": "Rice and Beans",
-      "qty": "3",
-      "value": 400,
-      "date": "2023-07-02T21:00:00.000Z",
-      "status": "pending",
-      "action": "",
-      "imgicon": "../assets/user.png",
-      "id": 1
-    },
+  "customers": [
     {
       "name": "Job Kay",
       "item": "Pizza",
@@ -44,7 +33,6 @@
       "imgicon": "../assets/user.png",
       "id": 4
     }
-
   ],
   "users": [
     {
@@ -94,17 +82,32 @@
   ],
   "trendingcombo": [
     {
+      "id": 1,
+      "comboname": "Ugali and Beefstew",
+      "ordernumber": "5540 orders today",
+      "price": 200,
+      "photo": "..assets/ugali_and_beef.jpg"
+    },
+    {
+      "id": 2,
+      "comboname": "Pizza and chips",
+      "ordernumber": "5540 orders today",
+      "price": 200,
+      "photo": "..assets/pizza_and_chips.jpg"
+    },
+    {
       "id": 3,
       "comboname": "Rice & Beans",
       "ordernumber": "5540 orders today",
       "price": 200,
-      "photo": "assets/rice_and_beans.jpg",
-      "value": 5000,
-      "date": "",
-      "beveragename": "Regular/Hearbal Tea",
-      "beverageprice": 500,
-      "beveragephoto": "assets/green_tea.jpg",
-      "iconfield": ""
+      "photo": "..assets/rice_and_beans.jpg"
+    },
+    {
+      "id": 4,
+      "comboname": "Chapati & Beans",
+      "ordernumber": "5540 orders today",
+      "price": 200,
+      "photo": "..assets/chapati_and_beans.jpg"
     }
   ],
   "menucombomeal": [
