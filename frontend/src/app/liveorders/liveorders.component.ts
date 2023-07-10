@@ -51,7 +51,9 @@ export class LiveordersComponent implements OnInit{
   this.filteredusersList = this.usersList.filter(users => users?.name.toLowerCase().includes(text.toLowerCase()));
 }
 ////
-//analytics functions
+
+
+//////analytics functions
 totals: number = 0;
 productcalc: number = 0;
 
@@ -59,7 +61,13 @@ productcalc: number = 0;
     this.getPreorderList();
 
     this.http.get<any[]>('http://localhost:3000/users').subscribe(data =>{
+      console.log(data);
+      const val = data.map(v => v.value);
+      console.log({val});
+      
+      
       this.totals = this.calculateSum(data, 'qty');
+
     });
 
     this.http.get<any[]>('http://localhost:3000/users').subscribe(data =>{
@@ -74,6 +82,9 @@ productcalc: number = 0;
   calculateProduct(data:any[], value:string, qty:string):number{
     return data.reduce((product, item) => product + item[value] * item[qty], 0);
   }
+
+/////end of analytics
+
   /*///or
   let productcalc = 1;
   data.forEach(item =>{

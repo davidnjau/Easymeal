@@ -5,9 +5,11 @@ import { UsersService } from '../users.service';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import {MatTabsModule} from '@angular/material/tabs';
 //import { CoreService } from '../core.service';
 import Swal from 'sweetalert2';
 import { Users } from '../users'; 
+import { Staff } from '../staff';
 
 @Component({
   selector: 'app-staff',
@@ -15,7 +17,11 @@ import { Users } from '../users';
   styleUrls: ['./staff.component.css'],
 })
 export class StaffComponent implements OnInit {
+  links = ['All', 'Onduty', 'Offduty'];
+  activeLink = this.links[0];
+
   displayedColumns = [
+    'imgicon',
     'staffname',
     'department',
     'position',
@@ -36,8 +42,8 @@ export class StaffComponent implements OnInit {
 
 
   ////
-    usersList : Users[] = [];
-    filteredusersList: Users[] = [];
+    usersList : Staff[] = [];
+    filteredusersList: Staff[] = [];
   //implementing filterresult event handler function to return the searched staff by department
  filterResults(text: string) {
   if (!text) {

@@ -1,4 +1,6 @@
 export interface Users{
+    
+    //users of the app(customers)
     imgicon:string;
     idno: string;
     name: string;
@@ -6,6 +8,8 @@ export interface Users{
     qty: number;
     value: number;
     date: string;
+
+//to be removed. Staff interface, used in users service. no need to be here after i sort page 1.
     status: string;
     //action:string;
     staffname:string;
@@ -15,23 +19,6 @@ export interface Users{
     department:string;
     joined:string;
     mobile: string;
-    itemid:number;
-    itemname:string;
-    datein:string;
-    qtyin: string;
-    currentqty: string;
-    qtystatus:string;
-   // qtyaction:string;
-
 
 }
-/*
-    constructor(id, name, item, qty, value, date, status){
-        this.id=id;
-        this.name=name;
-        this.item=item;
-        this.qty=qty;
-        this.value=value;
-        this.date=date;
-        this.status=status;
-    }*/
+

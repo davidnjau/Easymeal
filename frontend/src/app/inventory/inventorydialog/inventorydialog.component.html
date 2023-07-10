@@ -5,7 +5,7 @@
 <mat-dialog-content>
     <mat-form-field appearance="outline">
         <mat-label>Item number</mat-label>
-        <input placeholder="Item no." matInput formControlName="itemid">
+        <input placeholder="Item no." matInput formControlName="id">
     </mat-form-field>
     <mat-form-field appearance="outline">
         <mat-label>Item Name</mat-label>
@@ -13,7 +13,7 @@
     </mat-form-field>
     <mat-form-field appearance="outline">
         <mat-label>Choose a date</mat-label>
-        <input matInput [matDatepicker]="picker" [matDatepicker]="picker">
+        <input matInput [matDatepicker]="picker" formControlName="datein">
         <mat-hint>MM/DD/YYYY</mat-hint>
         <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>

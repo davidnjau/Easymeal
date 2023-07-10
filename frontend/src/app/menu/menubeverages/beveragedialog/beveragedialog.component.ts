@@ -1,7 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef,MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { TrendingService } from 'src/app/trending.service';
+import { MenuProductsService } from 'src/app/menu-products.service';
 //import { CoreService } from 'src/app/core.service';
 import Swal from 'sweetalert2';
 
@@ -15,7 +15,7 @@ export class BeveragedialogComponent {
   
   constructor(
     private _fb: FormBuilder,
-    private _empService: TrendingService,
+    private _empService: MenuProductsService,
     private _dialogRef: MatDialogRef<BeveragedialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
    // private _coreService: CoreService

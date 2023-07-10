@@ -3,7 +3,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { MatDialogRef,MAT_DIALOG_DATA } from '@angular/material/dialog';
 //import { CoreService } from '../core.service';
 import Swal from 'sweetalert2';
-import { UsersService } from 'src/app/users.service';
+import { InventoryService } from 'src/app/inventory.service'; 
 
  //select dropdown interface
 interface Quantitystatus {
@@ -29,13 +29,13 @@ export class InventorydialogComponent implements OnInit{
 
   constructor(
     private _fb: FormBuilder,
-    private _empService: UsersService,
+    private _empService: InventoryService,
     private _dialogRef: MatDialogRef<InventorydialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
    // private _coreService: CoreService
   ){
     this.inventoryForm = this._fb.group({
-      itemid: '',
+      id:'',
       itemname:'',
       datein: '',
       qtyin:'',

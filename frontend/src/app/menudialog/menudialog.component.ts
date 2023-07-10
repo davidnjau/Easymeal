@@ -1,7 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef,MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { TrendingService } from '../trending.service';
+import { MenuProductsService } from '../menu-products.service';
 import { CoreService } from '../core.service';
 import Swal from 'sweetalert2';
 
@@ -16,7 +16,7 @@ export class MenudialogComponent implements OnInit{
   
   constructor(
     private _fb: FormBuilder,
-    private _empService: TrendingService,
+    private _empService: MenuProductsService,
     private _dialogRef: MatDialogRef<MenudialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
    // private _coreService: CoreService
@@ -49,7 +49,7 @@ export class MenudialogComponent implements OnInit{
     onFormSubmit() {
       if (this.combomealForm.valid) {
         if (this.data) {
-          this._empService.updateTrendingcombomeal(this.data.id, this.combomealForm.value).subscribe({
+          this._empService.updatecombomeal(this.data.id, this.combomealForm.value).subscribe({
               next: (val: any) => {
                 //this._coreService.openSnackBar('Employee details updated!');
                 Swal.fire("Meal details updated successfully!", 'success');
@@ -61,7 +61,7 @@ export class MenudialogComponent implements OnInit{
               },
             });
         } else {
-          this._empService.addTrendingcombomeal(this.combomealForm.value).subscribe({
+          this._empService.addcombomeal(this.combomealForm.value).subscribe({
             next: (value: any) => {
               //this._coreService.openSnackBar('Employee added successfully');
               Swal.fire("Meal details added successfully!", 'success');

@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewChild, inject } from '@angular/core';
-import { Trendingcombo } from 'src/app/trendingcombo';
+import { Beverages } from 'src/app/beverage';
 import {MatDialog, MatDialogConfig} from '@angular/material/dialog';
 import { MenudialogComponent } from 'src/app/menudialog/menudialog.component';
-import { TrendingService } from 'src/app/trending.service';
+import { MenuProductsService } from 'src/app/menu-products.service';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
@@ -32,21 +32,21 @@ export class MenubeveragesComponent implements OnInit{
 
   constructor(
     private _dialog: MatDialog,
-    private _empService: TrendingService,
+    private _empService: MenuProductsService,
     //private _coreService: CoreService
   ) {}
 
 
 
   ////
-  trendingcomboList : Trendingcombo[] = [];
-  filteredcomboList: Trendingcombo[] = [];
+  trendingcomboList : Beverages[] = [];
+  filteredcomboList: Beverages[] = [];
 //implementing filterresult event handler function to return the searched staff by department
 filterResults(text: string) {
 if (!text) {
   this.filteredcomboList = this.trendingcomboList;
 }
-this.filteredcomboList = this.trendingcomboList.filter(trendingcombo => trendingcombo?.comboname.toLowerCase().includes(text.toLowerCase()));
+this.filteredcomboList = this.trendingcomboList.filter(trendingcombo => trendingcombo?.beveragename.toLowerCase().includes(text.toLowerCase()));
 }
 ////
 

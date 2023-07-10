@@ -23,7 +23,6 @@ import { InventoryComponent } from './inventory/inventory.component';
 import { StepperorderdialogComponent } from './menu/stepperorderdialog/stepperorderdialog.component';
 import { OndutyComponent } from './staff/onduty/onduty.component';
 import { OffdutyComponent } from './staff/offduty/offduty.component';
-import { InventoryitemsComponent } from './inventory/inventoryitems/inventoryitems.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DialogBodyComponent } from './dialog-body/dialog-body.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -51,6 +50,7 @@ import { AddmealdialogComponent } from './menu/addmealdialog/addmealdialog.compo
 import { SinglemealComponent } from './menu/menusinglemeals/singlemeal/singlemeal.component';
 import { BeveragedialogComponent } from './menu/menubeverages/beveragedialog/beveragedialog.component';
 import {MatStepperModule} from '@angular/material/stepper';
+import {MatTabsModule} from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -71,7 +71,6 @@ import {MatStepperModule} from '@angular/material/stepper';
     StepperorderdialogComponent,
     OndutyComponent,
     OffdutyComponent,
-    InventoryitemsComponent,
     DialogBodyComponent,
     InventorydialogComponent,
     MenudialogComponent,
@@ -104,7 +103,8 @@ import {MatStepperModule} from '@angular/material/stepper';
     MatSortModule,
     MatSnackBarModule,
     ReactiveFormsModule,
-    MatStepperModule
+    MatStepperModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

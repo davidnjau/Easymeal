@@ -3,7 +3,7 @@
     <div class="analytics">
         <ul> 
             <li>
-                <p>Total Pre-Orders Earnings <br> <a>Ksh.600,000</a></p>  
+                <p>Total Pre-Orders Earnings <br> <a>Ksh.{{productcalc}}</a></p>  
             </li>
             <li class="second">
                 <p>Total Pre-Order Items <br> <a>20,000 Items</a></p> 
@@ -91,3 +91,7 @@
         <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
   </section>
 </section>
+
+
+<p>Total Orderitems: {{totals}}</p>
+<p>Total Liveorders Earnings: {{productcalc}}</p>

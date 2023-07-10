@@ -1,9 +1,9 @@
 import { Component, OnInit, ViewChild, inject } from '@angular/core';
-import { Trendingcombo } from '../trendingcombo';
+import { Menu_products } from '../menu_products';
 import {MatDialog, MatDialogConfig} from '@angular/material/dialog';
 import { MenudialogComponent } from '../menudialog/menudialog.component';
 import { MenusinglemealsComponent } from '../menu/menusinglemeals/menusinglemeals.component';
-import { TrendingService } from '../trending.service';
+import { MenuProductsService } from '../menu-products.service'; 
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
@@ -46,15 +46,15 @@ export class MenuhomeComponent implements OnInit  {
 
   constructor(
     private _dialog: MatDialog,
-    private _empService: TrendingService,
+    private _empService: MenuProductsService,
     //private _coreService: CoreService
   ) {}
 
 
 
   ////
-  trendingcomboList : Trendingcombo[] = [];
-  filteredcomboList: Trendingcombo[] = [];
+  trendingcomboList : Menu_products[] = [];
+  filteredcomboList: Menu_products[] = [];
 //implementing filterresult event handler function to return the searched staff by department
 filterResults(text: string) {
 if (!text) {
@@ -66,7 +66,7 @@ this.filteredcomboList = this.trendingcomboList.filter(trendingcombo => trending
 
 
 ngOnInit(): void {
-  this.getTrendingcomboList();
+  this.getcomboList();
 }
 
 openAddEditCategoryForm() {
@@ -75,7 +75,7 @@ openAddEditCategoryForm() {
     next: (val) => {
       if (val) {
         console.log(val);
-        this.getTrendingcomboList();
+        this.getcomboList();
       }
     },
   });
@@ -87,14 +87,14 @@ openAddEditMealForm() {
     next: (val) => {
       if (val) {
         console.log(val);
-        this.getTrendingcomboList();
+        this.getcomboList();
       }
     },
   });
 }
 
-getTrendingcomboList() {
-  this._empService.getTrendingcomboList().subscribe({
+getcomboList() {
+  this._empService.getcomboList().subscribe({
     next: (res) => {
       this.dataSource = new MatTableDataSource(res);
       this.dataSource.sort = this.sort;
@@ -117,12 +117,12 @@ applyFilter(event: Event) {
 ////
 
 
-deleteTrendingcombomeal(id: number) {
-  this._empService.deleteTrendingcombomeal(id).subscribe({
+deletecombomeal(id: number) {
+  this._empService.deletecombomeal(id).subscribe({
     next: (res) => {
       //this._coreService.openSnackBar('Employee deleted!', 'done');
       Swal.fire("Meal deleted successfully!", 'success');
-      this.getTrendingcomboList();
+      this.getcomboList();
     },
     error: console.log,
   });
@@ -138,7 +138,7 @@ openEditForm(data: any) {
    next: (val) => {
     console.log('val', val);
       if (val) {
-        this.getTrendingcomboList();
+        this.getcomboList();
       }
    },
   });

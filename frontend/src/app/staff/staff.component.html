@@ -7,22 +7,16 @@
       </div>
 </div> 
 
-<nav>
-  <div class="analytics">
-      <ul> 
-          <li>
-              <p><a  routerLinkActive="active" routerLink="staff">All </a></p>  
-          </li>
-          <li>
-              <p><a routerLink="onduty">On Duty</a></p>
-          </li>
-          <li>
-              <p><a routerLink="offduty">Off Duty</a></p>
-          </li>
-      </ul>  
-  </div>
+  <nav mat-tab-nav-bar [tabPanel]="tabPanel">
+    <div class="analytics">
+    <a mat-tab-link *ngFor="let link of links"
+       (click)="activeLink = link"
+       [active]="activeLink == link" color="orangered"> {{link}} </a>
+      </div>
+  </nav>
+<mat-tab-nav-panel #tabPanel>
+
   <hr>
-</nav>
 
   <section class="ordersummary">
 
@@ -34,6 +28,11 @@
     
         <section class="datatable">
           <table class="tabled" mat-table [dataSource] = "dataSource" matSort>
+
+            <ng-container matColumnDef="imgicon">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header></th>
+              <td mat-cell mat-cell *matCellDef="let row"><img src="{{row.imgicon}}" alt="" width="40px"></td>
+           </ng-container>
 
             <!-- Progress Column -->
             <ng-container matColumnDef="staffname">
@@ -85,6 +84,24 @@
           <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
     </section>
   </section>
+
+  </mat-tab-nav-panel>
+  
+  
+  <!-- <div class="analytics">
+      <ul> 
+          <li>
+              <p><a routerLinkActive="active" routerLink="staff">All </a></p>  
+          </li>
+          <li>
+              <p><a routerLink="onduty">On Duty</a></p>
+          </li>
+          <li>
+              <p><a routerLink="offduty">Off Duty</a></p>
+          </li>
+      </ul>  
+  </div> -->
+  
 
 
 

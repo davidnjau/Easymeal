@@ -29,6 +29,7 @@ export class DialogBodyComponent implements OnInit{
       joined: '',
       mobile: '',
       action: '',
+      imgicon: '',
     });
   }
   //respdata: any;

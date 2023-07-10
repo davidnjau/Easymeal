@@ -1,11 +1,12 @@
-export interface Users{
+export interface Staff{
     imgicon:string;
-    id: string;
-    name: string;
-    position: string;
-    qty: number;
-    value: string;
-    date: string;
+    id:number;
     status: string;
-    action:string;
+    //action:string;
+    staffname:string;
+    staffimg:string;
+    position:string;
+    department:string;
+    joined:string;
+    mobile: string;
 }

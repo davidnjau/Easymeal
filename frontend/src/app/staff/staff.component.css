@@ -17,7 +17,7 @@ nav .analytics{
     margin: 0px 0 0 0;
 }
 
-nav .analytics li{
+nav .analytics a{
     list-style: none;
     display: inline-flex;
     text-decoration: none;
@@ -25,17 +25,10 @@ nav .analytics li{
     font-size: 19px;
     padding: 0px;
     margin: 0 0 0 100px;
-    
+
 }
 
-nav .analytics li p a{
-  
-     color: rgb(80, 80, 80);  
-}
-nav .analytics li p a:active{
-  color: orangered;
-}
-nav .analytics li p a:hover{
+nav .analytics a mat-tab-link:hover{
     color: orangered;
     text-decoration: none;
 }

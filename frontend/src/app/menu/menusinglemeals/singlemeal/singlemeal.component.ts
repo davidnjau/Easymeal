@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild, inject } from '@angular/core';
-import { Trendingcombo } from 'src/app/trendingcombo';
+import { Singlemeals } from 'src/app/singlemeal'; 
 import {MatDialog, MatDialogConfig} from '@angular/material/dialog';
-import { TrendingService } from 'src/app/trending.service';
+import { MenuProductsService } from 'src/app/menu-products.service';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
@@ -31,7 +31,7 @@ export class SinglemealComponent implements OnInit {
 
   constructor(
     private _dialog: MatDialog,
-    private _empService: TrendingService,
+    private _empService: MenuProductsService,
     //private _coreService: CoreService
   ) {}
 

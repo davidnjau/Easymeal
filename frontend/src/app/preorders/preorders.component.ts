@@ -8,6 +8,7 @@ import { MatTableDataSource } from '@angular/material/table';
 //import { CoreService } from '../core.service';
 import Swal from 'sweetalert2';
 import { Users } from '../users'; 
+import { HttpClient } from '@angular/common/http';
 
 
 @Component({
@@ -35,27 +36,53 @@ export class PreordersComponent implements OnInit {
   constructor(
     private _dialog: MatDialog,
     private _empService: UsersService,
+    private http:HttpClient,
     //private _coreService: CoreService
   ) {}
 
 
-  
-////
-    usersList : Users[] = [];
-    filteredusersList: Users[] = [];
+//////analytics functions
+totals: number = 0;
+productcalc: number = 0;
+
+  ngOnInit(): void {
+    this.getPreorderList();
+
+    this.http.get<any[]>('http://localhost:3000/users').subscribe(data =>{
+      /*console.log(data);
+      const val = data.map(v => v.value);
+      console.log({val});
+      */
+      this.totals = this.calculateSum(data, 'qty');
+    });
+
+    this.http.get<any[]>('http://localhost:3000/users').subscribe(data =>{
+      this.productcalc = this.calculateProduct(data, 'value', 'qty');
+    });
+  }
+
+  calculateSum(data:any[], qty:string):number{
+    return data.reduce((sum, item) => sum + item[qty], 0);
+  }
+
+  calculateProduct(data:any[], value:string, qty:string):number{
+    return data.reduce((product, item) => product + item[value] * item[qty], 0);
+  }
+
+/////end of analytics
+
+
+usersList: Users[] = [];
+filteredusersList: Users[] = [];
   //implementing filterresult event handler function to return the searched staff by department
  filterResults(text: string) {
   if (!text) {
     this.filteredusersList = this.usersList;
+    }
+    this.filteredusersList = this.usersList.filter(users => users?.name.toLowerCase().includes(text.toLowerCase()));
   }
-  this.filteredusersList = this.usersList.filter(users => users?.name.toLowerCase().includes(text.toLowerCase()));
-}
 ////
 
-
-  ngOnInit(): void {
-    this.getPreorderList();
-  }
 
   /*openAddEditPreordersForm() {
     const dialogRef = this._dialog.open(LivesummaryComponent,{width:"60%", height:"80%"});
