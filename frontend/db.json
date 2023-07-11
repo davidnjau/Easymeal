@@ -213,7 +213,8 @@
       "singlemealname": "Chapati",
       "singlemealprice": 5000,
       "date": "2022-01-31T21:00:00.000Z",
-      "action": ""
+      "action": "",
+      "category": "meals"
     },
     {
       "id": 3,
@@ -251,7 +252,7 @@
     },
     {
       "id": 2,
-      "beveragephoto": "../assets/masala.jpg",
+      "beveragephoto": "../assets/masala_tea.jpg",
       "beveragename": "Regular/Masala Tea",
       "beverageprice": 5000,
       "date": "2022-02-31T21:00:00.000Z",
@@ -401,5 +402,8 @@
       "imgicon": "../assets/staffimg2.jpg",
       "status": "onDuty"
     }
+  ],
+  "categories":[
+    "meals", "beverages"
   ]
 }

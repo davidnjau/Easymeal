@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { Trendingcombo } from 'src/app/trendingcombo';
 
 @Component({
@@ -7,5 +7,5 @@ import { Trendingcombo } from 'src/app/trendingcombo';
   styleUrls: ['./menusinglemeals.component.css']
 })
 export class MenusinglemealsComponent {
-  @Input() trendingcombo! :Trendingcombo;
+
 }

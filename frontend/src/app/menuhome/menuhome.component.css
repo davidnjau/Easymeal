@@ -131,7 +131,10 @@
 .menubar{
     margin: 30px 0 30px 120px;
 }
-  
+.tabled img{
+  border-radius: 15%;
+  padding:5px 5px 5px 0px;
+}
 
 
 
