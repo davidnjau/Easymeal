@@ -312,7 +312,7 @@
       "action": ""
     }
   ],
-  "staffonduty": [
+  "allEmployees": [
     {
       "staffname": "Grant Marshall",
       "department": "Kitchen",
@@ -321,7 +321,8 @@
       "mobile": "0712444444",
       "action": "",
       "id": 1,
-      "imgicon": "../assets/staffimg1.jpg"
+      "imgicon": "../assets/staffimg1.jpg",
+      "status": "onDuty"
     },
     {
       "staffname": "Pena Valdez",
@@ -331,7 +332,8 @@
       "mobile": "0712444444",
       "action": "",
       "id": 2,
-      "imgicon": "../assets/staffimg2.jpg"
+      "imgicon": "../assets/staffimg2.jpg",
+      "status": "offDuty"
     },
     {
       "staffname": "Jessica Miles",
@@ -341,7 +343,8 @@
       "mobile": "0712444444",
       "action": "",
       "id": 3,
-      "imgicon": "../assets/staffimg3.jpg"
+      "imgicon": "../assets/staffimg3.jpg",
+      "status": "onDuty"
     },
     {
       "staffname": "Kerri Barber",
@@ -351,7 +354,8 @@
       "mobile": "0712444444",
       "action": "",
       "id": 4,
-      "imgicon": "../assets/staffimg4.jpg"
+      "imgicon": "../assets/staffimg4.jpg",
+      "status": "offDuty"
     },
     {
       "staffname": "Garet Jay",
@@ -361,20 +365,20 @@
       "mobile": "0712444444",
       "action": "",
       "id": 5,
-      "imgicon": "../assets/staffimg5.jpg"
+      "imgicon": "../assets/staffimg5.jpg",
+      "status": "onDuty"
     },
     {
       "staffname": "Joael Kip",
       "department": "Store",
       "position": "Store keeper",
-      "joined": "",
+      "joined": "2023-07-12T21:00:00.000Z",
       "mobile": "0710000000",
       "action": "",
       "imgicon": "",
+      "status": "onDuty",
       "id": 6
-    }
-  ],
-  "staffoffduty": [
+    },
     {
       "staffname": "Natasha Gamble",
       "department": "Kitchen",
@@ -383,7 +387,8 @@
       "mobile": "0712444444",
       "action": "",
       "id": 6,
-      "imgicon": "../assets/staffimg6.jpg"
+      "imgicon": "../assets/staffimg6.jpg",
+      "status": "offDuty"
     },
     {
       "staffname": "White Castaneda",
@@ -393,7 +398,8 @@
       "mobile": "0712444444",
       "action": "",
       "id": 7,
-      "imgicon": "../assets/staffimg2.jpg"
+      "imgicon": "../assets/staffimg2.jpg",
+      "status": "onDuty"
     }
   ]
 }

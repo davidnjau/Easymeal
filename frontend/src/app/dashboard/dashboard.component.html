@@ -3,13 +3,13 @@
         <ul>
             <li class="chefnote"><p>Welcome <br> Head Chef.</p></li>
             <li>
-                <p>Total Earnings <br> <a>#600,000</a></p> <fa-icon icon="ellipsis"></fa-icon> 
+                <p>Total Earnings <br> <a>{{productcalc}}</a></p> <fa-icon icon="ellipsis" routerLink="./preorders"></fa-icon> 
             </li>
             <li>
-                <p>Today's Orders <br> <a>20,000 Items</a></p> <fa-icon icon="ellipsis"></fa-icon>
+                <p>Today's Orders <br> <a>{{totals}}Items</a></p> <fa-icon icon="ellipsis" routerLink="./preorders"></fa-icon>
             </li>
             <li>
-                <p>Tomorrow's Orders <br> <a>20,000 Items</a></p> <fa-icon icon="ellipsis"></fa-icon>
+                <p>Tomorrow's Orders <br> <a>{{totals}}Items</a></p> <fa-icon icon="ellipsis" routerLink="./preorders"></fa-icon>
             </li>
         </ul>  
     </div>
@@ -18,7 +18,7 @@
 <section class="comboss">
   <section class="combos">
   <article *ngFor="let t of tc">
-    <img class="combo-photo" [src]="t.photo" alt="Exterior photo of {{t.comboname}}">
+    <img class="combo-photo" [src]="t.photo" alt="Exterior photo of {{t.comboname}}" routerLink="./menuhome">
     <h2 class="combo-heading">{{t.comboname }} <br> <p>{{t.ordernumber}} orders today</p></h2>
     <div  class="combo-details"><p> {{t.price }} Ksh</p></div>
 </article> 

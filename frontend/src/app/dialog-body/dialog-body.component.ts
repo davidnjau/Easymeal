@@ -30,6 +30,7 @@ export class DialogBodyComponent implements OnInit{
       mobile: '',
       action: '',
       imgicon: '',
+      status:'',
     });
   }
   //respdata: any;
@@ -64,6 +65,8 @@ export class DialogBodyComponent implements OnInit{
             },
           });
       } else {
+        console.log(this.empForm.value);
+        
         this._empService.addEmployee(this.empForm.value).subscribe({
           next: (val: any) => {
             //this._coreService.openSnackBar('Employee added successfully');

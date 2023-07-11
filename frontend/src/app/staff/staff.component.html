@@ -7,25 +7,14 @@
       </div>
 </div> 
 
-  <!-- <nav mat-tab-nav-bar [tabPanel]="tabPanel">
-    <div class="analytics">
-    <a mat-tab-link *ngFor="let link of links"
-       (click)="activeLink = link"
-       [active]="activeLink == link" color="orangered"> {{link}} </a>
-      </div>
-  </nav>
-<mat-tab-nav-panel #tabPanel> -->
-
   <mat-tab-group>
-    <mat-tab label="All">
-        <section class="ordersummary">
+    <mat-tab class="label" label="All">
 
+        <section class="ordersummary">
           <form class="input" action="/action_page.php">
             <input type="text" placeholder="" name="search" #filter  (keyup)="applyFilter($event)" #input>
             <button type="submit" (click)="filterResults(filter.value)">Search</button>
           </form>
-    
-    
         <section class="datatable">
           <table class="tabled" mat-table [dataSource] = "dataSource" matSort>
 
@@ -84,7 +73,6 @@
           <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
     </section>
   </section>
-  <app-offduty></app-offduty>
     </mat-tab>
 
 

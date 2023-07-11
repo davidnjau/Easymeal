@@ -11,13 +11,12 @@ hr{
     width: 86%;
     margin: 5px 0 0 100px;
 }
-    
-nav .analytics{
-    display: inline;
-    margin: 0px 0 0 0;
+.label{
+  margin-right: 0;
 }
+    
 
-nav .analytics a{
+.label{
     list-style: none;
     display: inline-flex;
     text-decoration: none;
@@ -28,7 +27,7 @@ nav .analytics a{
 
 }
 
-nav .analytics a mat-tab-link:hover{
+ .label:hover{
     color: orangered;
     text-decoration: none;
 }

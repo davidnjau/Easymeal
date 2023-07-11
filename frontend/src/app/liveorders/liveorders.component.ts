@@ -86,6 +86,12 @@ productcalc: number = 0;
     return data.reduce((product, item) => product + item[value] * item[qty], 0);
   }
 
+  ///
+  todayorders:number=0;
+  tomorroworders:number=0;
+
+  ///
+
 /////end of analytics
 
   /*openAddEditPreordersForm() {

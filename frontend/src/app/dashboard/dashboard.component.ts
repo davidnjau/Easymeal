@@ -43,11 +43,40 @@ export class DashboardComponent implements OnInit {
     //private _coreService: CoreService
   ) {}
 
+  totals: number = 0;
+  productcalc: number = 0;
+
+
   ngOnInit(): void {
     this.getLiveorderList();
-
     this.getTrendingcomboList();
+
+    /* analytics */
+    this.http.get<any[]>('http://localhost:3000/users').subscribe(data =>{
+      console.log(data);
+      const val = data.map(v => v.value);
+      console.log("val",val);
+      
+      
+      this.totals = this.calculateSum(data, 'qty');
+      console.log("totals",this.totals);
+    });
+
+    this.http.get<any[]>('http://localhost:3000/users').subscribe(data =>{
+      this.productcalc = this.calculateProduct(data, 'value', 'qty');
+    });
   }
+  calculateSum(data:any[], qty:string):number{
+    console.log()
+    return data.reduce((sum, item) => sum + item[qty], 0);
+  }
+
+  calculateProduct(data:any[], value:string, qty:string):number{
+    return data.reduce((product, item) => product + item[value] * item[qty], 0);
+  }
+
+  /* end of analytics */
+  
 
   getLiveorderList() {
     this._emService.getLiveorderList().subscribe({

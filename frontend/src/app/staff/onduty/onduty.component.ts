@@ -74,7 +74,12 @@ export class OndutyComponent implements OnInit{
   getEmployeeList() {
     this._empService.getEmployeeList().subscribe({
       next: (res) => {
-        this.dataSource = new MatTableDataSource(res);
+        //console.log(res.staffonduty+res.staffoffduty);
+        let onDuty;
+        onDuty=res.filter((item) => item.status==="onDuty");
+        console.log(onDuty);
+        
+        this.dataSource = new MatTableDataSource(onDuty);
         this.dataSource.sort = this.sort;
         this.dataSource.paginator = this.paginator;
       },

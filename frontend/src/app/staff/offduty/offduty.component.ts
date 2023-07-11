@@ -54,7 +54,7 @@ export class OffdutyComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.getOffdutyEmployeeList();
+    this.getEmployeeList();
   }
 
   openAddEditEmpForm() {
@@ -63,16 +63,20 @@ export class OffdutyComponent implements OnInit {
       next: (val) => {
         if (val) {
           console.log(val);
-          this.getOffdutyEmployeeList();
+          this.getEmployeeList();
         }
       },
     });
   }
 
-  getOffdutyEmployeeList() {
-    this._empService.getOffdutyEmployeeList().subscribe({
+  getEmployeeList() {
+    this._empService.getEmployeeList().subscribe({
       next: (res) => {
-        this.dataSource = new MatTableDataSource(res);
+        let offDuty;
+        offDuty=res.filter((item) => item.status==="offDuty");
+        console.log(offDuty);
+
+        this.dataSource = new MatTableDataSource(offDuty);
         this.dataSource.sort = this.sort;
         this.dataSource.paginator = this.paginator;
       },
@@ -93,12 +97,12 @@ export class OffdutyComponent implements OnInit {
   ////
 
 
-  deleteOffdutyEmployee(id: number) {
-    this._empService.deleteOffdutyEmployee(id).subscribe({
+  deleteEmployee(id: number) {
+    this._empService.deleteEmployee(id).subscribe({
       next: (res) => {
         //this._coreService.openSnackBar('Employee deleted!', 'done');
         Swal.fire("Employee deleted successfully!", 'success');
-        this.getOffdutyEmployeeList();
+        this.getEmployeeList();
       },
       error: console.log,
     });
@@ -113,7 +117,7 @@ export class OffdutyComponent implements OnInit {
      next: (val) => {
       console.log('val', val);
         if (val) {
-          this.getOffdutyEmployeeList();
+          this.getEmployeeList();
         }
      },
     });

@@ -72,6 +72,8 @@ export class StaffComponent implements OnInit {
   getEmployeeList() {
     this._empService.getEmployeeList().subscribe({
       next: (res) => {
+        //console.log(res.staffonduty+res.staffoffduty);
+        
         this.dataSource = new MatTableDataSource(res);
         this.dataSource.sort = this.sort;
         this.dataSource.paginator = this.paginator;
@@ -79,7 +81,6 @@ export class StaffComponent implements OnInit {
       error: console.log,
     });
   }
-
 
   ////
   applyFilter(event: Event) {
