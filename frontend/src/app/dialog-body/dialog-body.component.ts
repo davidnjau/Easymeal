@@ -76,23 +76,23 @@ export class DialogBodyComponent implements OnInit{
   }
 
   //file selector or image upload
-    @Input()
-        imgicon = '';
+   
+       selectedFile:File|any='';
     
   onFileSelected(event){
 
-    const file:File = event.target.files[0];
+    this.selectedFile = <File>event.target.files[0];
+    
+        
+      const fd = new FormData();
 
-    if (file) {
+      fd.append("image", this.selectedFile, this.selectedFile.imgicon);
 
-        this.imgicon = file.name;
+       this.http.post('http://localhost:3000/allEmployees',fd).subscribe(res => {
+         console.log(res);
+       });
 
-        const formData = new FormData();
-
-        formData.append("thumbnail", file);
-
-        const upload$ = this.http.post('http://localhost:3000/allEmployees', this.imgicon )}
-    }   
+      }
         
 
 }

@@ -35,10 +35,9 @@
         <mat-radio-button value="offDuty">Off duty</mat-radio-button>
       </mat-radio-group>
       
-      <button (click)="fileUpload.click()">
+      
+        <input placeholder="Add Image" formControlName="imgicon" type="file" class="file-upload"  (change)="onFileSelected($event)">
     
-        <input placeholder="Add Image" formControlName="imgicon" type="file" class="file-upload"   #fileUpload>
-    </button>
     
    <!-- <mat-form-field appearance="outline">
         <input placeholder="Add Image" formControlName="imgicon" type="file" class="file-upload" onchange="console.log(event.target.files)">
