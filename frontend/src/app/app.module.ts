@@ -35,6 +35,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { HttpEventType } from '@angular/common/http';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
@@ -50,6 +51,7 @@ import { BeveragedialogComponent } from './menu/menubeverages/beveragedialog/bev
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatTabsModule} from '@angular/material/tabs';
 import { PresummaryComponent } from './preorders/presummary/presummary.component';
+import { CategorymealComponent } from './categorymeal/categorymeal.component';
 
 @NgModule({
   declarations: [
@@ -76,6 +78,7 @@ import { PresummaryComponent } from './preorders/presummary/presummary.component
     SinglemealComponent,
     BeveragedialogComponent,
     PresummaryComponent,
+    CategorymealComponent,
     
    
   ],

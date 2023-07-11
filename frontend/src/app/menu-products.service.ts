@@ -62,4 +62,23 @@ export class MenuProductsService {
   }
 
 
-}
+
+  getCategory(): Observable<any> {
+    return this._http.get('http://localhost:3000/categories');
+  }
+
+  deleteCategory(id: number): Observable<any> {
+    return this._http.delete(`http://localhost:3000/categories/${id}`);
+  }
+    addCategory(data: any): Observable<any> {
+      return this._http.post('http://localhost:3000/categories', data);
+    }
+
+  updateCategory(data: any): Observable<any> {
+      return this._http.post('http://localhost:3000/categories', data);
+    }
+  
+  
+  }
+
+

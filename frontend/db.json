@@ -196,6 +196,10 @@
       "value": "3000",
       "date": "2023-06-30T21:00:00.000Z",
       "action": ""
+    },
+    {
+      "categoryname": "beverage",
+      "id": 6
     }
   ],
   "singlemeals": [
@@ -376,7 +380,7 @@
       "joined": "2023-07-12T21:00:00.000Z",
       "mobile": "0710000000",
       "action": "",
-      "imgicon": "",
+      "imgicon": "C:\\fakepath\\teapot2.jpg",
       "status": "onDuty",
       "id": 6
     },
@@ -401,9 +405,45 @@
       "id": 7,
       "imgicon": "../assets/staffimg2.jpg",
       "status": "onDuty"
+    },
+    {
+      "id": 8
+    },
+    {
+      "staffname": "",
+      "department": "",
+      "position": "",
+      "joined": "",
+      "mobile": "",
+      "action": "",
+      "imgicon": "C:\\fakepath\\chapati.jpg",
+      "status": "",
+      "id": 9
+    },
+    {
+      "staffname": "",
+      "department": "",
+      "position": "",
+      "joined": "",
+      "mobile": "",
+      "action": "",
+      "imgicon": "C:\\fakepath\\teapot.jpg",
+      "status": "",
+      "id": 10
     }
   ],
-  "categories":[
-    "meals", "beverages"
+  "categories": [
+    {
+      "categoryname": "Chef's choice combos"
+    },
+    {
+      "categoryname": "meals"
+    },
+    {
+      "categoryname": " Hot beverages"
+    },
+    {
+      "categoryname": "Cold Beverages"
+    }
   ]
 }

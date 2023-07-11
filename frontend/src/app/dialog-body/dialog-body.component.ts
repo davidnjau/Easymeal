@@ -1,9 +1,11 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, Input } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef,MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { UsersService } from '../users.service';
 import { CoreService } from '../core.service';
 import Swal from 'sweetalert2';
+import { HttpClient } from '@angular/common/http';
+import { HttpEventType } from '@angular/common/http';
 
 
 @Component({
@@ -19,6 +21,7 @@ export class DialogBodyComponent implements OnInit{
     private _fb: FormBuilder,
     private _empService: UsersService,
     private _dialogRef: MatDialogRef<DialogBodyComponent>,
+    private http: HttpClient,
     @Inject(MAT_DIALOG_DATA) public data: any,
    // private _coreService: CoreService
   ) {
@@ -39,17 +42,6 @@ export class DialogBodyComponent implements OnInit{
     this.empForm.patchValue(this.data);
   }
 
-
-/*
-  Reactiveform = new FormGroup({
-    staffname: new FormControl("", Validators.required),
-    mobile: new FormControl("", Validators.required),
-    department: new FormControl("", Validators.required),
-    position: new FormControl("", Validators.required),
-    staffimg: new FormControl("")
-  });
-
-  */
   onFormSubmit() {
     if (this.empForm.valid) {
       if (this.data) {
@@ -82,5 +74,25 @@ export class DialogBodyComponent implements OnInit{
       }
     }
   }
+
+  //file selector or image upload
+    @Input()
+        imgicon = '';
+    
+  onFileSelected(event){
+
+    const file:File = event.target.files[0];
+
+    if (file) {
+
+        this.imgicon = file.name;
+
+        const formData = new FormData();
+
+        formData.append("thumbnail", file);
+
+        const upload$ = this.http.post('http://localhost:3000/allEmployees', this.imgicon )}
+    }   
+        
 
 }

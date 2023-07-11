@@ -35,10 +35,14 @@
         <mat-radio-button value="offDuty">Off duty</mat-radio-button>
       </mat-radio-group>
       
-
-   <!--<mat-form-field appearance="outline">
-        <input placeholder="Add Image" matInput formControlName="staffimg">
-    </mat-form-field>-->
+      <button (click)="fileUpload.click()">
+    
+        <input placeholder="Add Image" formControlName="imgicon" type="file" class="file-upload"   #fileUpload>
+    </button>
+    
+   <!-- <mat-form-field appearance="outline">
+        <input placeholder="Add Image" formControlName="imgicon" type="file" class="file-upload" onchange="console.log(event.target.files)">
+    </mat-form-field> -->
     
 </div>
 <div mat-dialog-actions class="action">
@@ -46,3 +50,4 @@
     <button mat-raised-button color="primary" type="submit">{{ data ? 'Update': 'Add Staff' }}</button>
 </div>
 </form>
+
