@@ -8,23 +8,23 @@
   </mat-form-field>
   
   <mat-form-field appearance="outline">
-      <input placeholder="Item name" matInput formControlName="item">
+      <input placeholder="Item name" matInput formControlName="itemName">
   </mat-form-field>
   
   <mat-form-field appearance="outline">
       <mat-label>Quantity</mat-label>
-      <input matInput placeholder="Quantity " formControlName="qty">
+      <input matInput placeholder="Quantity " formControlName="itemQuantity">
   </mat-form-field>
 
   <mat-form-field appearance="outline">
     <mat-label>Price</mat-label>
-    <input placeholder="Item Price" matInput formControlName="value">
+    <input placeholder="Item Price" matInput formControlName="itemValue">
 </mat-form-field>
 
 
   <mat-form-field appearance="outline">
       <mat-label>Date Added</mat-label>
-      <input matInput [matDatepicker]="picker" formControlName="date">
+      <input matInput [matDatepicker]="picker" formControlName="orderDate">
       <mat-hint>MM/DD/YYYY</mat-hint>
       <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
@@ -32,7 +32,7 @@
 
   <mat-form-field appearance="outline">
     <mat-label>Status</mat-label>
-    <mat-select formControlName="status">
+    <mat-select formControlName="itemStatus">
         <mat-option *ngFor="let order of orders" [value]="order.value" >{{order.viewValue}}</mat-option>
     </mat-select>
    <!--supposed to be a matselect-->
@@ -40,7 +40,7 @@
   
 <div mat-dialog-actions class="action">
   <!--<button mat-raised-button type="button" [mat-dialog-close]="false">Close</button>-->
-  <button mat-raised-button color="primary" type="submit">{{ data ? 'Update': 'Order an item' }}</button>
+  <button mat-raised-button color="primary" type="submit">{{ data ? 'Update': 'Update Preorder' }}</button>
 </div>
 
 </form>

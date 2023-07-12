@@ -22,9 +22,9 @@ export class BeveragedialogComponent {
   ) {
     this.bevmealForm = this._fb.group({
       id:'',
-      beveragephoto:'',
-      beveragename:'',
-      beverageprice:'',
+      itemUrl:'',
+      itemName:'',
+      itemValue:'',
       date:'',
       action:'',
     });

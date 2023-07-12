@@ -41,9 +41,13 @@
       "itemQuantity": 3,
       "itemValue": 10.99,
       "orderDate": "2023-07-01",
-      "itemStatus": "Shipped"
+      "itemStatus": "Processing",
+      "action": "",
+      "imgicon": "../assets/user.png",
+      "id": 1
     },
     {
+      "id": 2,
       "name": "Jane Smith",
       "itemName": "Widget B",
       "itemQuantity": 2,
@@ -52,6 +56,7 @@
       "itemStatus": "Processing"
     },
     {
+      "id": 3,
       "name": "Mark Johnson",
       "itemName": "Widget C",
       "itemQuantity": 1,
@@ -60,6 +65,7 @@
       "itemStatus": "Delivered"
     },
     {
+      "id": 4,
       "name": "Sarah Davis",
       "itemName": "Widget D",
       "itemQuantity": 5,
@@ -68,6 +74,7 @@
       "itemStatus": "Shipped"
     },
     {
+      "id": 5,
       "name": "Michael Wilson",
       "itemName": "Widget E",
       "itemQuantity": 2,
@@ -76,6 +83,7 @@
       "itemStatus": "Processing"
     },
     {
+      "id": 6,
       "name": "Emily Thompson",
       "itemName": "Widget F",
       "itemQuantity": 4,
@@ -84,6 +92,7 @@
       "itemStatus": "Processing"
     },
     {
+      "id": 7,
       "name": "David Lee",
       "itemName": "Widget G",
       "itemQuantity": 1,
@@ -92,6 +101,7 @@
       "itemStatus": "Delivered"
     },
     {
+      "id": 8,
       "name": "Karen Baker",
       "itemName": "Widget H",
       "itemQuantity": 3,
@@ -100,6 +110,7 @@
       "itemStatus": "Shipped"
     },
     {
+      "id": 9,
       "name": "Robert Turner",
       "itemName": "Widget I",
       "itemQuantity": 2,
@@ -108,6 +119,7 @@
       "itemStatus": "Delivered"
     },
     {
+      "id": 10,
       "name": "Jennifer Clark",
       "itemName": "Widget J",
       "itemQuantity": 1,
@@ -195,124 +207,217 @@
   "menucombomeal": [
     {
       "id": 1,
-      "photo": "./assets/ugali_and_beef.jpg",
-      "comboname": "Ugali and Beef",
-      "value": 3000,
-      "date": "2022-01 -31T21:00:00.000Z",
+      "itemName": "Widget A",
+      "itemUrl": "https://example.com/widget-a",
+      "itemValue": 10.99,
+      "dateAdded": "2023-07-01",
       "action": ""
     },
     {
       "id": 2,
-      "photo": "./assets/chapati_and_beef.jpg",
-      "comboname": "Chapati and Beef",
-      "value": 5000,
-      "date": "2023-06-30T21:00:00.000Z",
+      "itemName": "Widget B",
+      "itemUrl": "https://example.com/widget-b",
+      "itemValue": 5.99,
+      "dateAdded": "2023-07-02",
       "action": ""
     },
     {
       "id": 3,
-      "photo": "./assets/rice_and_beef.jpg",
-      "comboname": "rice and beef",
-      "value": 2000,
-      "date": "2023-06-30T21:00:00.000Z",
+      "itemName": "Widget C",
+      "itemUrl": "https://example.com/widget-c",
+      "itemValue": 8.99,
+      "dateAdded": "2023-07-03",
       "action": ""
     },
     {
       "id": 4,
-      "photo": "./assets/pizza_and_chips.jpg",
-      "comboname": "Pizza andd chipo",
-      "value": 3000,
-      "date": "2022-01-31T21:00:00.000Z",
+      "itemName": "Widget D",
+      "itemUrl": "https://example.com/widget-d",
+      "itemValue": 15.99,
+      "dateAdded": "2023-07-04",
       "action": ""
     },
     {
       "id": 5,
-      "photo": "./assets/rice_and_beans.jpg",
-      "comboname": "Rice & Beans",
-      "value": "3000",
-      "date": "2023-06-30T21:00:00.000Z",
+      "itemName": "Widget E",
+      "itemUrl": "https://example.com/widget-e",
+      "itemValue": 7.99,
+      "dateAdded": "2023-07-05",
       "action": ""
     },
     {
-      "categoryname": "beverage",
-      "id": 6
+      "itemName": "Widget F",
+      "itemUrl": "https://example.com/widget-f",
+      "itemValue": 12.99,
+      "dateAdded": "2023-07-06"
+    },
+    {
+      "itemName": "Widget G",
+      "itemUrl": "https://example.com/widget-g",
+      "itemValue": 9.99,
+      "dateAdded": "2023-07-07"
+    },
+    {
+      "itemName": "Widget H",
+      "itemUrl": "https://example.com/widget-h",
+      "itemValue": 11.99,
+      "dateAdded": "2023-07-08"
+    },
+    {
+      "itemName": "Widget I",
+      "itemUrl": "https://example.com/widget-i",
+      "itemValue": 6.99,
+      "dateAdded": "2023-07-09"
+    },
+    {
+      "itemName": "Widget J",
+      "itemUrl": "https://example.com/widget-j",
+      "itemValue": 14.99,
+      "dateAdded": "2023-07-10"
     }
   ],
   "singlemeals": [
     {
       "id": 1,
-      "singlemealphoto": "./assets/ugali.jpg",
-      "singlemealname": "Ugali",
-      "singlemealprice": 5000,
-      "date": "2022-01-31T21:00:00.000Z",
+      "itemName": "Widget A",
+      "itemUrl": "https://example.com/widget-a",
+      "itemValue": 10.99,
+      "dateAdded": "2023-07-01",
       "action": ""
     },
     {
       "id": 2,
-      "singlemealphoto": "./assets/chapati.jpg",
-      "singlemealname": "Chapati",
-      "singlemealprice": 5000,
-      "date": "2022-01-31T21:00:00.000Z",
-      "action": "",
-      "category": "meals"
+      "itemName": "Widget B",
+      "itemUrl": "https://example.com/widget-b",
+      "itemValue": 5.99,
+      "dateAdded": "2023-07-02",
+      "action": ""
     },
     {
       "id": 3,
-      "singlemealphoto": "./assets/rice.jpg",
-      "singlemealname": "Rice",
-      "singlemealprice": 5000,
-      "date": "2022-01-31T21:00:00.000Z",
+      "itemName": "Widget C",
+      "itemUrl": "https://example.com/widget-c",
+      "itemValue": 8.99,
+      "dateAdded": "2023-07-03",
       "action": ""
     },
     {
       "id": 4,
-      "singlemealphoto": "./assets/pizza_and_chips.jpg",
-      "singlemealname": "Pizza",
-      "singlemealprice": 5000,
-      "date": "2022-01-31T21:00:00.000Z",
+      "itemName": "Widget D",
+      "itemUrl": "https://example.com/widget-d",
+      "itemValue": 15.99,
+      "dateAdded": "2023-07-04",
       "action": ""
     },
     {
       "id": 5,
-      "singlemealphoto": "./assets/chips.jpg",
-      "singlemealname": "Fries",
-      "singlemealprice": 5000,
-      "date": "2022-01-31T21:00:00.000Z",
+      "itemName": "Widget E",
+      "itemUrl": "https://example.com/widget-e",
+      "itemValue": 7.99,
+      "dateAdded": "2023-07-05",
       "action": ""
+    },
+    {
+      "itemName": "Widget F",
+      "itemUrl": "https://example.com/widget-f",
+      "itemValue": 12.99,
+      "dateAdded": "2023-07-06"
+    },
+    {
+      "itemName": "Widget G",
+      "itemUrl": "https://example.com/widget-g",
+      "itemValue": 9.99,
+      "dateAdded": "2023-07-07"
+    },
+    {
+      "itemName": "Widget H",
+      "itemUrl": "https://example.com/widget-h",
+      "itemValue": 11.99,
+      "dateAdded": "2023-07-08"
+    },
+    {
+      "itemName": "Widget I",
+      "itemUrl": "https://example.com/widget-i",
+      "itemValue": 6.99,
+      "dateAdded": "2023-07-09"
+    },
+    {
+      "itemName": "Widget J",
+      "itemUrl": "https://example.com/widget-j",
+      "itemValue": 14.99,
+      "dateAdded": "2023-07-10"
     }
   ],
   "beveragess": [
     {
       "id": 1,
-      "beveragephoto": "../assets/coffee.jpg",
-      "beveragename": "House Coffee",
-      "beverageprice": 5000,
-      "date": "2022-02-31T21:00:00.000Z",
+      "itemName": "Widget A",
+      "itemUrl": "https://example.com/widget-a",
+      "itemValue": 10.99,
+      "dateAdded": "2023-07-01",
       "action": ""
     },
     {
       "id": 2,
-      "beveragephoto": "../assets/masala_tea.jpg",
-      "beveragename": "Regular/Masala Tea",
-      "beverageprice": 5000,
-      "date": "2022-02-31T21:00:00.000Z",
+      "itemName": "Widget B",
+      "itemUrl": "https://example.com/widget-b",
+      "itemValue": 5.99,
+      "dateAdded": "2023-07-02",
       "action": ""
     },
     {
       "id": 3,
-      "beveragephoto": "../assets/green_tea.jpg",
-      "beveragename": "Regular/Herbal Tea",
-      "beverageprice": 5000,
-      "date": "2022-02-31T21:00:00.000Z",
+      "itemName": "Widget C",
+      "itemUrl": "https://example.com/widget-c",
+      "itemValue": 8.99,
+      "dateAdded": "2023-07-03",
       "action": ""
     },
     {
       "id": 4,
-      "beveragephoto": "../assets/teapot.jpg",
-      "beveragename": "Tea Pot",
-      "beverageprice": 5000,
-      "date": "2022-02-31T21:00:00.000Z",
+      "itemName": "Widget D",
+      "itemUrl": "https://example.com/widget-d",
+      "itemValue": 15.99,
+      "dateAdded": "2023-07-04",
       "action": ""
+    },
+    {
+      "id": 5,
+      "itemName": "Widget E",
+      "itemUrl": "https://example.com/widget-e",
+      "itemValue": 7.99,
+      "dateAdded": "2023-07-05",
+      "action": ""
+    },
+    {
+      "itemName": "Widget F",
+      "itemUrl": "https://example.com/widget-f",
+      "itemValue": 12.99,
+      "dateAdded": "2023-07-06"
+    },
+    {
+      "itemName": "Widget G",
+      "itemUrl": "https://example.com/widget-g",
+      "itemValue": 9.99,
+      "dateAdded": "2023-07-07"
+    },
+    {
+      "itemName": "Widget H",
+      "itemUrl": "https://example.com/widget-h",
+      "itemValue": 11.99,
+      "dateAdded": "2023-07-08"
+    },
+    {
+      "itemName": "Widget I",
+      "itemUrl": "https://example.com/widget-i",
+      "itemValue": 6.99,
+      "dateAdded": "2023-07-09"
+    },
+    {
+      "itemName": "Widget J",
+      "itemUrl": "https://example.com/widget-j",
+      "itemValue": 14.99,
+      "dateAdded": "2023-07-10"
     }
   ],
   "inventoryitems": [
@@ -350,6 +455,15 @@
       "qtyin": "10 kgs ",
       "currentqty": "12 Kgs",
       "qtystatus": "Good",
+      "action": ""
+    },
+    {
+      "id": 5,
+      "itemname": "",
+      "datein": "",
+      "qtyin": "",
+      "currentqty": "",
+      "qtystatus": "",
       "action": ""
     }
   ],
@@ -514,6 +628,20 @@
     },
     {
       "id": 19
+    },
+    {
+      "id": 20
+    },
+    {
+      "staffname": "jack",
+      "department": "Kitchen",
+      "position": "chef",
+      "joined": "2023-07-04T21:00:00.000Z",
+      "mobile": "07000000000",
+      "action": "",
+      "imgicon": "C:\\fakepath\\Screenshot (1).png",
+      "status": "",
+      "id": 21
     }
   ],
   "categories": [

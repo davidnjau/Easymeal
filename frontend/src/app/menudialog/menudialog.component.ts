@@ -23,10 +23,10 @@ export class MenudialogComponent implements OnInit{
   ) {
     this.combomealForm = this._fb.group({
       id:'',
-      photo:'',
-      comboname:'',
-      value:'',
-      date:'',
+      itemUrl:'',
+      itemName:'',
+      itemValue:'',
+      dateAdded:'',
       action:'',
     });
   }

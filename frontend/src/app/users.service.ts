@@ -64,9 +64,10 @@ export class UsersService {
   deletePreorder(id: number): Observable<any> {
     return this._http.delete(`http://localhost:3000/details/${id}`);
   }
+  /*
   addPreorder(data: any): Observable<any> {
     return this._http.post('http://localhost:3000/details', data);
-  }
+  }*/
 
 
   
@@ -75,14 +76,14 @@ export class UsersService {
     return this._http.get(this.baseUrl + 'details');
   }
   updateLiveorder(id: number, data: any): Observable<any> {
-    return this._http.put(`this.baseUrl + 'details'${id}`, data);
+    return this._http.put(`http://localhost:3000/details/${id}`, data);
   }
   deleteLiveorder(id: number): Observable<any> {
-    return this._http.delete(`this.baseUrl + 'details'${id}`);
+    return this._http.delete(`http://localhost:3000/details/${id}`);
   }
-  addLiveorder(data: any): Observable<any> {
+  /*addLiveorder(data: any): Observable<any> {
     return this._http.post(this.baseUrl + 'details', data);
-  }
+  }*/
 
 
 

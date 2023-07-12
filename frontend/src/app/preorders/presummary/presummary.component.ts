@@ -38,11 +38,11 @@ export class PresummaryComponent implements OnInit{
   ) {
     this.preorderForm = this._fb.group({
       name:'',
-      item:'',
-      qty:'',
-      value:'',
-      date:'',
-      status:'',
+      itemName:'',
+      itemQuantity:'',
+      itemValue:'',
+      orderDate:'',
+      itemStatus:'',
       action:'',
       imgicon: "../assets/user.png",
     });
@@ -68,7 +68,7 @@ export class PresummaryComponent implements OnInit{
                 //Swal.fire('Please Enter valid data)', 'error');
               },
             });
-        } else {
+        } /*else {
           this._empService.addPreorder(this.preorderForm.value).subscribe({
             next: (value: any) => {
               //this._coreService.openSnackBar('Employee added successfully');
@@ -81,7 +81,7 @@ export class PresummaryComponent implements OnInit{
             // Swal.fire('Please Enter valid data)', 'error');
             },
           });
-        }
+        }*/
       }
     }
 }

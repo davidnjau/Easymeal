@@ -18,11 +18,11 @@ import { BeveragedialogComponent } from './beveragedialog/beveragedialog.compone
 export class MenubeveragesComponent implements OnInit{
   displayedColumns = [
     'id',
-    'beveragephoto',
-    'beveragename',
-    'beverageprice',
-    'date',
-    'action', 
+    'itemUrl',
+    'itemName',
+    'itemValue',
+    'dateAdded',
+    'action',
     
   ];
   dataSource!: MatTableDataSource<any>;

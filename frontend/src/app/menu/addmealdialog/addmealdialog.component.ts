@@ -23,10 +23,10 @@ export class AddmealdialogComponent implements OnInit {
   ) {
     this.smealForm = this._fb.group({
       id:'',
-      singlemealphoto:'',
-      singlemealname:'',
-      singlemealprice:'',
-      date:'',
+      itemUrl:'',
+      itemName:'',
+      itemValue:'',
+      dateAdded:'',
       action:'',
     });
   }

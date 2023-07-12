@@ -8,22 +8,22 @@
   </mat-form-field>
   
   <mat-form-field appearance="outline">
-      <input placeholder="Add Image" matInput formControlName="singlemealphoto">
+      <input placeholder="Add Image" matInput formControlName="itemUrl">
   </mat-form-field>
   
   <mat-form-field appearance="outline">
       <mat-label>Item Name</mat-label>
-      <input matInput placeholder="Meal Name" formControlName="singlemealname">
+      <input matInput placeholder="Meal Name" formControlName="itemName">
   </mat-form-field>
 
   <mat-form-field appearance="outline">
       <mat-label>Value</mat-label>
-      <input placeholder="Value, cost" matInput formControlName="singlemealprice">
+      <input placeholder="Value, cost" matInput formControlName="itemValue">
   </mat-form-field>
 
   <mat-form-field appearance="outline">
       <mat-label>Date Added</mat-label>
-      <input matInput [matDatepicker]="picker" formControlName="date">
+      <input matInput [matDatepicker]="picker" formControlName="dateAdded">
       <mat-hint>MM/DD/YYYY</mat-hint>
       <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>

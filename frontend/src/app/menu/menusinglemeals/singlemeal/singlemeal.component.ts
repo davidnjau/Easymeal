@@ -17,11 +17,11 @@ import { AddmealdialogComponent } from '../../addmealdialog/addmealdialog.compon
 export class SinglemealComponent implements OnInit {
   displayedColumns = [
     'id',
-    'singlemealphoto',
-    'singlemealname',
-    'singlemealprice',
-    'date',
-    'action', 
+    'itemUrl',
+    'itemName',
+    'itemValue',
+    'dateAdded',
+    'action',
     
   ];
   dataSource!: MatTableDataSource<any>;

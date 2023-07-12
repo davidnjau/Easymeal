@@ -78,7 +78,7 @@ export class LivesummaryComponent implements OnInit{
                 //Swal.fire('Please Enter valid data)', 'error');
               },
             });
-        } else {
+        } /*else {
           this._empService.addLiveorder(this.liveorderForm.value).subscribe({
             next: (value: any) => {
               //this._coreService.openSnackBar('Employee added successfully');
@@ -91,7 +91,7 @@ export class LivesummaryComponent implements OnInit{
             // Swal.fire('Please Enter valid data)', 'error');
             },
           });
-        }
+        }*/
       }
     }
 }

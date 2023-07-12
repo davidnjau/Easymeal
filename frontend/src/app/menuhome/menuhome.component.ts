@@ -24,10 +24,10 @@ export class MenuhomeComponent implements OnInit  {
   **/
   displayedColumns = [
     'id',
-    'photo',
-    'comboname',
-    'value',
-    'date',
+    'itemUrl',
+    'itemName',
+    'itemValue',
+    'dateAdded',
     'action',
   ];
   dataSource!: MatTableDataSource<any>;

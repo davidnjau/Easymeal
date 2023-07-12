@@ -14,25 +14,25 @@
                 <td mat-cell *matCellDef="let row"> {{row.id}}</td>
               </ng-container>
             <!--image to figure shortly-->
-              <ng-container matColumnDef="beveragephoto">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header> Picture </th>
-                <td mat-cell *matCellDef="let row"><img src="{{row.beveragephoto}}" width="100px" ></td>
-              </ng-container>
-  
-              <ng-container matColumnDef="beveragename">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header> Item Name </th>
-                <td mat-cell *matCellDef="let row"> {{row.beveragename}}</td>
-              </ng-container>
-  
-              <ng-container matColumnDef="beverageprice">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header>Value</th>
-                <td mat-cell *matCellDef="let row"> {{row.beverageprice}}</td>
-              </ng-container>
-  
-              <ng-container matColumnDef="date">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header> Date Added </th>
-                <td mat-cell *matCellDef="let row"> {{row.date | date}}</td>
-              </ng-container> 
+            <ng-container matColumnDef="itemUrl">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Picture </th>
+              <td mat-cell *matCellDef="let row"> <img src="{{row.itemUrl}}" width="100px" alt="menuitem.img"></td>
+            </ng-container>
+
+            <ng-container matColumnDef="itemName">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Item Name </th>
+              <td mat-cell *matCellDef="let row"> {{row.itemName}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="itemValue">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>itemValue</th>
+              <td mat-cell *matCellDef="let row"> {{row.itemValue}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="dateAdded">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Date Added </th>
+              <td mat-cell *matCellDef="let row"> {{row.dateAdded | date}}</td>
+            </ng-container>
               
   
               <ng-container matColumnDef="action">
