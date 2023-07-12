@@ -21,9 +21,10 @@ export class LivesummaryComponent implements OnInit{
   
 
   orders: Orderstatus[] = [
-    {value: 'Received', viewValue: 'Received'},
-    {value: 'pending', viewValue: 'Pending'},
-    {value: 'cancelled', viewValue: 'Cancelled'},
+    {value: 'Shipped', viewValue: 'Shipped'},
+    {value: 'Processing', viewValue: 'Processing'},
+    {value: 'Delivered', viewValue: 'Delivered'},
+    {value: 'Cancelled', viewValue: 'Cancelled'},
   ];
  
   liveorderForm: FormGroup;
@@ -37,11 +38,11 @@ export class LivesummaryComponent implements OnInit{
   ) {
     this.liveorderForm = this._fb.group({
       name:'',
-      item:'',
-      qty:'',
-      value:'',
-      date:'',
-      status:'',
+      itemName:'',
+      itemQuantity:'',
+      itemValue:'',
+      orderDate:'',
+      itemStatus:'',
       action:'',
       imgicon: "../assets/user.png",
     });

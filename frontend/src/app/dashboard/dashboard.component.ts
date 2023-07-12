@@ -23,11 +23,11 @@ export class DashboardComponent implements OnInit {
      'imgicon',
     //'idno',
     'name',
-    'item',
-    'value',
-    'qty',
-    'date',
-    'status',
+    'itemName',
+    'itemValue',
+    'itemQuantity',
+    'orderDate',
+    'itemStatus',
   ];
 
   dataSource!: MatTableDataSource<any>;

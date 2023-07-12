@@ -34,50 +34,86 @@
       "id": 4
     }
   ],
-  "live": [
+  "details": [
     {
-      "name": "Job Kay",
-      "item": "Pizza",
-      "qty": 3,
-      "value": 200,
-      "date": "2023-06-30T21:00:00.000Z",
-      "status": "Received",
-      "action": "",
-      "imgicon": "../assets/user.png",
-      "id": 2
+      "name": "John Doe",
+      "itemName": "Widget A",
+      "itemQuantity": 3,
+      "itemValue": 10.99,
+      "orderDate": "2023-07-01",
+      "itemStatus": "Shipped"
     },
     {
-      "name": "Bosun Jones",
-      "item": "Chapati and Beans",
-      "qty": 15,
-      "value": 500,
-      "date": "2023-07-14T21:00:00.000Z",
-      "status": "Pending",
-      "action": "",
-      "imgicon": "../assets/user.png",
-      "id": 3
+      "name": "Jane Smith",
+      "itemName": "Widget B",
+      "itemQuantity": 2,
+      "itemValue": 5.99,
+      "orderDate": "2023-07-02",
+      "itemStatus": "Processing"
     },
     {
-      "name": "Harry J",
-      "item": "chips",
-      "qty": 1,
-      "value": 401,
-      "date": "2023-07-06T21:00:00.000Z",
-      "status": "Received",
-      "action": "",
-      "imgicon": "../assets/user.png",
-      "id": 4
+      "name": "Mark Johnson",
+      "itemName": "Widget C",
+      "itemQuantity": 1,
+      "itemValue": 8.99,
+      "orderDate": "2023-07-03",
+      "itemStatus": "Delivered"
     },
     {
-      "name": "Kay Kay",
-      "item": "Pizza",
-      "qty": 3,
-      "value": 200,
-      "date": "2023-06-30T21:00:00.000Z",
-      "status": "cancelled",
-      "action": "",
-      "imgicon": "../assets/user.png",
-      "id": 5
+      "name": "Sarah Davis",
+      "itemName": "Widget D",
+      "itemQuantity": 5,
+      "itemValue": 15.99,
+      "orderDate": "2023-07-04",
+      "itemStatus": "Shipped"
+    },
+    {
+      "name": "Michael Wilson",
+      "itemName": "Widget E",
+      "itemQuantity": 2,
+      "itemValue": 7.99,
+      "orderDate": "2023-07-05",
+      "itemStatus": "Processing"
+    },
+    {
+      "name": "Emily Thompson",
+      "itemName": "Widget F",
+      "itemQuantity": 4,
+      "itemValue": 12.99,
+      "orderDate": "2023-07-06",
+      "itemStatus": "Processing"
+    },
+    {
+      "name": "David Lee",
+      "itemName": "Widget G",
+      "itemQuantity": 1,
+      "itemValue": 9.99,
+      "orderDate": "2023-07-07",
+      "itemStatus": "Delivered"
+    },
+    {
+      "name": "Karen Baker",
+      "itemName": "Widget H",
+      "itemQuantity": 3,
+      "itemValue": 11.99,
+      "orderDate": "2023-07-08",
+      "itemStatus": "Shipped"
+    },
+    {
+      "name": "Robert Turner",
+      "itemName": "Widget I",
+      "itemQuantity": 2,
+      "itemValue": 6.99,
+      "orderDate": "2023-07-09",
+      "itemStatus": "Delivered"
+    },
+    {
+      "name": "Jennifer Clark",
+      "itemName": "Widget J",
+      "itemQuantity": 1,
+      "itemValue": 14.99,
+      "orderDate": "2023-07-10",
+      "itemStatus": "Processing"
     }
   ],
   "users": [

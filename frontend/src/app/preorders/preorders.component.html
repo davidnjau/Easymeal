@@ -3,7 +3,7 @@
     <div class="analytics">
         <ul> 
             <li>
-                <p>Total Pre-Orders Earnings <br> <a>Ksh.{{productcalc}}</a></p>  
+                <p>Total Pre-Orders Earnings <br> <a>Ksh.{{productcalc.toFixed(2)}}</a></p>  
             </li>
             <li class="second">
                 <p>Total Pre-Order Items <br> <a>{{totals}} Items</a></p> 
@@ -42,28 +42,28 @@
             <td mat-cell *matCellDef="let row"> {{row.name}}</td>
           </ng-container>
 
-          <ng-container matColumnDef="item">
+          <ng-container matColumnDef="itemName">
             <th mat-header-cell *matHeaderCellDef mat-sort-header> Item </th>
-            <td mat-cell *matCellDef="let row"> {{row.item}}</td>
+            <td mat-cell *matCellDef="let row"> {{row.itemName}}</td>
           </ng-container>
 
-          <ng-container matColumnDef="qty">
+          <ng-container matColumnDef="itemQuantity">
             <th mat-header-cell *matHeaderCellDef mat-sort-header>Qty</th>
-            <td mat-cell *matCellDef="let row"> {{row.qty}}</td>
+            <td mat-cell *matCellDef="let row"> {{row.itemQuantity}}</td>
           </ng-container>
 
-          <ng-container matColumnDef="value">
+          <ng-container matColumnDef="itemValue">
             <th mat-header-cell *matHeaderCellDef mat-sort-header>Value</th>
-            <td mat-cell *matCellDef="let row"> {{row.value}}</td>
+            <td mat-cell *matCellDef="let row"> {{row.itemValue}}</td>
           </ng-container>
 
-          <ng-container matColumnDef="date">
+          <ng-container matColumnDef="orderDate">
             <th mat-header-cell *matHeaderCellDef mat-sort-header> Date </th>
-            <td mat-cell *matCellDef="let row"> {{row.date | date}}</td>
+            <td mat-cell *matCellDef="let row"> {{row.orderDate | date}}</td>
           </ng-container> 
-          <ng-container matColumnDef="status">
+          <ng-container matColumnDef="itemStatus">
             <th mat-header-cell *matHeaderCellDef mat-sort-header> Status </th>
-            <td mat-cell *matCellDef="let row"> {{row.status}}</td>
+            <td mat-cell *matCellDef="let row"> {{row.itemStatus}}</td>
           </ng-container> 
 
 
@@ -92,6 +92,3 @@
   </section>
 </section>
 
-
-<p>Total Orderitems: {{totals}}</p>
-<p>Total Liveorders Earnings: {{productcalc}}</p>

@@ -21,11 +21,11 @@ export class PreordersComponent implements OnInit {
     'imgicon',
     //'idno',
     'name',
-    'item',
-    'value',
-    'qty',
-    'date',
-    'status',
+    'itemName',
+    'itemValue',
+    'itemQuantity',
+    'orderDate',
+    'itemStatus',
     'action',
   ];
   dataSource!: MatTableDataSource<any>;
@@ -48,28 +48,28 @@ productcalc: number = 0;
   ngOnInit(): void {
     this.getPreorderList();
 
-    this.http.get<any[]>('http://localhost:3000/users').subscribe(data =>{
+    this.http.get<any[]>('http://localhost:3000/details').subscribe(data =>{
       console.log(data);
-      const val = data.map(v => v.value);
+      const val = data.map(v => v.itemValue);
       console.log("val",val);
       
-      this.totals = this.calculateSum(data, 'qty');
+      this.totals = this.calculateSum(data, 'itemQuantity');
       console.log("totals",this.totals);
       
     });
 
-    this.http.get<any[]>('http://localhost:3000/users').subscribe(data =>{
-      this.productcalc = this.calculateProduct(data, 'value', 'qty');
+    this.http.get<any[]>('http://localhost:3000/details').subscribe(data =>{
+      this.productcalc = this.calculateProduct(data, 'itemValue', 'itemQuantity');
     });
   }
 //sum
-  calculateSum(data:any[], value:string):number{
-    return data.reduce((sum, item) => sum + item[value], 0);
+  calculateSum(data:any[], itemValue:string):number{
+    return data.reduce((sum, item) => sum + item[itemValue], 0);
   }
 
 //product-sum
-  calculateProduct(data:any[], value:string, qty:string):number{
-    return data.reduce((product, item) => product + item[value] * item[qty], 0);
+  calculateProduct(data:any[], itemValue:string, itemQuantity:string):number{
+    return data.reduce((product, item) => product + item[itemValue] * item[itemQuantity], 0);
   }
 
 /////end of analytics

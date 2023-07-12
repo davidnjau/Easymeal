@@ -9,10 +9,11 @@ import { Users } from './users';
   providedIn: 'root',
 })
 export class UsersService {
+  baseUrl = 'http://localhost:3000/'
   constructor(private _http: HttpClient) {}
 
   addEmployee(data: any): Observable<any> {
-    return this._http.post('http://localhost:3000/allEmployees', data);
+    return this._http.post(this.baseUrl + 'allEmployees', data);
   }
 
   updateEmployee(id: number, data: any): Observable<any> {
@@ -55,32 +56,32 @@ export class UsersService {
 
 
   getPreorderList(): Observable<any> {
-    return this._http.get('http://localhost:3000/customers');
+    return this._http.get('http://localhost:3000/details');
   }
   updatePreorder(id: number, data: any): Observable<any> {
-    return this._http.put(`http://localhost:3000/customers/${id}`, data);
+    return this._http.put(`http://localhost:3000/details/${id}`, data);
   }
   deletePreorder(id: number): Observable<any> {
-    return this._http.delete(`http://localhost:3000/customers/${id}`);
+    return this._http.delete(`http://localhost:3000/details/${id}`);
   }
   addPreorder(data: any): Observable<any> {
-    return this._http.post('http://localhost:3000/customers', data);
+    return this._http.post('http://localhost:3000/details', data);
   }
 
 
   
 
   getLiveorderList(): Observable<any> {
-    return this._http.get('http://localhost:3000/live');
+    return this._http.get(this.baseUrl + 'details');
   }
   updateLiveorder(id: number, data: any): Observable<any> {
-    return this._http.put(`http://localhost:3000/live/${id}`, data);
+    return this._http.put(`this.baseUrl + 'details'${id}`, data);
   }
   deleteLiveorder(id: number): Observable<any> {
-    return this._http.delete(`http://localhost:3000/live/${id}`);
+    return this._http.delete(`this.baseUrl + 'details'${id}`);
   }
   addLiveorder(data: any): Observable<any> {
-    return this._http.post('http://localhost:3000/live', data);
+    return this._http.post(this.baseUrl + 'details', data);
   }
 
 

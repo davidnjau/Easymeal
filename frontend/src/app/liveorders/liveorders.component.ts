@@ -21,11 +21,11 @@ export class LiveordersComponent implements OnInit{
     'imgicon',
     //'idno',
     'name',
-    'item',
-    'value',
-    'qty',
-    'date',
-    'status',
+    'itemName',
+    'itemValue',
+    'itemQuantity',
+    'orderDate',
+    'itemStatus',
     'action',
   ];
   dataSource!: MatTableDataSource<any>;
@@ -57,33 +57,34 @@ export class LiveordersComponent implements OnInit{
 totals: number = 0;
 productcalc: number = 0;
 
+
   ngOnInit(): void {
     this.getLiveorderList();
 
-    this.http.get<any[]>('http://localhost:3000/users').subscribe(data =>{
+    this.http.get<any[]>('http://localhost:3000/details').subscribe(data =>{
       console.log(data);
-      const val = data.map(v => v.value);
-      console.log("val",val);
+      const val = data.map(v => v.itemValue);
+      console.log("values",val);
       
       
-      this.totals = this.calculateSum(data, 'qty');
-      console.log("totals",this.totals);
+      this.totals = this.calculateSum(data, 'itemQuantity');
+      console.log("totals",this.totals.toFixed(3));
       
 
     });
 
-    this.http.get<any[]>('http://localhost:3000/users').subscribe(data =>{
-      this.productcalc = this.calculateProduct(data, 'value', 'qty');
+    this.http.get<any[]>('http://localhost:3000/details').subscribe(data =>{
+      this.productcalc = this.calculateProduct(data, 'itemValue', 'itemQuantity');
     });
   }
 
-  calculateSum(data:any[], qty:string):number{
+  calculateSum(data:any[], itemQuantity:string):number{
     console.log()
-    return data.reduce((sum, item) => sum + item[qty], 0);
+    return data.reduce((sum, item) => sum + item[itemQuantity], 0);
   }
 
-  calculateProduct(data:any[], value:string, qty:string):number{
-    return data.reduce((product, item) => product + item[value] * item[qty], 0);
+  calculateProduct(data:any[], itemValue:string, itemQuantity:string):number{
+    return data.reduce((product, item) => product + item[itemValue] * item[itemQuantity], 0);
   }
 
   ///
@@ -109,7 +110,7 @@ productcalc: number = 0;
   getLiveorderList() {
     this._empService.getLiveorderList().subscribe({
       next: (res) => {
-        console.log(res);
+        console.log('Show orders', res);
         this.dataSource = new MatTableDataSource(res);
         this.dataSource.sort = this.sort;
         this.dataSource.paginator = this.paginator;
