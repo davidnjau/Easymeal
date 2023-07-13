@@ -12,3 +12,7 @@ mat-form-field{
     background-color: green;
     height:50px;
 }
+form button{
+    width: 70%;
+   margin-left: 80px;
+}

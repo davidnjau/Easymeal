@@ -86,17 +86,29 @@ export class UsersService {
   }*/
 
 
+  getTotalorders(): Observable<any> {
+    return this._http.get('http://localhost:3000/totalOrders');
+  }
+  getTotalpreorders(): Observable<any> {
+    return this._http.get('http://localhost:3000/preOrders');
+  }
 
 
+  addLogindetails(data: any): Observable<any> {
+    return this._http.post('http://localhost:3000/logdetails', data);
+  }
+  updateLogindetails(id: string, data: any): Observable<any> {
+    return this._http.put(`http://localhost:3000/logdetails/${id}`, data);
+  }
 
-
-
-
+  getLogindetails(): Observable<any> {
+    return this._http.get('http://localhost:3000/logdetails');
+  }
 
 
 
   
-  ////
+  /*
   url = 'http://localhost:3000/users';
 
   
@@ -109,7 +121,7 @@ export class UsersService {
     async getUsersById(id:number): Promise<Users| undefined> {
       const data = await fetch(`${this.url}/${id}`);
       return await data.json() ?? {};
-    }
+    }*/
 }
 
 

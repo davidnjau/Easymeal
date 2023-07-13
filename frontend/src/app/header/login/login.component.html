@@ -1,0 +1,28 @@
+
+<h4 mat-dialog-title> Log In here</h4>
+
+<form [formGroup]="empForm" (ngSubmit)="onFormSubmit()">
+<mat-dialog-content class="content">
+    <mat-form-field appearance="outline">
+        <mat-label>Username</mat-label>
+        <input matInput type="text" placeholder="Enter name" formControlName="username">
+    </mat-form-field>
+    
+    <mat-form-field appearance="outline">
+        <mat-label>password</mat-label>
+        <input matInput placeholder="password" formControlName="password">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Phone Number</mat-label>
+        <input placeholder="Phone Number" matInput formControlName="phonenumber">
+    </mat-form-field>
+    
+</mat-dialog-content>
+
+    <div mat-dialog-actions class="action">
+        <button mat-raised-button color="primary" type="submit">{{ data ? 'Update': 'Login' }}</button>
+    </div>
+
+</form>
+

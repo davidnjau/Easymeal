@@ -1,16 +1,19 @@
 <nav>
     <div class="analytics">
-        <ul>
+        <ul *ngFor="let t of totalOrders">
             <li class="chefnote"><p>Welcome <br> Head Chef.</p></li>
             <li routerLink="../liveorders">
-                <p>Total Earnings <br> <a>{{productcalc}}</a></p> <fa-icon icon="ellipsis" routerLink="../liveorders"></fa-icon> 
-            </li>
+                <p>Total Earnings <br> <a>Ksh.{{t.totalEarnings}}</a></p> <fa-icon icon="ellipsis" routerLink="../liveorders"></fa-icon> 
+                                        <!-- {{productcalc.toFixed(2)}} -->
+              </li>
             <li routerLink="../preorders">
-                <p>Today's Orders <br> <a>{{totals}}Items</a></p> <fa-icon icon="ellipsis" routerLink="../preorders"></fa-icon>
-            </li>
+                <p>Today's Orders <br> <a>{{t.todayOrders}} Items</a></p> <fa-icon icon="ellipsis" routerLink="../preorders"></fa-icon>
+                                        <!-- {{totals}} -->
+              </li>
             <li routerLink="../preorders">
-                <p>Tomorrow's Orders <br> <a>{{totals}}Items</a></p> <fa-icon icon="ellipsis" routerLink="../preorders"></fa-icon>
-            </li>
+                <p>Tomorrow's Orders <br> <a>{{t.tomorrowOrders}} Items</a></p> <fa-icon icon="ellipsis" routerLink="../preorders"></fa-icon>
+                                              <!-- {{totals}} -->
+              </li>
         </ul>  
     </div>
 </nav>

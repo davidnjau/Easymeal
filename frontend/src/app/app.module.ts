@@ -8,7 +8,6 @@ import { HeaderComponent } from './header/header.component';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { faEllipsisH } from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
-import { RestComponent } from './rest/rest.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MenuhomeComponent } from './menuhome/menuhome.component';
 import { MenubeveragesComponent } from './menu/menubeverages/menubeverages.component';
@@ -52,13 +51,13 @@ import {MatStepperModule} from '@angular/material/stepper';
 import {MatTabsModule} from '@angular/material/tabs';
 import { PresummaryComponent } from './preorders/presummary/presummary.component';
 import { CategorymealComponent } from './categorymeal/categorymeal.component';
+import { LoginComponent } from './header/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     HeaderComponent,
-    RestComponent,
     DashboardComponent,
     MenuhomeComponent,
     MenubeveragesComponent,
@@ -79,6 +78,7 @@ import { CategorymealComponent } from './categorymeal/categorymeal.component';
     BeveragedialogComponent,
     PresummaryComponent,
     CategorymealComponent,
+    LoginComponent,
     
    
   ],

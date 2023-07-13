@@ -41,38 +41,22 @@ export class PreordersComponent implements OnInit {
   ) {}
 
 
-//////analytics functions
-totals: number = 0;
-productcalc: number = 0;
+
 
   ngOnInit(): void {
     this.getPreorderList();
-
-    this.http.get<any[]>('http://localhost:3000/details').subscribe(data =>{
-      console.log(data);
-      const val = data.map(v => v.itemValue);
-      console.log("val",val);
-      
-      this.totals = this.calculateSum(data, 'itemQuantity');
-      console.log("totals",this.totals);
-      
-    });
-
-    this.http.get<any[]>('http://localhost:3000/details').subscribe(data =>{
-      this.productcalc = this.calculateProduct(data, 'itemValue', 'itemQuantity');
-    });
-  }
-//sum
-  calculateSum(data:any[], itemValue:string):number{
-    return data.reduce((sum, item) => sum + item[itemValue], 0);
+    this.getTotalpreorders(); 
   }
 
-//product-sum
-  calculateProduct(data:any[], itemValue:string, itemQuantity:string):number{
-    return data.reduce((product, item) => product + item[itemValue] * item[itemQuantity], 0);
-  }
+  totalPreorders:any=[];
 
-/////end of analytics
+  getTotalpreorders(): void {
+    this._empService.getTotalpreorders().subscribe(res => {
+        this.totalPreorders= res;
+        console.log(res);
+      });
+    }
+  
 
 
 usersList: Users[] = [];
@@ -148,4 +132,38 @@ filteredusersList: Users[] = [];
      },
     });
   }
+
+
+  /*
+//////analytics functions
+totals: number = 0;
+productcalc: number = 0;
+/*
+    this.http.get<any[]>('http://localhost:3000/details').subscribe(data =>{
+      console.log(data);
+      const val = data.map(v => v.itemValue);
+      console.log("val",val);
+      
+      this.totals = this.calculateSum(data, 'itemQuantity');
+      console.log("totals",this.totals);
+      
+    });
+
+    this.http.get<any[]>('http://localhost:3000/details').subscribe(data =>{
+      this.productcalc = this.calculateProduct(data, 'itemValue', 'itemQuantity');
+    });
+  }
+//sum
+  calculateSum(data:any[], itemValue:string):number{
+    return data.reduce((sum, item) => sum + item[itemValue], 0);
+  }
+
+//product-sum
+  calculateProduct(data:any[], itemValue:string, itemQuantity:string):number{
+    return data.reduce((product, item) => product + item[itemValue] * item[itemQuantity], 0);
+  }
+
+/////end of analytics
+*/
+
 }

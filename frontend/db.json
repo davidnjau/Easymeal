@@ -47,40 +47,48 @@
       "id": 1
     },
     {
-      "id": 2,
       "name": "Jane Smith",
       "itemName": "Widget B",
       "itemQuantity": 2,
       "itemValue": 5.99,
       "orderDate": "2023-07-02",
-      "itemStatus": "Processing"
+      "itemStatus": "Processing",
+      "action": "",
+      "imgicon": "../assets/user.png",
+      "id": 2
     },
     {
-      "id": 3,
       "name": "Mark Johnson",
       "itemName": "Widget C",
       "itemQuantity": 1,
       "itemValue": 8.99,
       "orderDate": "2023-07-03",
-      "itemStatus": "Delivered"
+      "itemStatus": "pending",
+      "action": "",
+      "imgicon": "../assets/user.png",
+      "id": 3
     },
     {
-      "id": 4,
       "name": "Sarah Davis",
       "itemName": "Widget D",
       "itemQuantity": 5,
       "itemValue": 15.99,
       "orderDate": "2023-07-04",
-      "itemStatus": "Shipped"
+      "itemStatus": "pending",
+      "action": "",
+      "imgicon": "../assets/user.png",
+      "id": 4
     },
     {
-      "id": 5,
       "name": "Michael Wilson",
       "itemName": "Widget E",
       "itemQuantity": 2,
       "itemValue": 7.99,
       "orderDate": "2023-07-05",
-      "itemStatus": "Processing"
+      "itemStatus": "Cancelled",
+      "action": "",
+      "imgicon": "../assets/user.png",
+      "id": 5
     },
     {
       "id": 6,
@@ -642,6 +650,9 @@
       "imgicon": "C:\\fakepath\\Screenshot (1).png",
       "status": "",
       "id": 21
+    },
+    {
+      "id": 22
     }
   ],
   "categories": [
@@ -656,6 +667,33 @@
     },
     {
       "categoryname": "Cold Beverages"
+    }
+  ],
+  "totalOrders": [
+    {
+      "totalEarnings": 600000,
+      "todayOrders": 2000,
+      "tomorrowOrders": 6000
+    }
+  ],
+  "preOrders": [
+    {
+      "preOrderEarnings": 600000,
+      "preOrderItems": 2000
+    }
+  ],
+  "logdetails": [
+    {
+      "id": 1,
+      "username": "this",
+      "password": "this",
+      "phonenumber": "0000"
+    },
+    {
+      "id": 2,
+      "username": "ffffff",
+      "phonenumber": "000",
+      "password": "ffff"
     }
   ]
 }

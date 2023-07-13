@@ -60,7 +60,10 @@ productcalc: number = 0;
 
   ngOnInit(): void {
     this.getLiveorderList();
+    this.getTotalorders();
+  }
 
+  /*
     this.http.get<any[]>('http://localhost:3000/details').subscribe(data =>{
       console.log(data);
       const val = data.map(v => v.itemValue);
@@ -76,7 +79,7 @@ productcalc: number = 0;
     this.http.get<any[]>('http://localhost:3000/details').subscribe(data =>{
       this.productcalc = this.calculateProduct(data, 'itemValue', 'itemQuantity');
     });
-  }
+  } 
 
   calculateSum(data:any[], itemQuantity:string):number{
     console.log()
@@ -87,13 +90,10 @@ productcalc: number = 0;
     return data.reduce((product, item) => product + item[itemValue] * item[itemQuantity], 0);
   }
 
-  ///
-  todayorders:number=0;
-  tomorroworders:number=0;
 
-  ///
 
 /////end of analytics
+*/
 
   /*openAddEditPreordersForm() {
     const dialogRef = this._dialog.open(LivesummaryComponent,{width:"60%", height:"80%"});
@@ -106,10 +106,20 @@ productcalc: number = 0;
       },
     });
   }*/
+  totalRejected=0;
 
   getLiveorderList() {
     this._empService.getLiveorderList().subscribe({
       next: (res) => {
+
+        let rejected: any = [];
+        rejected=res.filter((item) => item.itemStatus==="Cancelled");
+        console.log('these have been rejected: ', rejected);
+
+        this.totalRejected = this.calculateSum(rejected, 'itemQuantity');
+        console.log("totalRejected",this.totalRejected);
+    
+
         console.log('Show orders', res);
         this.dataSource = new MatTableDataSource(res);
         this.dataSource.sort = this.sort;
@@ -118,7 +128,23 @@ productcalc: number = 0;
       error: console.log,
     });
   }
+  calculateSum(rejected:any[], itemQuantity:string):number{
+    console.log()
+    return rejected.reduce((sum, item) => sum + item[itemQuantity], 0);
+  }
 
+
+  
+//nav totals/stats
+  totalOrders:any=[];
+
+  getTotalorders(): void {
+    this._empService.getTotalorders().subscribe(res => {
+        this.totalOrders= res;
+        console.log(res);
+      });
+    }
+//end of nav totals/stats
 
   ////
   applyFilter(event: Event) {

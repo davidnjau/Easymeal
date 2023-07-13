@@ -50,32 +50,9 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
     this.getLiveorderList();
     this.getTrendingcomboList();
-
-
-    /* analytics*/
-    this.http.get<any[]>('http://localhost:3000/users').subscribe(data =>{
-      console.log(data);
-      const val = data.map(v => v.value);
-      console.log("val",val);
-      
-      
-      this.totals = this.calculateSum(data, 'qty');
-      console.log("totals",this.totals);
-    });
-
-    this.http.get<any[]>('http://localhost:3000/users').subscribe(data =>{
-      this.productcalc = this.calculateProduct(data, 'value', 'qty');
-    });
-  }
-  calculateSum(data:any[], qty:string):number{
-    console.log()
-    return data.reduce((sum, item) => sum + item[qty], 0);
+    this.getTotalorders();
   }
 
-  calculateProduct(data:any[], value:string, qty:string):number{
-    return data.reduce((product, item) => product + item[value] * item[qty], 0);
-  }
-  /* end of analytics */
   
 
   getLiveorderList() {
@@ -103,15 +80,50 @@ export class DashboardComponent implements OnInit {
 ////
 
 
-
 tc: any = [];
 
 getTrendingcomboList(): void {
   this._empService.getTrendingcomboList().subscribe(res => {
       this.tc= res;
-      console.log(res);
-      
+      console.log(res);  
     });
   }
+
+  totalOrders:any=[];
+
+  getTotalorders(): void {
+    this._emService.getTotalorders().subscribe(res => {
+        this.totalOrders= res;
+        console.log(res);
+      });
+    }
  
+   /* 
+    // analytics (Was actual totals from the orders in live, their prices and totalearnings)
+    this.http.get<any[]>('http://localhost:3000/details').subscribe(data =>{
+      console.log(data);
+      const val = data.map(v => v.value);
+      console.log("val",val);
+      
+      
+      this.totals = this.calculateSum(data, 'itemQuantity');
+      console.log("totals",this.totals);
+    });
+
+    this.http.get<any[]>('http://localhost:3000/details').subscribe(data =>{
+      this.productcalc = this.calculateProduct(data, 'itemValue', 'itemQuantity');
+    });
+  }
+  calculateSum(data:any[], itemQuantity:string):number{
+    console.log()
+    return data.reduce((sum, item) => sum + item[itemQuantity], 0);
+  }
+
+  calculateProduct(data:any[], itemValue:string, itemQuantity:string):number{
+    return data.reduce((product, item) => product + item[itemValue] * item[itemQuantity], 0);
+  }
+
+  // end of analytics 
+  */
+  
 } 

@@ -1,15 +1,15 @@
 <nav>
     <div class="chefnote"><p>Live Orders</p></div>
     <div class="analytics">
-        <ul> 
+        <ul *ngFor="let t of totalOrders"> 
             <li>
-                <p>Total Live Orders Earnings <br> <a>Ksh.{{productcalc.toFixed(2)}}</a></p>  
+                <p>Total Live Orders Earnings <br> <a>Ksh.{{t.totalEarnings}}</a></p>  
             </li>
             <li>
-                <p>Today's Orders <br> <a>{{totals}} Items</a></p> 
+                <p>Today's Orders <br> <a>{{t.todayOrders}} Items</a></p> 
             </li>
             <li>
-                <p>Rejected Orders <br> <a>20 Items</a></p>
+                <p>Rejected Orders <br> <a>{{totalRejected}} Items</a></p>
             </li>
         </ul>  
     </div>

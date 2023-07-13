@@ -40,6 +40,17 @@ export class MenuhomeComponent implements OnInit  {
     private _empService: MenuProductsService,
     //private _coreService: CoreService
   ) {}
+  /*
+  // categories = ['Meals', 'Hot Beverages', 'Chefs combo']
+  categories = [
+    {name: 'Meals'},
+    {name: 'Hot Beverages'},
+    {name: 'Chefs combo'}
+  ];
+
+  getmeal(cat){
+
+  }*/
 
 
 
