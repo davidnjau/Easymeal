@@ -12,13 +12,13 @@ export class MenuProductsService {
 
   constructor(private _http: HttpClient) { }
   addcombomeal(data: any): Observable<any> {
-    return this._http.post('http://localhost:3000/menucombomeal', data);
+    return this._http.post('https://7a47fd5a-e15c-4758-ae4b-bccbfc86603f.mock.pstmn.io//menu/add-item', data);
   }
   addSinglemeal(data: any): Observable<any> {
-    return this._http.post('http://localhost:3000/singlemeals', data);
+    return this._http.post('https://7a47fd5a-e15c-4758-ae4b-bccbfc86603f.mock.pstmn.io//menu/add-item', data);
   }
   addBeverage(data: any): Observable<any> {
-    return this._http.post('http://localhost:3000/beveragess', data);
+    return this._http.post('https://7a47fd5a-e15c-4758-ae4b-bccbfc86603f.mock.pstmn.io//menu/add-item', data);
   }
 
   
@@ -36,13 +36,13 @@ export class MenuProductsService {
 
 
   getcomboList(): Observable<any> {
-    return this._http.get('http://localhost:3000/menucombomeal');
+    return this._http.get('https://7a47fd5a-e15c-4758-ae4b-bccbfc86603f.mock.pstmn.io//menu/get-item?limit=10&page=1');
   }
   getSinglemealList(): Observable<any> {
-    return this._http.get('http://localhost:3000/singlemeals');
+    return this._http.get('https://7a47fd5a-e15c-4758-ae4b-bccbfc86603f.mock.pstmn.io//menu/get-item?limit=10&page=1');
   }
   getBeverageList(): Observable<any> {
-    return this._http.get('http://localhost:3000/beveragess');
+    return this._http.get('https://7a47fd5a-e15c-4758-ae4b-bccbfc86603f.mock.pstmn.io//menu/get-item?limit=10&page=1');
   }
   /*
   gettotalorders(): Observable<any> {

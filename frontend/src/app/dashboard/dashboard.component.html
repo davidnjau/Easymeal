@@ -1,17 +1,17 @@
-<nav>
+<nav *ngIf="orders">
     <div class="analytics">
-        <ul *ngFor="let t of totalOrders">
+        <ul >
             <li class="chefnote"><p>Welcome <br> Head Chef.</p></li>
             <li routerLink="../liveorders">
-                <p>Total Earnings <br> <a>Ksh.{{t.totalEarnings}}</a></p> <fa-icon icon="ellipsis" routerLink="../liveorders"></fa-icon> 
+                <p>Total Earnings <br> <a>Ksh.{{orders.totalOrders.totalEarnings}}</a></p> <fa-icon icon="ellipsis" routerLink="../liveorders"></fa-icon> 
                                         <!-- {{productcalc.toFixed(2)}} -->
               </li>
             <li routerLink="../preorders">
-                <p>Today's Orders <br> <a>{{t.todayOrders}} Items</a></p> <fa-icon icon="ellipsis" routerLink="../preorders"></fa-icon>
+                <p>Today's Orders <br> <a>{{orders.totalOrders.todayOrders}} Items</a></p> <fa-icon icon="ellipsis" routerLink="../preorders"></fa-icon>
                                         <!-- {{totals}} -->
               </li>
             <li routerLink="../preorders">
-                <p>Tomorrow's Orders <br> <a>{{t.tomorrowOrders}} Items</a></p> <fa-icon icon="ellipsis" routerLink="../preorders"></fa-icon>
+                <p>Tomorrow's Orders <br> <a>{{orders.totalOrders.tomorrowOrders}} Items</a></p> <fa-icon icon="ellipsis" routerLink="../preorders"></fa-icon>
                                               <!-- {{totals}} -->
               </li>
         </ul>  
@@ -37,7 +37,6 @@
     <section class="dropdown">
         <select name="category" id="category" placeholder="select category" #filter > <!--The dropdown, to show ordersummary contents-->
           <option value="select category" (click)="filterResultss(filter.value)" >Select Category</option>  <!--Click event to filter by item(not working properly yet)-->
-          <option *ngFor="let users of usersList">{{users.item}}</option>
         </select>
     </section>
     <section class="datatable">

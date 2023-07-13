@@ -99,11 +99,11 @@ openAddEditMealForm() {
 getcomboList() {
   this._empService.getcomboList().subscribe({
     next: (res) => {
-      this.dataSource = new MatTableDataSource(res);
+      this.dataSource = new MatTableDataSource(res.details);
       this.dataSource.sort = this.sort;
       this.dataSource.paginator = this.paginator;
     },
-    error: console.log,
+    error: console.log
   });
 }
 

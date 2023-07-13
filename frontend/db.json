@@ -669,19 +669,6 @@
       "categoryname": "Cold Beverages"
     }
   ],
-  "totalOrders": [
-    {
-      "totalEarnings": 600000,
-      "todayOrders": 2000,
-      "tomorrowOrders": 6000
-    }
-  ],
-  "preOrders": [
-    {
-      "preOrderEarnings": 600000,
-      "preOrderItems": 2000
-    }
-  ],
   "logdetails": [
     {
       "id": 1,

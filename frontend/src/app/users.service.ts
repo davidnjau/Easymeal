@@ -56,7 +56,7 @@ export class UsersService {
 
 
   getPreorderList(): Observable<any> {
-    return this._http.get('http://localhost:3000/details');
+    return this._http.get('https://7a47fd5a-e15c-4758-ae4b-bccbfc86603f.mock.pstmn.io//orders/summary?search=xyz');
   }
   updatePreorder(id: number, data: any): Observable<any> {
     return this._http.put(`http://localhost:3000/details/${id}`, data);
@@ -65,7 +65,7 @@ export class UsersService {
     return this._http.delete(`http://localhost:3000/details/${id}`);
   }
   /*
-  addPreorder(data: any): Observable<any> {
+  addPreorder(data: any): Observable<any> {molpp/land-registration/chief-land-registrar/applications/registration-of-plans/list
     return this._http.post('http://localhost:3000/details', data);
   }*/
 
@@ -73,7 +73,8 @@ export class UsersService {
   
 
   getLiveorderList(): Observable<any> {
-    return this._http.get(this.baseUrl + 'details');
+   // return this._http.get(this.baseUrl + 'details');
+   return this._http.get('https://7a47fd5a-e15c-4758-ae4b-bccbfc86603f.mock.pstmn.io//orders/summary?search=xyz');
   }
   updateLiveorder(id: number, data: any): Observable<any> {
     return this._http.put(`http://localhost:3000/details/${id}`, data);
@@ -87,10 +88,10 @@ export class UsersService {
 
 
   getTotalorders(): Observable<any> {
-    return this._http.get('http://localhost:3000/totalOrders');
+    return this._http.get('https://7a47fd5a-e15c-4758-ae4b-bccbfc86603f.mock.pstmn.io/stats/api/v1/get-stats?totalOrders=true&liveOrders=false&preOrders=true');
   }
   getTotalpreorders(): Observable<any> {
-    return this._http.get('http://localhost:3000/preOrders');
+    return this._http.get('https://7a47fd5a-e15c-4758-ae4b-bccbfc86603f.mock.pstmn.io/stats/api/v1/get-stats?totalOrders=true&liveOrders=false&preOrders=true');
   }
 
 

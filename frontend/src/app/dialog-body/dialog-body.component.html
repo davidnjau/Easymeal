@@ -30,11 +30,12 @@
         <input placeholder="Phone Number" matInput formControlName="mobile">
     </mat-form-field>
 
+<!-- Though not displayed -->
      <mat-radio-group aria-label="Select an option" formControlName="status">
         <mat-radio-button value="onDuty">On duty</mat-radio-button>
         <mat-radio-button value="offDuty">Off duty</mat-radio-button>
       </mat-radio-group>
-      
+       
       
         <input placeholder="Add Image" formControlName="imgicon" type="file" class="file-upload"  (change)="onFileSelected($event)">
     

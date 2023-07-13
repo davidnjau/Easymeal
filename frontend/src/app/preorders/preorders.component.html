@@ -3,10 +3,10 @@
     <div class="analytics">
         <ul *ngFor="let t of totalPreorders"> 
             <li>
-                <p>Total Pre-Orders Earnings <br> <a>Ksh.{{t.preOrderEarnings}}</a></p>  
+                <p>Total Pre-Orders Earnings <br> <a>Ksh. {{t.preOrders.preOrderEarnings}}</a></p>  
             </li>
             <li class="second">
-                <p>Total Pre-Order Items <br> <a>{{t.preOrderItems}} Items</a></p> 
+                <p>Total Pre-Order Items <br> <a>{{t.preOrders.preOrderItems}} Items</a></p> 
             </li>
         </ul>  
     </div>
@@ -88,7 +88,7 @@
           </tr>
         </table>
 
-        <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+        <mat-paginator [pageSizeOptions]="[5, 10]" aria-label="Select page of users"></mat-paginator>
   </section>
 </section>
 

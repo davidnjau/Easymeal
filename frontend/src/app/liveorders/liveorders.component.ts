@@ -106,22 +106,23 @@ productcalc: number = 0;
       },
     });
   }*/
-  totalRejected=0;
+  totalRejected=0; ///error to correct in rejected orders calc
 
   getLiveorderList() {
     this._empService.getLiveorderList().subscribe({
       next: (res) => {
 
-        let rejected: any = [];
-        rejected=res.filter((item) => item.itemStatus==="Cancelled");
+        let rejected: any ;
+        rejected=res.details.filter((item) => item.itemStatus==="Cancelled");
         console.log('these have been rejected: ', rejected);
 
         this.totalRejected = this.calculateSum(rejected, 'itemQuantity');
         console.log("totalRejected",this.totalRejected);
     
 
-        console.log('Show orders', res);
-        this.dataSource = new MatTableDataSource(res);
+       // console.log('Show orders', res);
+        this.dataSource = new MatTableDataSource(res.details);
+        console.log('Show orders', res.details);
         this.dataSource.sort = this.sort;
         this.dataSource.paginator = this.paginator;
       },
@@ -140,7 +141,7 @@ productcalc: number = 0;
 
   getTotalorders(): void {
     this._empService.getTotalorders().subscribe(res => {
-        this.totalOrders= res;
+        this.totalOrders.push(res);
         console.log(res);
       });
     }

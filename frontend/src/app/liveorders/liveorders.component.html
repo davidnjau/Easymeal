@@ -3,10 +3,10 @@
     <div class="analytics">
         <ul *ngFor="let t of totalOrders"> 
             <li>
-                <p>Total Live Orders Earnings <br> <a>Ksh.{{t.totalEarnings}}</a></p>  
+                <p>Total Live Orders Earnings <br> <a>Ksh.{{t.totalOrders.totalEarnings}}</a></p>  
             </li>
             <li>
-                <p>Today's Orders <br> <a>{{t.todayOrders}} Items</a></p> 
+                <p>Today's Orders <br> <a>{{t.totalOrders.todayOrders}} Items</a></p> 
             </li>
             <li>
                 <p>Rejected Orders <br> <a>{{totalRejected}} Items</a></p>

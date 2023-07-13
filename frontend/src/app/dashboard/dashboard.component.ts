@@ -43,23 +43,21 @@ export class DashboardComponent implements OnInit {
     //private _coreService: CoreService
   ) {}
 
-  totals: number = 0;
-  productcalc: number = 0;
-
 
   ngOnInit(): void {
-    this.getLiveorderList();
+   // this.getLiveorderList();
     this.getTrendingcomboList();
     this.getTotalorders();
+    this.getLiveorderList();
   }
 
-  
+ 
 
   getLiveorderList() {
     this._emService.getLiveorderList().subscribe({
       next: (res) => {
-        console.log(res);
-        this.dataSource = new MatTableDataSource(res);
+        console.log(res.details);
+        this.dataSource = new MatTableDataSource(res.details);
         this.dataSource.sort = this.sort;
         this.dataSource.paginator = this.paginator;
       },
@@ -89,17 +87,21 @@ getTrendingcomboList(): void {
     });
   }
 
-  totalOrders:any=[];
+  orders:any;
 
   getTotalorders(): void {
     this._emService.getTotalorders().subscribe(res => {
-        this.totalOrders= res;
-        console.log(res);
+        this.orders = res;
+        console.log('orders',this.orders);
       });
     }
  
    /* 
     // analytics (Was actual totals from the orders in live, their prices and totalearnings)
+    
+  totals: number = 0;
+  productcalc: number = 0;
+  ///
     this.http.get<any[]>('http://localhost:3000/details').subscribe(data =>{
       console.log(data);
       const val = data.map(v => v.value);

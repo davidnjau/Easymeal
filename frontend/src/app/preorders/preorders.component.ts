@@ -28,6 +28,7 @@ export class PreordersComponent implements OnInit {
     'itemStatus',
     'action',
   ];
+  
   dataSource!: MatTableDataSource<any>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -52,7 +53,7 @@ export class PreordersComponent implements OnInit {
 
   getTotalpreorders(): void {
     this._empService.getTotalpreorders().subscribe(res => {
-        this.totalPreorders= res;
+        this.totalPreorders.push(res);
         console.log(res);
       });
     }
@@ -86,7 +87,9 @@ filteredusersList: Users[] = [];
   getPreorderList() {
     this._empService.getPreorderList().subscribe({
       next: (res) => {
-        this.dataSource = new MatTableDataSource(res);
+        console.log('thesepreorderss', res);
+        
+        this.dataSource = new MatTableDataSource(res.details);
         this.dataSource.sort = this.sort;
         this.dataSource.paginator = this.paginator;
       },
