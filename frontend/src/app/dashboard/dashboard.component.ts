@@ -51,7 +51,8 @@ export class DashboardComponent implements OnInit {
     this.getLiveorderList();
     this.getTrendingcomboList();
 
-    /* analytics */
+
+    /* analytics*/
     this.http.get<any[]>('http://localhost:3000/users').subscribe(data =>{
       console.log(data);
       const val = data.map(v => v.value);
@@ -74,7 +75,6 @@ export class DashboardComponent implements OnInit {
   calculateProduct(data:any[], value:string, qty:string):number{
     return data.reduce((product, item) => product + item[value] * item[qty], 0);
   }
-
   /* end of analytics */
   
 
