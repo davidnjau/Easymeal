@@ -51,7 +51,7 @@ export class DashboardComponent implements OnInit {
     this.getLiveorderList();
   }
 
- 
+  sortedObjects: any=[];
 
   getLiveorderList() {
     this._emService.getLiveorderList().subscribe({
@@ -60,6 +60,12 @@ export class DashboardComponent implements OnInit {
         this.dataSource = new MatTableDataSource(res.details);
         this.dataSource.sort = this.sort;
         this.dataSource.paginator = this.paginator;
+
+        //sort orders to get four highest to display as trending combo meals
+         // DAMN WORK ALREADY!
+        const sortedObjects = res.details.sort((a, b) => b.itemQuantity - a.itemQuantity);
+        const fourhighestvalues = sortedObjects.slice(0,4);
+        console.log(fourhighestvalues);
       },
       error: console.log,
     });
@@ -95,6 +101,9 @@ getTrendingcomboList(): void {
         console.log('orders',this.orders);
       });
     }
+
+    
+  } 
  
    /* 
     // analytics (Was actual totals from the orders in live, their prices and totalearnings)
@@ -128,4 +137,3 @@ getTrendingcomboList(): void {
   // end of analytics 
   */
   
-} 

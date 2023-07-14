@@ -12,7 +12,7 @@ import Swal from 'sweetalert2';
 })
 export class AddmealdialogComponent implements OnInit {
 
-  smealForm: FormGroup;
+  //smealForm: FormGroup;
   
   constructor(
     private _fb: FormBuilder,
@@ -21,14 +21,14 @@ export class AddmealdialogComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data: any,
    // private _coreService: CoreService
   ) {
-    this.smealForm = this._fb.group({
+    /*this.smealForm = this._fb.group({        //does the same fucntion as line 40 only that this has no validators
       id:'',
       itemUrl:'',
       itemName:'',
       itemValue:'',
       dateAdded:'',
       action:'',
-    });
+    });*/
   }
   
     ngOnInit(): void {
@@ -36,14 +36,15 @@ export class AddmealdialogComponent implements OnInit {
     }
   
   
-  /*
-    Reactiveform = new FormGroup({
-      staffname: new FormControl("", Validators.required),
-      mobile: new FormControl("", Validators.required),
-      department: new FormControl("", Validators.required),
-      position: new FormControl("", Validators.required),
-      staffimg: new FormControl("")
-    });*/
+  
+    smealForm = new FormGroup({
+      id: new FormControl(""),
+      itemUrl: new FormControl("", Validators.required),
+      itemName: new FormControl("", Validators.required),
+      itemValue: new FormControl("", Validators.required),
+      dateAdded: new FormControl(""),
+      action: new FormControl("")
+    });
   
     
     onFormSubmit() {

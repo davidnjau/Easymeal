@@ -22,17 +22,18 @@
   <section class="combos">
   <article *ngFor="let t of tc">
     <img class="combo-photo" [src]="t.photo" alt="Exterior photo of {{t.comboname}}" routerLink="../menuhome">
-    <h2 class="combo-heading">{{t.comboname }} <br> <p>{{t.ordernumber}} orders today</p></h2>
+    <h2 class="combo-heading">{{t.comboname }} <br> <p>{{orders.totalOrders.todayOrders}} orders today</p></h2>
     <div  class="combo-details"><p> {{t.price }} Ksh</p></div>
 </article> 
+</section>    
 </section>
-      
-</section>
+<!-- Trending combos to display data from liveorders. To be meals with the highest orders, their respective ordernumbers(quantities), prices(value) and photos -->
+
 
 <section class="ordersummary">
     <div class="summary">
         <p>Order Summary</p> 
-        <div class="faicon"><fa-icon icon="ellipsis"></fa-icon></div>
+        <div class="faicon"><fa-icon icon="ellipsis" routerLink="../liveorders"></fa-icon></div>
     </div>
     <section class="dropdown">
         <select name="category" id="category" placeholder="select category" #filter > <!--The dropdown, to show ordersummary contents-->
@@ -89,6 +90,10 @@
        <mat-paginator [pageSizeOptions]="[5,10]" aria-label="Select page of users"></mat-paginator>
   </section>
 </section>
+
+<!-- <section *ngFor="let s of sortedObjects">
+  {{s.fourhighestvalues}}
+</section> -->
 
 
 
