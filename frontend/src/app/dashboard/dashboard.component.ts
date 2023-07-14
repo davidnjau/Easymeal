@@ -51,7 +51,7 @@ export class DashboardComponent implements OnInit {
     this.getLiveorderList();
   }
 
-  sortedObjects: any=[];
+  fourhighestvalues: any=[];
 
   getLiveorderList() {
     this._emService.getLiveorderList().subscribe({
@@ -66,6 +66,7 @@ export class DashboardComponent implements OnInit {
         const sortedObjects = res.details.sort((a, b) => b.itemQuantity - a.itemQuantity);
         const fourhighestvalues = sortedObjects.slice(0,4);
         console.log(fourhighestvalues);
+        //end of sort
       },
       error: console.log,
     });

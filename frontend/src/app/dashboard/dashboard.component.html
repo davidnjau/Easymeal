@@ -19,7 +19,9 @@
 </nav>
 
 <section class="comboss">
+  <p>Trending Combos</p> 
   <section class="combos">
+    
   <article *ngFor="let t of tc">
     <img class="combo-photo" [src]="t.photo" alt="Exterior photo of {{t.comboname}}" routerLink="../menuhome">
     <h2 class="combo-heading">{{t.comboname }} <br> <p>{{orders.totalOrders.todayOrders}} orders today</p></h2>
@@ -28,6 +30,20 @@
 </section>    
 </section>
 <!-- Trending combos to display data from liveorders. To be meals with the highest orders, their respective ordernumbers(quantities), prices(value) and photos -->
+
+<!-- 
+<section class="comboss">
+  <p>Trending Combos</p> 
+  <section class="combos">
+    
+  <article *ngFor="let f of fourhighestvalues">
+    <img class="combo-photo" [src]="f.itemUrl" alt="Exterior photo of {{f.itemName}}" routerLink="../menuhome">
+    <h2 class="combo-heading">{{f.ItemName }} <br> <p>{{orders.totalOrders.todayOrders}} orders today</p></h2>
+    <div  class="combo-details"><p> {{f.itemValue}} Ksh</p></div>
+</article> 
+</section>    
+</section>
+Trending combos to display data from liveorders. To be meals with the highest orders, their respective ordernumbers(quantities), prices(value) and photos -->
 
 
 <section class="ordersummary">

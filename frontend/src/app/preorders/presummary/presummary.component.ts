@@ -44,7 +44,7 @@ export class PresummaryComponent implements OnInit{
       orderDate:'',
       itemStatus:'',
       action:'',
-      imgicon: "../assets/user.png",
+      itemUrl: "../assets/user.png",
     });
   }
   

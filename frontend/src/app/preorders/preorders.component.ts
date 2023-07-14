@@ -18,7 +18,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PreordersComponent implements OnInit {
   displayedColumns = [
-    'imgicon',
+    'itemUrl',
     //'idno',
     'name',
     'itemName',

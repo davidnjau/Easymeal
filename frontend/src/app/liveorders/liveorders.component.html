@@ -36,9 +36,9 @@
         <table class="tabled" mat-table [dataSource] = "dataSource" matSort>
 
           <!-- Progress Column -->
-          <ng-container matColumnDef="imgicon">
+          <ng-container matColumnDef="itemUrl">
             <th mat-header-cell *matHeaderCellDef mat-sort-header></th>
-            <td mat-cell mat-cell *matCellDef="let row"><img src="{{row.imgicon}}" alt="" width="40px"></td>
+            <td mat-cell mat-cell *matCellDef="let row"><img src="{{row.itemUrl}}" alt="imgicon" width="40px"></td>
          </ng-container>
          
           <ng-container matColumnDef="name">

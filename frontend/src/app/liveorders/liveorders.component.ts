@@ -18,7 +18,7 @@ import { HttpClient } from '@angular/common/http';
 export class LiveordersComponent implements OnInit{
 
   displayedColumns = [
-    'imgicon',
+    'itemUrl',
     //'idno',
     'name',
     'itemName',
