@@ -12,7 +12,7 @@ import Swal from 'sweetalert2';
 })
 export class MenudialogComponent implements OnInit{
 
-  combomealForm: FormGroup;
+  //combomealForm: FormGroup;
   
   constructor(
     private _fb: FormBuilder,
@@ -21,14 +21,14 @@ export class MenudialogComponent implements OnInit{
     @Inject(MAT_DIALOG_DATA) public data: any,
    // private _coreService: CoreService
   ) {
-    this.combomealForm = this._fb.group({
+   /* this.combomealForm = this._fb.group({
       id:'',
       itemUrl:'',
       itemName:'',
       itemValue:'',
       dateAdded:'',
       action:'',
-    });
+    });*/ //same functionality as from line 40
   }
   
     ngOnInit(): void {
@@ -36,14 +36,15 @@ export class MenudialogComponent implements OnInit{
     }
   
   
-  /*
-    Reactiveform = new FormGroup({
-      staffname: new FormControl("", Validators.required),
-      mobile: new FormControl("", Validators.required),
-      department: new FormControl("", Validators.required),
-      position: new FormControl("", Validators.required),
-      staffimg: new FormControl("")
-    });*/
+  
+    combomealForm = new FormGroup({
+     id: new FormControl(""),
+      itemUrl: new FormControl("", Validators.required),
+      itemName: new FormControl("", Validators.required),
+      itemValue: new FormControl("", Validators.required),
+      dateAdded: new FormControl(""),
+      action: new FormControl("")
+    });
   
     
     onFormSubmit() {
@@ -63,6 +64,8 @@ export class MenudialogComponent implements OnInit{
         } else {
           this._empService.addcombomeal(this.combomealForm.value).subscribe({
             next: (value: any) => {
+              console.log('valuesss', value.details);
+              
               //this._coreService.openSnackBar('Employee added successfully');
               Swal.fire("Meal details added successfully!", 'success');
               this._dialogRef.close(true);

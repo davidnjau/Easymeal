@@ -53,8 +53,6 @@ export class UsersService {
   }
 
 
-
-
   getPreorderList(): Observable<any> {
     return this._http.get('https://7a47fd5a-e15c-4758-ae4b-bccbfc86603f.mock.pstmn.io//orders/summary?search=xyz');
   }
@@ -69,8 +67,6 @@ export class UsersService {
     return this._http.post('http://localhost:3000/details', data);
   }*/
 
-
-  
 
   getLiveorderList(): Observable<any> {
    // return this._http.get(this.baseUrl + 'details');

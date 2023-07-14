@@ -106,7 +106,7 @@ productcalc: number = 0;
       },
     });
   }*/
-  totalRejected=0; ///error to correct in rejected orders calc
+  totalRejected=0;
 
   getLiveorderList() {
     this._empService.getLiveorderList().subscribe({
