@@ -37,9 +37,9 @@
   <section class="combos">
     
   <article *ngFor="let f of fourhighestvalues">
-    <img class="combo-photo" [src]="f.itemUrl" alt="Exterior photo of {{f.itemName}}" routerLink="../menuhome">
-    <h2 class="combo-heading">{{f.ItemName }} <br> <p>{{orders.totalOrders.todayOrders}} orders today</p></h2>
-    <div  class="combo-details"><p> {{f.itemValue}} Ksh</p></div>
+    <img class="combo-photo" [src]="f.details.itemUrl" alt="Exterior photo of {{f.details.itemName}}" routerLink="../menuhome">
+    <h2 class="combo-heading">{{f.details.itemName }} <br> <p>{{orders.totalOrders.todayOrders}} orders today</p></h2>
+    <div  class="combo-details"><p> {{f.details.itemValue}} Ksh</p></div>
 </article> 
 </section>    
 </section>
