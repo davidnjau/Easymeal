@@ -33,7 +33,7 @@ export class MenusinglemealsComponent implements OnInit{
     onFormSubmit() {
       if (this.categoryForm.valid) {
         if (this.data) {
-          this._empService.updatecombomeal(this.data.id, this.categoryForm.value).subscribe({
+          this._empService.updateCategory(this.data.id).subscribe({
               next: (val: any) => {
                 //this._coreService.openSnackBar('Employee details updated!');
                 Swal.fire("Meal details updated successfully!", 'success');
@@ -45,7 +45,7 @@ export class MenusinglemealsComponent implements OnInit{
               },
             });
         } else {
-          this._empService.addcombomeal(this.categoryForm.value).subscribe({
+          this._empService.addCategory(this.categoryForm.value).subscribe({
             next: (value: any) => {
               //this._coreService.openSnackBar('Employee added successfully');
               Swal.fire("Meal details added successfully!", 'success');

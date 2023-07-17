@@ -34,7 +34,7 @@
       "id": 4
     }
   ],
-  "details": [
+  "detailss": [
     {
       "name": "John Doe",
       "itemName": "Widget A",
@@ -683,687 +683,689 @@
       "password": "ffff"
     }
   ],
-
-    "detailss": [
+  "count": 10,
+  "next": "https://example.com/api?page=2",
+  "previous": null,
+  "details": [
+    {
+      "categoryName": "Electronics",
+      "categoryValue": "electronics",
+      "dateAdded": "2023-07-01",
+      "itemStatus": "Active",
+      "menuItems": [
         {
-            "categoryName": "Electronics",
-            "categoryValue": "electronics",
-            "dateAdded": "2023-07-01",
-            "itemStatus": "Active",
-            "menuItems": [
-                {
-                    "itemName": "Widget A",
-                    "itemUrl": "https://example.com/widget-a",
-                    "itemValue": 10.99,
-                    "dateAdded": "2023-07-01"
-                },
-                {
-                    "itemName": "Widget B",
-                    "itemUrl": "https://example.com/widget-b",
-                    "itemValue": 5.99,
-                    "dateAdded": "2023-07-02"
-                },
-                {
-                    "itemName": "Widget C",
-                    "itemUrl": "https://example.com/widget-c",
-                    "itemValue": 8.99,
-                    "dateAdded": "2023-07-03"
-                },
-                {
-                    "itemName": "Widget D",
-                    "itemUrl": "https://example.com/widget-d",
-                    "itemValue": 15.99,
-                    "dateAdded": "2023-07-04"
-                },
-                {
-                    "itemName": "Widget E",
-                    "itemUrl": "https://example.com/widget-e",
-                    "itemValue": 7.99,
-                    "dateAdded": "2023-07-05"
-                },
-                {
-                    "itemName": "Widget F",
-                    "itemUrl": "https://example.com/widget-f",
-                    "itemValue": 12.99,
-                    "dateAdded": "2023-07-06"
-                },
-                {
-                    "itemName": "Widget G",
-                    "itemUrl": "https://example.com/widget-g",
-                    "itemValue": 9.99,
-                    "dateAdded": "2023-07-07"
-                },
-                {
-                    "itemName": "Widget H",
-                    "itemUrl": "https://example.com/widget-h",
-                    "itemValue": 11.99,
-                    "dateAdded": "2023-07-08"
-                },
-                {
-                    "itemName": "Widget I",
-                    "itemUrl": "https://example.com/widget-i",
-                    "itemValue": 6.99,
-                    "dateAdded": "2023-07-09"
-                },
-                {
-                    "itemName": "Widget J",
-                    "itemUrl": "https://example.com/widget-j",
-                    "itemValue": 14.99,
-                    "dateAdded": "2023-07-10"
-                }
-            ]
+          "itemName": "Widget A",
+          "itemUrl": "https://example.com/widget-a",
+          "itemValue": 10.99,
+          "dateAdded": "2023-07-01"
         },
         {
-            "categoryName": "Books",
-            "categoryValue": "books",
-            "dateAdded": "2023-07-02",
-            "itemStatus": "Inactive",
-            "menuItems": [
-                {
-                    "itemName": "Widget A",
-                    "itemUrl": "https://example.com/widget-a",
-                    "itemValue": 10.99,
-                    "dateAdded": "2023-07-01"
-                },
-                {
-                    "itemName": "Widget B",
-                    "itemUrl": "https://example.com/widget-b",
-                    "itemValue": 5.99,
-                    "dateAdded": "2023-07-02"
-                },
-                {
-                    "itemName": "Widget C",
-                    "itemUrl": "https://example.com/widget-c",
-                    "itemValue": 8.99,
-                    "dateAdded": "2023-07-03"
-                },
-                {
-                    "itemName": "Widget D",
-                    "itemUrl": "https://example.com/widget-d",
-                    "itemValue": 15.99,
-                    "dateAdded": "2023-07-04"
-                },
-                {
-                    "itemName": "Widget E",
-                    "itemUrl": "https://example.com/widget-e",
-                    "itemValue": 7.99,
-                    "dateAdded": "2023-07-05"
-                },
-                {
-                    "itemName": "Widget F",
-                    "itemUrl": "https://example.com/widget-f",
-                    "itemValue": 12.99,
-                    "dateAdded": "2023-07-06"
-                },
-                {
-                    "itemName": "Widget G",
-                    "itemUrl": "https://example.com/widget-g",
-                    "itemValue": 9.99,
-                    "dateAdded": "2023-07-07"
-                },
-                {
-                    "itemName": "Widget H",
-                    "itemUrl": "https://example.com/widget-h",
-                    "itemValue": 11.99,
-                    "dateAdded": "2023-07-08"
-                },
-                {
-                    "itemName": "Widget I",
-                    "itemUrl": "https://example.com/widget-i",
-                    "itemValue": 6.99,
-                    "dateAdded": "2023-07-09"
-                },
-                {
-                    "itemName": "Widget J",
-                    "itemUrl": "https://example.com/widget-j",
-                    "itemValue": 14.99,
-                    "dateAdded": "2023-07-10"
-                }
-            ]
+          "itemName": "Widget B",
+          "itemUrl": "https://example.com/widget-b",
+          "itemValue": 5.99,
+          "dateAdded": "2023-07-02"
         },
         {
-            "categoryName": "Clothing",
-            "categoryValue": "clothing",
-            "dateAdded": "2023-07-03",
-            "itemStatus": "Active",
-            "menuItems": [
-                {
-                    "itemName": "Widget A",
-                    "itemUrl": "https://example.com/widget-a",
-                    "itemValue": 10.99,
-                    "dateAdded": "2023-07-01"
-                },
-                {
-                    "itemName": "Widget B",
-                    "itemUrl": "https://example.com/widget-b",
-                    "itemValue": 5.99,
-                    "dateAdded": "2023-07-02"
-                },
-                {
-                    "itemName": "Widget C",
-                    "itemUrl": "https://example.com/widget-c",
-                    "itemValue": 8.99,
-                    "dateAdded": "2023-07-03"
-                },
-                {
-                    "itemName": "Widget D",
-                    "itemUrl": "https://example.com/widget-d",
-                    "itemValue": 15.99,
-                    "dateAdded": "2023-07-04"
-                },
-                {
-                    "itemName": "Widget E",
-                    "itemUrl": "https://example.com/widget-e",
-                    "itemValue": 7.99,
-                    "dateAdded": "2023-07-05"
-                },
-                {
-                    "itemName": "Widget F",
-                    "itemUrl": "https://example.com/widget-f",
-                    "itemValue": 12.99,
-                    "dateAdded": "2023-07-06"
-                },
-                {
-                    "itemName": "Widget G",
-                    "itemUrl": "https://example.com/widget-g",
-                    "itemValue": 9.99,
-                    "dateAdded": "2023-07-07"
-                },
-                {
-                    "itemName": "Widget H",
-                    "itemUrl": "https://example.com/widget-h",
-                    "itemValue": 11.99,
-                    "dateAdded": "2023-07-08"
-                },
-                {
-                    "itemName": "Widget I",
-                    "itemUrl": "https://example.com/widget-i",
-                    "itemValue": 6.99,
-                    "dateAdded": "2023-07-09"
-                },
-                {
-                    "itemName": "Widget J",
-                    "itemUrl": "https://example.com/widget-j",
-                    "itemValue": 14.99,
-                    "dateAdded": "2023-07-10"
-                }
-            ]
+          "itemName": "Widget C",
+          "itemUrl": "https://example.com/widget-c",
+          "itemValue": 8.99,
+          "dateAdded": "2023-07-03"
         },
         {
-            "categoryName": "Home Decor",
-            "categoryValue": "home_decor",
-            "dateAdded": "2023-07-04",
-            "itemStatus": "Active",
-            "menuItems": [
-                {
-                    "itemName": "Widget A",
-                    "itemUrl": "https://example.com/widget-a",
-                    "itemValue": 10.99,
-                    "dateAdded": "2023-07-01"
-                },
-                {
-                    "itemName": "Widget B",
-                    "itemUrl": "https://example.com/widget-b",
-                    "itemValue": 5.99,
-                    "dateAdded": "2023-07-02"
-                },
-                {
-                    "itemName": "Widget C",
-                    "itemUrl": "https://example.com/widget-c",
-                    "itemValue": 8.99,
-                    "dateAdded": "2023-07-03"
-                },
-                {
-                    "itemName": "Widget D",
-                    "itemUrl": "https://example.com/widget-d",
-                    "itemValue": 15.99,
-                    "dateAdded": "2023-07-04"
-                },
-                {
-                    "itemName": "Widget E",
-                    "itemUrl": "https://example.com/widget-e",
-                    "itemValue": 7.99,
-                    "dateAdded": "2023-07-05"
-                },
-                {
-                    "itemName": "Widget F",
-                    "itemUrl": "https://example.com/widget-f",
-                    "itemValue": 12.99,
-                    "dateAdded": "2023-07-06"
-                },
-                {
-                    "itemName": "Widget G",
-                    "itemUrl": "https://example.com/widget-g",
-                    "itemValue": 9.99,
-                    "dateAdded": "2023-07-07"
-                },
-                {
-                    "itemName": "Widget H",
-                    "itemUrl": "https://example.com/widget-h",
-                    "itemValue": 11.99,
-                    "dateAdded": "2023-07-08"
-                },
-                {
-                    "itemName": "Widget I",
-                    "itemUrl": "https://example.com/widget-i",
-                    "itemValue": 6.99,
-                    "dateAdded": "2023-07-09"
-                },
-                {
-                    "itemName": "Widget J",
-                    "itemUrl": "https://example.com/widget-j",
-                    "itemValue": 14.99,
-                    "dateAdded": "2023-07-10"
-                }
-            ]
+          "itemName": "Widget D",
+          "itemUrl": "https://example.com/widget-d",
+          "itemValue": 15.99,
+          "dateAdded": "2023-07-04"
         },
         {
-            "categoryName": "Toys",
-            "categoryValue": "toys",
-            "dateAdded": "2023-07-05",
-            "itemStatus": "Inactive",
-            "menuItems": [
-                {
-                    "itemName": "Widget A",
-                    "itemUrl": "https://example.com/widget-a",
-                    "itemValue": 10.99,
-                    "dateAdded": "2023-07-01"
-                },
-                {
-                    "itemName": "Widget B",
-                    "itemUrl": "https://example.com/widget-b",
-                    "itemValue": 5.99,
-                    "dateAdded": "2023-07-02"
-                },
-                {
-                    "itemName": "Widget C",
-                    "itemUrl": "https://example.com/widget-c",
-                    "itemValue": 8.99,
-                    "dateAdded": "2023-07-03"
-                },
-                {
-                    "itemName": "Widget D",
-                    "itemUrl": "https://example.com/widget-d",
-                    "itemValue": 15.99,
-                    "dateAdded": "2023-07-04"
-                },
-                {
-                    "itemName": "Widget E",
-                    "itemUrl": "https://example.com/widget-e",
-                    "itemValue": 7.99,
-                    "dateAdded": "2023-07-05"
-                },
-                {
-                    "itemName": "Widget F",
-                    "itemUrl": "https://example.com/widget-f",
-                    "itemValue": 12.99,
-                    "dateAdded": "2023-07-06"
-                },
-                {
-                    "itemName": "Widget G",
-                    "itemUrl": "https://example.com/widget-g",
-                    "itemValue": 9.99,
-                    "dateAdded": "2023-07-07"
-                },
-                {
-                    "itemName": "Widget H",
-                    "itemUrl": "https://example.com/widget-h",
-                    "itemValue": 11.99,
-                    "dateAdded": "2023-07-08"
-                },
-                {
-                    "itemName": "Widget I",
-                    "itemUrl": "https://example.com/widget-i",
-                    "itemValue": 6.99,
-                    "dateAdded": "2023-07-09"
-                },
-                {
-                    "itemName": "Widget J",
-                    "itemUrl": "https://example.com/widget-j",
-                    "itemValue": 14.99,
-                    "dateAdded": "2023-07-10"
-                }
-            ]
+          "itemName": "Widget E",
+          "itemUrl": "https://example.com/widget-e",
+          "itemValue": 7.99,
+          "dateAdded": "2023-07-05"
         },
         {
-            "categoryName": "Beauty",
-            "categoryValue": "beauty",
-            "dateAdded": "2023-07-06",
-            "itemStatus": "Active",
-            "menuItems": [
-                {
-                    "itemName": "Widget A",
-                    "itemUrl": "https://example.com/widget-a",
-                    "itemValue": 10.99,
-                    "dateAdded": "2023-07-01"
-                },
-                {
-                    "itemName": "Widget B",
-                    "itemUrl": "https://example.com/widget-b",
-                    "itemValue": 5.99,
-                    "dateAdded": "2023-07-02"
-                },
-                {
-                    "itemName": "Widget C",
-                    "itemUrl": "https://example.com/widget-c",
-                    "itemValue": 8.99,
-                    "dateAdded": "2023-07-03"
-                },
-                {
-                    "itemName": "Widget D",
-                    "itemUrl": "https://example.com/widget-d",
-                    "itemValue": 15.99,
-                    "dateAdded": "2023-07-04"
-                },
-                {
-                    "itemName": "Widget E",
-                    "itemUrl": "https://example.com/widget-e",
-                    "itemValue": 7.99,
-                    "dateAdded": "2023-07-05"
-                },
-                {
-                    "itemName": "Widget F",
-                    "itemUrl": "https://example.com/widget-f",
-                    "itemValue": 12.99,
-                    "dateAdded": "2023-07-06"
-                },
-                {
-                    "itemName": "Widget G",
-                    "itemUrl": "https://example.com/widget-g",
-                    "itemValue": 9.99,
-                    "dateAdded": "2023-07-07"
-                },
-                {
-                    "itemName": "Widget H",
-                    "itemUrl": "https://example.com/widget-h",
-                    "itemValue": 11.99,
-                    "dateAdded": "2023-07-08"
-                },
-                {
-                    "itemName": "Widget I",
-                    "itemUrl": "https://example.com/widget-i",
-                    "itemValue": 6.99,
-                    "dateAdded": "2023-07-09"
-                },
-                {
-                    "itemName": "Widget J",
-                    "itemUrl": "https://example.com/widget-j",
-                    "itemValue": 14.99,
-                    "dateAdded": "2023-07-10"
-                }
-            ]
+          "itemName": "Widget F",
+          "itemUrl": "https://example.com/widget-f",
+          "itemValue": 12.99,
+          "dateAdded": "2023-07-06"
         },
         {
-            "categoryName": "Sports",
-            "categoryValue": "sports",
-            "dateAdded": "2023-07-07",
-            "itemStatus": "Inactive",
-            "menuItems": [
-                {
-                    "itemName": "Widget A",
-                    "itemUrl": "https://example.com/widget-a",
-                    "itemValue": 10.99,
-                    "dateAdded": "2023-07-01"
-                },
-                {
-                    "itemName": "Widget B",
-                    "itemUrl": "https://example.com/widget-b",
-                    "itemValue": 5.99,
-                    "dateAdded": "2023-07-02"
-                },
-                {
-                    "itemName": "Widget C",
-                    "itemUrl": "https://example.com/widget-c",
-                    "itemValue": 8.99,
-                    "dateAdded": "2023-07-03"
-                },
-                {
-                    "itemName": "Widget D",
-                    "itemUrl": "https://example.com/widget-d",
-                    "itemValue": 15.99,
-                    "dateAdded": "2023-07-04"
-                },
-                {
-                    "itemName": "Widget E",
-                    "itemUrl": "https://example.com/widget-e",
-                    "itemValue": 7.99,
-                    "dateAdded": "2023-07-05"
-                },
-                {
-                    "itemName": "Widget F",
-                    "itemUrl": "https://example.com/widget-f",
-                    "itemValue": 12.99,
-                    "dateAdded": "2023-07-06"
-                },
-                {
-                    "itemName": "Widget G",
-                    "itemUrl": "https://example.com/widget-g",
-                    "itemValue": 9.99,
-                    "dateAdded": "2023-07-07"
-                },
-                {
-                    "itemName": "Widget H",
-                    "itemUrl": "https://example.com/widget-h",
-                    "itemValue": 11.99,
-                    "dateAdded": "2023-07-08"
-                },
-                {
-                    "itemName": "Widget I",
-                    "itemUrl": "https://example.com/widget-i",
-                    "itemValue": 6.99,
-                    "dateAdded": "2023-07-09"
-                },
-                {
-                    "itemName": "Widget J",
-                    "itemUrl": "https://example.com/widget-j",
-                    "itemValue": 14.99,
-                    "dateAdded": "2023-07-10"
-                }
-            ]
+          "itemName": "Widget G",
+          "itemUrl": "https://example.com/widget-g",
+          "itemValue": 9.99,
+          "dateAdded": "2023-07-07"
         },
         {
-            "categoryName": "Furniture",
-            "categoryValue": "furniture",
-            "dateAdded": "2023-07-08",
-            "itemStatus": "Active",
-            "menuItems": [
-                {
-                    "itemName": "Widget A",
-                    "itemUrl": "https://example.com/widget-a",
-                    "itemValue": 10.99,
-                    "dateAdded": "2023-07-01"
-                },
-                {
-                    "itemName": "Widget B",
-                    "itemUrl": "https://example.com/widget-b",
-                    "itemValue": 5.99,
-                    "dateAdded": "2023-07-02"
-                },
-                {
-                    "itemName": "Widget C",
-                    "itemUrl": "https://example.com/widget-c",
-                    "itemValue": 8.99,
-                    "dateAdded": "2023-07-03"
-                },
-                {
-                    "itemName": "Widget D",
-                    "itemUrl": "https://example.com/widget-d",
-                    "itemValue": 15.99,
-                    "dateAdded": "2023-07-04"
-                },
-                {
-                    "itemName": "Widget E",
-                    "itemUrl": "https://example.com/widget-e",
-                    "itemValue": 7.99,
-                    "dateAdded": "2023-07-05"
-                },
-                {
-                    "itemName": "Widget F",
-                    "itemUrl": "https://example.com/widget-f",
-                    "itemValue": 12.99,
-                    "dateAdded": "2023-07-06"
-                },
-                {
-                    "itemName": "Widget G",
-                    "itemUrl": "https://example.com/widget-g",
-                    "itemValue": 9.99,
-                    "dateAdded": "2023-07-07"
-                },
-                {
-                    "itemName": "Widget H",
-                    "itemUrl": "https://example.com/widget-h",
-                    "itemValue": 11.99,
-                    "dateAdded": "2023-07-08"
-                },
-                {
-                    "itemName": "Widget I",
-                    "itemUrl": "https://example.com/widget-i",
-                    "itemValue": 6.99,
-                    "dateAdded": "2023-07-09"
-                },
-                {
-                    "itemName": "Widget J",
-                    "itemUrl": "https://example.com/widget-j",
-                    "itemValue": 14.99,
-                    "dateAdded": "2023-07-10"
-                }
-            ]
+          "itemName": "Widget H",
+          "itemUrl": "https://example.com/widget-h",
+          "itemValue": 11.99,
+          "dateAdded": "2023-07-08"
         },
         {
-            "categoryName": "Jewelry",
-            "categoryValue": "jewelry",
-            "dateAdded": "2023-07-09",
-            "itemStatus": "Active",
-            "menuItems": [
-                {
-                    "itemName": "Widget A",
-                    "itemUrl": "https://example.com/widget-a",
-                    "itemValue": 10.99,
-                    "dateAdded": "2023-07-01"
-                },
-                {
-                    "itemName": "Widget B",
-                    "itemUrl": "https://example.com/widget-b",
-                    "itemValue": 5.99,
-                    "dateAdded": "2023-07-02"
-                },
-                {
-                    "itemName": "Widget C",
-                    "itemUrl": "https://example.com/widget-c",
-                    "itemValue": 8.99,
-                    "dateAdded": "2023-07-03"
-                },
-                {
-                    "itemName": "Widget D",
-                    "itemUrl": "https://example.com/widget-d",
-                    "itemValue": 15.99,
-                    "dateAdded": "2023-07-04"
-                },
-                {
-                    "itemName": "Widget E",
-                    "itemUrl": "https://example.com/widget-e",
-                    "itemValue": 7.99,
-                    "dateAdded": "2023-07-05"
-                },
-                {
-                    "itemName": "Widget F",
-                    "itemUrl": "https://example.com/widget-f",
-                    "itemValue": 12.99,
-                    "dateAdded": "2023-07-06"
-                },
-                {
-                    "itemName": "Widget G",
-                    "itemUrl": "https://example.com/widget-g",
-                    "itemValue": 9.99,
-                    "dateAdded": "2023-07-07"
-                },
-                {
-                    "itemName": "Widget H",
-                    "itemUrl": "https://example.com/widget-h",
-                    "itemValue": 11.99,
-                    "dateAdded": "2023-07-08"
-                },
-                {
-                    "itemName": "Widget I",
-                    "itemUrl": "https://example.com/widget-i",
-                    "itemValue": 6.99,
-                    "dateAdded": "2023-07-09"
-                },
-                {
-                    "itemName": "Widget J",
-                    "itemUrl": "https://example.com/widget-j",
-                    "itemValue": 14.99,
-                    "dateAdded": "2023-07-10"
-                }
-            ]
+          "itemName": "Widget I",
+          "itemUrl": "https://example.com/widget-i",
+          "itemValue": 6.99,
+          "dateAdded": "2023-07-09"
         },
         {
-            "categoryName": "Movies",
-            "categoryValue": "movies",
-            "dateAdded": "2023-07-10",
-            "itemStatus": "Inactive",
-            "menuItems": [
-                {
-                    "itemName": "Widget A",
-                    "itemUrl": "https://example.com/widget-a",
-                    "itemValue": 10.99,
-                    "dateAdded": "2023-07-01"
-                },
-                {
-                    "itemName": "Widget B",
-                    "itemUrl": "https://example.com/widget-b",
-                    "itemValue": 5.99,
-                    "dateAdded": "2023-07-02"
-                },
-                {
-                    "itemName": "Widget C",
-                    "itemUrl": "https://example.com/widget-c",
-                    "itemValue": 8.99,
-                    "dateAdded": "2023-07-03"
-                },
-                {
-                    "itemName": "Widget D",
-                    "itemUrl": "https://example.com/widget-d",
-                    "itemValue": 15.99,
-                    "dateAdded": "2023-07-04"
-                },
-                {
-                    "itemName": "Widget E",
-                    "itemUrl": "https://example.com/widget-e",
-                    "itemValue": 7.99,
-                    "dateAdded": "2023-07-05"
-                },
-                {
-                    "itemName": "Widget F",
-                    "itemUrl": "https://example.com/widget-f",
-                    "itemValue": 12.99,
-                    "dateAdded": "2023-07-06"
-                },
-                {
-                    "itemName": "Widget G",
-                    "itemUrl": "https://example.com/widget-g",
-                    "itemValue": 9.99,
-                    "dateAdded": "2023-07-07"
-                },
-                {
-                    "itemName": "Widget H",
-                    "itemUrl": "https://example.com/widget-h",
-                    "itemValue": 11.99,
-                    "dateAdded": "2023-07-08"
-                },
-                {
-                    "itemName": "Widget I",
-                    "itemUrl": "https://example.com/widget-i",
-                    "itemValue": 6.99,
-                    "dateAdded": "2023-07-09"
-                },
-                {
-                    "itemName": "Widget J",
-                    "itemUrl": "https://example.com/widget-j",
-                    "itemValue": 14.99,
-                    "dateAdded": "2023-07-10"
-                }
-            ]
+          "itemName": "Widget J",
+          "itemUrl": "https://example.com/widget-j",
+          "itemValue": 14.99,
+          "dateAdded": "2023-07-10"
         }
-    ]
+      ]
+    },
+    {
+      "categoryName": "Books",
+      "categoryValue": "books",
+      "dateAdded": "2023-07-02",
+      "itemStatus": "Inactive",
+      "menuItems": [
+        {
+          "itemName": "Widget A",
+          "itemUrl": "https://example.com/widget-a",
+          "itemValue": 10.99,
+          "dateAdded": "2023-07-01"
+        },
+        {
+          "itemName": "Widget B",
+          "itemUrl": "https://example.com/widget-b",
+          "itemValue": 5.99,
+          "dateAdded": "2023-07-02"
+        },
+        {
+          "itemName": "Widget C",
+          "itemUrl": "https://example.com/widget-c",
+          "itemValue": 8.99,
+          "dateAdded": "2023-07-03"
+        },
+        {
+          "itemName": "Widget D",
+          "itemUrl": "https://example.com/widget-d",
+          "itemValue": 15.99,
+          "dateAdded": "2023-07-04"
+        },
+        {
+          "itemName": "Widget E",
+          "itemUrl": "https://example.com/widget-e",
+          "itemValue": 7.99,
+          "dateAdded": "2023-07-05"
+        },
+        {
+          "itemName": "Widget F",
+          "itemUrl": "https://example.com/widget-f",
+          "itemValue": 12.99,
+          "dateAdded": "2023-07-06"
+        },
+        {
+          "itemName": "Widget G",
+          "itemUrl": "https://example.com/widget-g",
+          "itemValue": 9.99,
+          "dateAdded": "2023-07-07"
+        },
+        {
+          "itemName": "Widget H",
+          "itemUrl": "https://example.com/widget-h",
+          "itemValue": 11.99,
+          "dateAdded": "2023-07-08"
+        },
+        {
+          "itemName": "Widget I",
+          "itemUrl": "https://example.com/widget-i",
+          "itemValue": 6.99,
+          "dateAdded": "2023-07-09"
+        },
+        {
+          "itemName": "Widget J",
+          "itemUrl": "https://example.com/widget-j",
+          "itemValue": 14.99,
+          "dateAdded": "2023-07-10"
+        }
+      ]
+    },
+    {
+      "categoryName": "Clothing",
+      "categoryValue": "clothing",
+      "dateAdded": "2023-07-03",
+      "itemStatus": "Active",
+      "menuItems": [
+        {
+          "itemName": "Widget A",
+          "itemUrl": "https://example.com/widget-a",
+          "itemValue": 10.99,
+          "dateAdded": "2023-07-01"
+        },
+        {
+          "itemName": "Widget B",
+          "itemUrl": "https://example.com/widget-b",
+          "itemValue": 5.99,
+          "dateAdded": "2023-07-02"
+        },
+        {
+          "itemName": "Widget C",
+          "itemUrl": "https://example.com/widget-c",
+          "itemValue": 8.99,
+          "dateAdded": "2023-07-03"
+        },
+        {
+          "itemName": "Widget D",
+          "itemUrl": "https://example.com/widget-d",
+          "itemValue": 15.99,
+          "dateAdded": "2023-07-04"
+        },
+        {
+          "itemName": "Widget E",
+          "itemUrl": "https://example.com/widget-e",
+          "itemValue": 7.99,
+          "dateAdded": "2023-07-05"
+        },
+        {
+          "itemName": "Widget F",
+          "itemUrl": "https://example.com/widget-f",
+          "itemValue": 12.99,
+          "dateAdded": "2023-07-06"
+        },
+        {
+          "itemName": "Widget G",
+          "itemUrl": "https://example.com/widget-g",
+          "itemValue": 9.99,
+          "dateAdded": "2023-07-07"
+        },
+        {
+          "itemName": "Widget H",
+          "itemUrl": "https://example.com/widget-h",
+          "itemValue": 11.99,
+          "dateAdded": "2023-07-08"
+        },
+        {
+          "itemName": "Widget I",
+          "itemUrl": "https://example.com/widget-i",
+          "itemValue": 6.99,
+          "dateAdded": "2023-07-09"
+        },
+        {
+          "itemName": "Widget J",
+          "itemUrl": "https://example.com/widget-j",
+          "itemValue": 14.99,
+          "dateAdded": "2023-07-10"
+        }
+      ]
+    },
+    {
+      "categoryName": "Home Decor",
+      "categoryValue": "home_decor",
+      "dateAdded": "2023-07-04",
+      "itemStatus": "Active",
+      "menuItems": [
+        {
+          "itemName": "Widget A",
+          "itemUrl": "https://example.com/widget-a",
+          "itemValue": 10.99,
+          "dateAdded": "2023-07-01"
+        },
+        {
+          "itemName": "Widget B",
+          "itemUrl": "https://example.com/widget-b",
+          "itemValue": 5.99,
+          "dateAdded": "2023-07-02"
+        },
+        {
+          "itemName": "Widget C",
+          "itemUrl": "https://example.com/widget-c",
+          "itemValue": 8.99,
+          "dateAdded": "2023-07-03"
+        },
+        {
+          "itemName": "Widget D",
+          "itemUrl": "https://example.com/widget-d",
+          "itemValue": 15.99,
+          "dateAdded": "2023-07-04"
+        },
+        {
+          "itemName": "Widget E",
+          "itemUrl": "https://example.com/widget-e",
+          "itemValue": 7.99,
+          "dateAdded": "2023-07-05"
+        },
+        {
+          "itemName": "Widget F",
+          "itemUrl": "https://example.com/widget-f",
+          "itemValue": 12.99,
+          "dateAdded": "2023-07-06"
+        },
+        {
+          "itemName": "Widget G",
+          "itemUrl": "https://example.com/widget-g",
+          "itemValue": 9.99,
+          "dateAdded": "2023-07-07"
+        },
+        {
+          "itemName": "Widget H",
+          "itemUrl": "https://example.com/widget-h",
+          "itemValue": 11.99,
+          "dateAdded": "2023-07-08"
+        },
+        {
+          "itemName": "Widget I",
+          "itemUrl": "https://example.com/widget-i",
+          "itemValue": 6.99,
+          "dateAdded": "2023-07-09"
+        },
+        {
+          "itemName": "Widget J",
+          "itemUrl": "https://example.com/widget-j",
+          "itemValue": 14.99,
+          "dateAdded": "2023-07-10"
+        }
+      ]
+    },
+    {
+      "categoryName": "Toys",
+      "categoryValue": "toys",
+      "dateAdded": "2023-07-05",
+      "itemStatus": "Inactive",
+      "menuItems": [
+        {
+          "itemName": "Widget A",
+          "itemUrl": "https://example.com/widget-a",
+          "itemValue": 10.99,
+          "dateAdded": "2023-07-01"
+        },
+        {
+          "itemName": "Widget B",
+          "itemUrl": "https://example.com/widget-b",
+          "itemValue": 5.99,
+          "dateAdded": "2023-07-02"
+        },
+        {
+          "itemName": "Widget C",
+          "itemUrl": "https://example.com/widget-c",
+          "itemValue": 8.99,
+          "dateAdded": "2023-07-03"
+        },
+        {
+          "itemName": "Widget D",
+          "itemUrl": "https://example.com/widget-d",
+          "itemValue": 15.99,
+          "dateAdded": "2023-07-04"
+        },
+        {
+          "itemName": "Widget E",
+          "itemUrl": "https://example.com/widget-e",
+          "itemValue": 7.99,
+          "dateAdded": "2023-07-05"
+        },
+        {
+          "itemName": "Widget F",
+          "itemUrl": "https://example.com/widget-f",
+          "itemValue": 12.99,
+          "dateAdded": "2023-07-06"
+        },
+        {
+          "itemName": "Widget G",
+          "itemUrl": "https://example.com/widget-g",
+          "itemValue": 9.99,
+          "dateAdded": "2023-07-07"
+        },
+        {
+          "itemName": "Widget H",
+          "itemUrl": "https://example.com/widget-h",
+          "itemValue": 11.99,
+          "dateAdded": "2023-07-08"
+        },
+        {
+          "itemName": "Widget I",
+          "itemUrl": "https://example.com/widget-i",
+          "itemValue": 6.99,
+          "dateAdded": "2023-07-09"
+        },
+        {
+          "itemName": "Widget J",
+          "itemUrl": "https://example.com/widget-j",
+          "itemValue": 14.99,
+          "dateAdded": "2023-07-10"
+        }
+      ]
+    },
+    {
+      "categoryName": "Beauty",
+      "categoryValue": "beauty",
+      "dateAdded": "2023-07-06",
+      "itemStatus": "Active",
+      "menuItems": [
+        {
+          "itemName": "Widget A",
+          "itemUrl": "https://example.com/widget-a",
+          "itemValue": 10.99,
+          "dateAdded": "2023-07-01"
+        },
+        {
+          "itemName": "Widget B",
+          "itemUrl": "https://example.com/widget-b",
+          "itemValue": 5.99,
+          "dateAdded": "2023-07-02"
+        },
+        {
+          "itemName": "Widget C",
+          "itemUrl": "https://example.com/widget-c",
+          "itemValue": 8.99,
+          "dateAdded": "2023-07-03"
+        },
+        {
+          "itemName": "Widget D",
+          "itemUrl": "https://example.com/widget-d",
+          "itemValue": 15.99,
+          "dateAdded": "2023-07-04"
+        },
+        {
+          "itemName": "Widget E",
+          "itemUrl": "https://example.com/widget-e",
+          "itemValue": 7.99,
+          "dateAdded": "2023-07-05"
+        },
+        {
+          "itemName": "Widget F",
+          "itemUrl": "https://example.com/widget-f",
+          "itemValue": 12.99,
+          "dateAdded": "2023-07-06"
+        },
+        {
+          "itemName": "Widget G",
+          "itemUrl": "https://example.com/widget-g",
+          "itemValue": 9.99,
+          "dateAdded": "2023-07-07"
+        },
+        {
+          "itemName": "Widget H",
+          "itemUrl": "https://example.com/widget-h",
+          "itemValue": 11.99,
+          "dateAdded": "2023-07-08"
+        },
+        {
+          "itemName": "Widget I",
+          "itemUrl": "https://example.com/widget-i",
+          "itemValue": 6.99,
+          "dateAdded": "2023-07-09"
+        },
+        {
+          "itemName": "Widget J",
+          "itemUrl": "https://example.com/widget-j",
+          "itemValue": 14.99,
+          "dateAdded": "2023-07-10"
+        }
+      ]
+    },
+    {
+      "categoryName": "Sports",
+      "categoryValue": "sports",
+      "dateAdded": "2023-07-07",
+      "itemStatus": "Inactive",
+      "menuItems": [
+        {
+          "itemName": "Widget A",
+          "itemUrl": "https://example.com/widget-a",
+          "itemValue": 10.99,
+          "dateAdded": "2023-07-01"
+        },
+        {
+          "itemName": "Widget B",
+          "itemUrl": "https://example.com/widget-b",
+          "itemValue": 5.99,
+          "dateAdded": "2023-07-02"
+        },
+        {
+          "itemName": "Widget C",
+          "itemUrl": "https://example.com/widget-c",
+          "itemValue": 8.99,
+          "dateAdded": "2023-07-03"
+        },
+        {
+          "itemName": "Widget D",
+          "itemUrl": "https://example.com/widget-d",
+          "itemValue": 15.99,
+          "dateAdded": "2023-07-04"
+        },
+        {
+          "itemName": "Widget E",
+          "itemUrl": "https://example.com/widget-e",
+          "itemValue": 7.99,
+          "dateAdded": "2023-07-05"
+        },
+        {
+          "itemName": "Widget F",
+          "itemUrl": "https://example.com/widget-f",
+          "itemValue": 12.99,
+          "dateAdded": "2023-07-06"
+        },
+        {
+          "itemName": "Widget G",
+          "itemUrl": "https://example.com/widget-g",
+          "itemValue": 9.99,
+          "dateAdded": "2023-07-07"
+        },
+        {
+          "itemName": "Widget H",
+          "itemUrl": "https://example.com/widget-h",
+          "itemValue": 11.99,
+          "dateAdded": "2023-07-08"
+        },
+        {
+          "itemName": "Widget I",
+          "itemUrl": "https://example.com/widget-i",
+          "itemValue": 6.99,
+          "dateAdded": "2023-07-09"
+        },
+        {
+          "itemName": "Widget J",
+          "itemUrl": "https://example.com/widget-j",
+          "itemValue": 14.99,
+          "dateAdded": "2023-07-10"
+        }
+      ]
+    },
+    {
+      "categoryName": "Furniture",
+      "categoryValue": "furniture",
+      "dateAdded": "2023-07-08",
+      "itemStatus": "Active",
+      "menuItems": [
+        {
+          "itemName": "Widget A",
+          "itemUrl": "https://example.com/widget-a",
+          "itemValue": 10.99,
+          "dateAdded": "2023-07-01"
+        },
+        {
+          "itemName": "Widget B",
+          "itemUrl": "https://example.com/widget-b",
+          "itemValue": 5.99,
+          "dateAdded": "2023-07-02"
+        },
+        {
+          "itemName": "Widget C",
+          "itemUrl": "https://example.com/widget-c",
+          "itemValue": 8.99,
+          "dateAdded": "2023-07-03"
+        },
+        {
+          "itemName": "Widget D",
+          "itemUrl": "https://example.com/widget-d",
+          "itemValue": 15.99,
+          "dateAdded": "2023-07-04"
+        },
+        {
+          "itemName": "Widget E",
+          "itemUrl": "https://example.com/widget-e",
+          "itemValue": 7.99,
+          "dateAdded": "2023-07-05"
+        },
+        {
+          "itemName": "Widget F",
+          "itemUrl": "https://example.com/widget-f",
+          "itemValue": 12.99,
+          "dateAdded": "2023-07-06"
+        },
+        {
+          "itemName": "Widget G",
+          "itemUrl": "https://example.com/widget-g",
+          "itemValue": 9.99,
+          "dateAdded": "2023-07-07"
+        },
+        {
+          "itemName": "Widget H",
+          "itemUrl": "https://example.com/widget-h",
+          "itemValue": 11.99,
+          "dateAdded": "2023-07-08"
+        },
+        {
+          "itemName": "Widget I",
+          "itemUrl": "https://example.com/widget-i",
+          "itemValue": 6.99,
+          "dateAdded": "2023-07-09"
+        },
+        {
+          "itemName": "Widget J",
+          "itemUrl": "https://example.com/widget-j",
+          "itemValue": 14.99,
+          "dateAdded": "2023-07-10"
+        }
+      ]
+    },
+    {
+      "categoryName": "Jewelry",
+      "categoryValue": "jewelry",
+      "dateAdded": "2023-07-09",
+      "itemStatus": "Active",
+      "menuItems": [
+        {
+          "itemName": "Widget A",
+          "itemUrl": "https://example.com/widget-a",
+          "itemValue": 10.99,
+          "dateAdded": "2023-07-01"
+        },
+        {
+          "itemName": "Widget B",
+          "itemUrl": "https://example.com/widget-b",
+          "itemValue": 5.99,
+          "dateAdded": "2023-07-02"
+        },
+        {
+          "itemName": "Widget C",
+          "itemUrl": "https://example.com/widget-c",
+          "itemValue": 8.99,
+          "dateAdded": "2023-07-03"
+        },
+        {
+          "itemName": "Widget D",
+          "itemUrl": "https://example.com/widget-d",
+          "itemValue": 15.99,
+          "dateAdded": "2023-07-04"
+        },
+        {
+          "itemName": "Widget E",
+          "itemUrl": "https://example.com/widget-e",
+          "itemValue": 7.99,
+          "dateAdded": "2023-07-05"
+        },
+        {
+          "itemName": "Widget F",
+          "itemUrl": "https://example.com/widget-f",
+          "itemValue": 12.99,
+          "dateAdded": "2023-07-06"
+        },
+        {
+          "itemName": "Widget G",
+          "itemUrl": "https://example.com/widget-g",
+          "itemValue": 9.99,
+          "dateAdded": "2023-07-07"
+        },
+        {
+          "itemName": "Widget H",
+          "itemUrl": "https://example.com/widget-h",
+          "itemValue": 11.99,
+          "dateAdded": "2023-07-08"
+        },
+        {
+          "itemName": "Widget I",
+          "itemUrl": "https://example.com/widget-i",
+          "itemValue": 6.99,
+          "dateAdded": "2023-07-09"
+        },
+        {
+          "itemName": "Widget J",
+          "itemUrl": "https://example.com/widget-j",
+          "itemValue": 14.99,
+          "dateAdded": "2023-07-10"
+        }
+      ]
+    },
+    {
+      "categoryName": "Movies",
+      "categoryValue": "movies",
+      "dateAdded": "2023-07-10",
+      "itemStatus": "Inactive",
+      "menuItems": [
+        {
+          "itemName": "Widget A",
+          "itemUrl": "https://example.com/widget-a",
+          "itemValue": 10.99,
+          "dateAdded": "2023-07-01"
+        },
+        {
+          "itemName": "Widget B",
+          "itemUrl": "https://example.com/widget-b",
+          "itemValue": 5.99,
+          "dateAdded": "2023-07-02"
+        },
+        {
+          "itemName": "Widget C",
+          "itemUrl": "https://example.com/widget-c",
+          "itemValue": 8.99,
+          "dateAdded": "2023-07-03"
+        },
+        {
+          "itemName": "Widget D",
+          "itemUrl": "https://example.com/widget-d",
+          "itemValue": 15.99,
+          "dateAdded": "2023-07-04"
+        },
+        {
+          "itemName": "Widget E",
+          "itemUrl": "https://example.com/widget-e",
+          "itemValue": 7.99,
+          "dateAdded": "2023-07-05"
+        },
+        {
+          "itemName": "Widget F",
+          "itemUrl": "https://example.com/widget-f",
+          "itemValue": 12.99,
+          "dateAdded": "2023-07-06"
+        },
+        {
+          "itemName": "Widget G",
+          "itemUrl": "https://example.com/widget-g",
+          "itemValue": 9.99,
+          "dateAdded": "2023-07-07"
+        },
+        {
+          "itemName": "Widget H",
+          "itemUrl": "https://example.com/widget-h",
+          "itemValue": 11.99,
+          "dateAdded": "2023-07-08"
+        },
+        {
+          "itemName": "Widget I",
+          "itemUrl": "https://example.com/widget-i",
+          "itemValue": 6.99,
+          "dateAdded": "2023-07-09"
+        },
+        {
+          "itemName": "Widget J",
+          "itemUrl": "https://example.com/widget-j",
+          "itemValue": 14.99,
+          "dateAdded": "2023-07-10"
+        }
+      ]
+    }
+  ]
 }

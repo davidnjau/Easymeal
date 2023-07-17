@@ -30,6 +30,7 @@ export class MenuhomeComponent implements OnInit  {
     'dateAdded',
     'action',
   ];
+
   dataSource!: MatTableDataSource<any>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -38,10 +39,29 @@ export class MenuhomeComponent implements OnInit  {
   constructor(
     private _dialog: MatDialog,
     private _empService: MenuProductsService,
-    //private _coreService: CoreService
+    //private _coreService: CoreServicegetCategory
   ) {}
+  
+  categorically:any;
+ // category:any;
+
+  getCategory() {
+    this._empService.getCategory().subscribe({
+      next: (res) => {
+    //  this.category = res.details[0];
+      //console.log('category 1', res.details[0]);
+      
+      this.categorically = res.details;
+      //this.dataSource = new MatTableDataSource(res.details);
+      console.log('res details', res.details);
+      
+      this.dataSource.sort = this.sort;
+      this.dataSource.paginator = this.paginator;
+      }, 
+      error: console.log,
+    });
+  }
   /*
-  // categories = ['Meals', 'Hot Beverages', 'Chefs combo']
   categories = [
     {name: 'Meals'},
     {name: 'Hot Beverages'},
@@ -69,20 +89,8 @@ this.filteredcomboList = this.trendingcomboList.filter(trendingcombo => trending
 
 ngOnInit(): void {
   this.getcomboList();
+  this.getCategory();
 }
-////
-openAddEditCategoryForm() {
-  const dialogRef = this._dialog.open(MenusinglemealsComponent,{width:"60%"});
-  dialogRef.afterClosed().subscribe({
-    next: (val) => {
-      if (val) {
-        console.log(val);
-        this.getcomboList();
-      }
-    },
-  });
-}
-////
 
 openAddEditMealForm() {
   const dialogRef = this._dialog.open(MenudialogComponent,{width:"55%"});
@@ -100,7 +108,7 @@ getcomboList() {
   this._empService.getcomboList().subscribe({
     next: (res) => {
       this.dataSource = new MatTableDataSource(res.details[0].menuItems);
-      console.log(res.details[0].menuItems);
+      console.log('cresults',res.details[0].menuItems);
       
       this.dataSource.sort = this.sort;
       this.dataSource.paginator = this.paginator;
@@ -146,6 +154,33 @@ openEditForm(data: any) {
         this.getcomboList();
       }
    },
+  });
+}
+
+
+
+////
+openAddCategoryForm() {
+  const dialogRef = this._dialog.open(MenusinglemealsComponent,{width:"60%"});
+  dialogRef.afterClosed().subscribe({
+    next: (val) => {
+      if (val) {
+        console.log(val);
+        this.getCategory();
+      }
+    },
+  });
+}
+////
+
+deleteCategory(id: number) {
+  this._empService.deleteCategory(id).subscribe({
+    next: (res) => {
+      //this._coreService.openSnackBar('Employee deleted!', 'done');
+      Swal.fire("deleted successfully!", 'success');
+      this.getCategory();
+    },
+    error: console.log,
   });
 }
 

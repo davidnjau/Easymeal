@@ -122,6 +122,8 @@ productcalc: number = 0;
 
        // console.log('Show orders', res);
         this.dataSource = new MatTableDataSource(res.details);
+      console.log('res details4', res.details);
+
         console.log('Show orders', res.details);
         this.dataSource.sort = this.sort;
         this.dataSource.paginator = this.paginator;

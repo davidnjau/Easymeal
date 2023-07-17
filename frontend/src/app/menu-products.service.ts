@@ -11,6 +11,8 @@ import { Singlemeals } from './singlemeal';
 export class MenuProductsService {
 
   constructor(private _http: HttpClient) { }
+
+  //to change link once updated on postman to enable add function.
   addcombomeal(data: any): Observable<any> {
     return this._http.post('https://7a47fd5a-e15c-4758-ae4b-bccbfc86603f.mock.pstmn.io//menu/add-item', data);
   }
@@ -36,9 +38,8 @@ export class MenuProductsService {
 
 
   getcomboList(): Observable<any> {
-    //return this._http.get('http://localhost:3000/detailss');
+    //return this._http.get('http://localhost:3000/details');
       return this._http.get('https://7a47fd5a-e15c-4758-ae4b-bccbfc86603f.mock.pstmn.io//menus/get-category?page=1&limit=20');
-
   }
   getSinglemealList(): Observable<any> {
     return this._http.get('https://7a47fd5a-e15c-4758-ae4b-bccbfc86603f.mock.pstmn.io//menus/get-category?page=1&limit=20');
@@ -64,22 +65,20 @@ export class MenuProductsService {
   }
 
 
-
   getCategory(): Observable<any> {
-    return this._http.get('http://localhost:3000/categories');
+    return this._http.get('https://7a47fd5a-e15c-4758-ae4b-bccbfc86603f.mock.pstmn.io//menus/get-category?page=1&limit=20');
   }
 
   deleteCategory(id: number): Observable<any> {
-    return this._http.delete(`http://localhost:3000/categories/${id}`);
+    return this._http.delete(`https://7a47fd5a-e15c-4758-ae4b-bccbfc86603f.mock.pstmn.io//menus/get-category?page=1&limit=20/${id}`);
   }
-    addCategory(data: any): Observable<any> {
-      return this._http.post('http://localhost:3000/categories', data);
-    }
+  addCategory(data: any): Observable<any> {
+    return this._http.post('http://localhost:3000/details', data);
+  }
 
   updateCategory(data: any): Observable<any> {
-      return this._http.post('http://localhost:3000/categories', data);
+      return this._http.post('https://7a47fd5a-e15c-4758-ae4b-bccbfc86603f.mock.pstmn.io//menus/get-category?page=1&limit=20', data);
     }
-  
   
   }
 
