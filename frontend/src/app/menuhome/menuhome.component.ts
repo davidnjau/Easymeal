@@ -55,8 +55,8 @@ export class MenuhomeComponent implements OnInit  {
       //this.dataSource = new MatTableDataSource(res.details);
       console.log('res details', res.details);
       
-      this.dataSource.sort = this.sort;
-      this.dataSource.paginator = this.paginator;
+      this.categorically.sort = this.sort;
+      this.categorically.paginator = this.paginator;
       }, 
       error: console.log,
     });

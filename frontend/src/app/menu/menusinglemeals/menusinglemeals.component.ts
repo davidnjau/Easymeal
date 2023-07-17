@@ -21,7 +21,7 @@ export class MenusinglemealsComponent implements OnInit{
    // private _coreService: CoreService
   ) {
     this.categoryForm = this._fb.group({
-      categoryname:'',
+      categoryName:'',
     });
   }
   
@@ -33,7 +33,7 @@ export class MenusinglemealsComponent implements OnInit{
     onFormSubmit() {
       if (this.categoryForm.valid) {
         if (this.data) {
-          this._empService.updateCategory(this.data.id).subscribe({
+          this._empService.updateCategory(this.data.categoryName, this.categoryForm.value).subscribe({
               next: (val: any) => {
                 //this._coreService.openSnackBar('Employee details updated!');
                 Swal.fire("Meal details updated successfully!", 'success');

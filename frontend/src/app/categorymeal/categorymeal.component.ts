@@ -40,7 +40,7 @@ getCategory() {
   });
 }
 ////
-openAddEditCategoryForm() {
+openAddCategoryForm() {
   const dialogRef = this._dialog.open(MenusinglemealsComponent,{width:"60%"});
   dialogRef.afterClosed().subscribe({
     next: (val) => {

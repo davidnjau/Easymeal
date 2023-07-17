@@ -653,6 +653,17 @@
     },
     {
       "id": 22
+    },
+    {
+      "staffname": "ccccccccccc",
+      "department": "dddddddd",
+      "position": "this",
+      "joined": "2023-07-05T21:00:00.000Z",
+      "mobile": "4444444444",
+      "action": "",
+      "imgicon": "",
+      "status": "onDuty",
+      "id": 23
     }
   ],
   "categories": [
@@ -683,9 +694,6 @@
       "password": "ffff"
     }
   ],
-  "count": 10,
-  "next": "https://example.com/api?page=2",
-  "previous": null,
   "details": [
     {
       "categoryName": "Electronics",

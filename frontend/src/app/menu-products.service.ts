@@ -73,13 +73,11 @@ export class MenuProductsService {
     return this._http.delete(`https://7a47fd5a-e15c-4758-ae4b-bccbfc86603f.mock.pstmn.io//menus/get-category?page=1&limit=20/${id}`);
   }
   addCategory(data: any): Observable<any> {
-    return this._http.post('http://localhost:3000/details', data);
+    return this._http.post(`http://localhost:3000/details`, data);
   }
 
-  updateCategory(data: any): Observable<any> {
-      return this._http.post('https://7a47fd5a-e15c-4758-ae4b-bccbfc86603f.mock.pstmn.io//menus/get-category?page=1&limit=20', data);
-    }
-  
+  updateCategory(categoryName: string, data: any): Observable<any> {
+    return this._http.put(`http://localhost:3000/details/${categoryName}`, data);
   }
 
-
+}
