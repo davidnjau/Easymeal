@@ -71,7 +71,9 @@ openAddEditBevForm() {
 getBeverageList() {
   this._empService.getBeverageList().subscribe({
     next: (res) => {
-      this.dataSource = new MatTableDataSource(res.details);
+      this.dataSource = new MatTableDataSource(res.details[2].menuItems);
+      console.log('hotbeverageitems', res.details[2].menuItems);
+      
       this.dataSource.sort = this.sort;
       this.dataSource.paginator = this.paginator;
     },

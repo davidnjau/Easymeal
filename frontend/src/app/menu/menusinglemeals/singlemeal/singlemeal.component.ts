@@ -55,7 +55,9 @@ openAddEditSMealForm() {
 getSinglemealList() {
   this._empService.getSinglemealList().subscribe({
     next: (res) => {
-      this.dataSource = new MatTableDataSource(res.details);
+      this.dataSource = new MatTableDataSource(res.details[1].menuItems);
+      console.log('singlemenuitems', res.details[1].menuItems);
+      
       this.dataSource.sort = this.sort;
       this.dataSource.paginator = this.paginator;
     },

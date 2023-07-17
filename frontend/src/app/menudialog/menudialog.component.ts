@@ -64,7 +64,7 @@ export class MenudialogComponent implements OnInit{
         } else {
           this._empService.addcombomeal(this.combomealForm.value).subscribe({
             next: (value: any) => {
-              console.log('valuesss', value.details);
+              console.log('valuesss', value.details[1].menuItems);
               
               //this._coreService.openSnackBar('Employee added successfully');
               Swal.fire("Meal details added successfully!", 'success');

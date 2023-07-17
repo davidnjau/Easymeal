@@ -99,7 +99,9 @@ openAddEditMealForm() {
 getcomboList() {
   this._empService.getcomboList().subscribe({
     next: (res) => {
-      this.dataSource = new MatTableDataSource(res.details);
+      this.dataSource = new MatTableDataSource(res.details[0].menuItems);
+      console.log(res.details[0].menuItems);
+      
       this.dataSource.sort = this.sort;
       this.dataSource.paginator = this.paginator;
     },

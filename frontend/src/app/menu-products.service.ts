@@ -36,13 +36,15 @@ export class MenuProductsService {
 
 
   getcomboList(): Observable<any> {
-    return this._http.get('https://7a47fd5a-e15c-4758-ae4b-bccbfc86603f.mock.pstmn.io//menu/get-item?limit=10&page=1');
+    //return this._http.get('http://localhost:3000/detailss');
+      return this._http.get('https://7a47fd5a-e15c-4758-ae4b-bccbfc86603f.mock.pstmn.io//menus/get-category?page=1&limit=20');
+
   }
   getSinglemealList(): Observable<any> {
-    return this._http.get('https://7a47fd5a-e15c-4758-ae4b-bccbfc86603f.mock.pstmn.io//menu/get-item?limit=10&page=1');
+    return this._http.get('https://7a47fd5a-e15c-4758-ae4b-bccbfc86603f.mock.pstmn.io//menus/get-category?page=1&limit=20');
   }
   getBeverageList(): Observable<any> {
-    return this._http.get('https://7a47fd5a-e15c-4758-ae4b-bccbfc86603f.mock.pstmn.io//menu/get-item?limit=10&page=1');
+    return this._http.get('https://7a47fd5a-e15c-4758-ae4b-bccbfc86603f.mock.pstmn.io//menus/get-category?page=1&limit=20');
   }
   /*
   gettotalorders(): Observable<any> {
